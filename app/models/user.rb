@@ -10,10 +10,11 @@
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  zip_code        :integer          not null
 #
 
 class User < ApplicationRecord
-    validates :first_name, :last_name, :email, :password_digest, :session_token, presence: true
+    validates :first_name, :last_name, :email, :password_digest, :session_token, :zip_code, presence: true
     validates :password, length: { minimum: 6, allow_nil: true }
 
     attr_reader :password
