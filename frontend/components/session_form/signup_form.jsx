@@ -44,7 +44,7 @@ class SignupForm extends React.Component {
                 <form onSubmit={this.handleSubmit} className="signup-form-box">
                     Welcome to inTents!
                 <br />
-                    Please {this.props.formType} or {this.props.navLink}
+                    {/* Please {this.props.formType} or {this.props.navLink} */}
                     {this.renderErrors()}
                     <div className="signup-form">
                         <br />
