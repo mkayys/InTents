@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-class SessionForm extends React.Component {
+class LoginForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,7 +20,7 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(user).then(() => this.props.history.push('/'));
     }
 
     renderErrors() {
@@ -39,8 +39,8 @@ class SessionForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome to inTents!
-                 <br />
+                    Welcome back to inTents!
+                <br />
                     Please {this.props.formType} or {this.props.navLink}
                     {this.renderErrors()}
                     <div className="login-form">
@@ -66,7 +66,8 @@ class SessionForm extends React.Component {
                 </form>
             </div>
         );
+
     }
 }
 
-export default SessionForm;
+export default LoginForm;
