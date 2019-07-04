@@ -62,9 +62,7 @@ class LoginForm extends React.Component {
                             />
                         <br />
                         <br />
-                        <input className="session-submit" type="submit" value={this.props.formType} />
-                        {/* <h6>By signing up, I agree to in-Tents's 
-                            terms and privacy policy.</h6> */}
+                        <input className="login-submit" type="submit" value={this.props.formType} />
                     </div>
                 </form>
             </div>

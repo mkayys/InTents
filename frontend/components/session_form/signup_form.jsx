@@ -49,21 +49,20 @@ class SignupForm extends React.Component {
                     {this.renderErrors()}
                     <div className="signup-form">
                         <br />
+                        <div className='signup-fname-lname'>
                             <input type="text"
                                 value={this.state.first_name}
                                 onChange={this.update('first_name')}
-                                className="signup-input"
+                                className="signup-input fname"
                                 placeholder="First name..."
                             />
-                        <br />
-                        <br />
                             <input type="text"
                                 value={this.state.last_name}
                                 onChange={this.update('last_name')}
-                                className="signup-input" 
+                                className="signup-input lname" 
                                 placeholder="Last name..."
                             />
-                        <br />
+                        </div>
                         <br />
                             <input type="text"
                                 value={this.state.email}
@@ -89,7 +88,11 @@ class SignupForm extends React.Component {
                             />
                         <br />
                         <br />
-                        <input className="session-submit" type="submit" value="Join in-Tents" />
+                        <input className="signup-submit" type="submit" value="Join in-Tents" />
+                        <br />
+                        <br />
+                        <div className="signup-form-footer">By signing up, I agree to in-Tents's 
+                            terms and privacy policy.</div>
                     </div>
                 </form>
             </div>

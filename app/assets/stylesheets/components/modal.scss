@@ -22,7 +22,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -27%);
+    transform: translate(-50%, -25%);
     padding: 13px;
     background: white;
     border: 1px solid white;
@@ -33,7 +33,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -42%);
+    transform: translate(-50%, -40%);
     padding: 13px;
     background: white;
     border: 1px solid white;
@@ -52,10 +52,23 @@
     color: rgb(117, 117, 117);
   }
 }
+
 .signup-input, .login-input {
   border: 1px solid black;
   padding: 15px;
   width: 100%;
+}
+
+.signup-fname-lname {
+  display: flex;
+}
+
+.fname {
+  margin-right: 5px;
+}
+
+.lname {
+  margin-left: 5px;
 }
 // .login-input {
 //   border: 1px solid black;
@@ -63,15 +76,42 @@
 //   width: 100%;
 // }
 
-.session-submit[type=submit] {
+.login-submit[type=submit] {
   background-color: rgb(97, 218, 173);
   color: white;
   width: 100%;
-  padding: 15px;
+  padding: 20px 15px;
   font-weight: bold;
+  font-size: 16px;
 }
-.session-submit[type=submit]:hover {
+
+.login-submit[type=submit]:hover {
   background-color: rgb(88, 198, 158);
+  cursor: pointer;
+}
+
+.signup-submit[type=submit] {
+  background-color: rgb(97, 218, 173);
+  color: white;
+  width: 100%;
+  padding: 20px 15px;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid transparent;
+
+}
+
+.signup-submit[type=submit]:hover {
+  background-color: white;
+  color: rgb(97, 218, 173);
+  border: 2px solid rgb(97, 218, 173);
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+}
+
+.signup-form-footer {
+  font-size: 12px;
+  color: rgb(117, 117, 117);
 }
 
 // .signup-form-container {

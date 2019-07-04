@@ -6,6 +6,7 @@ import Modal from './modal/modal';
 
 const App = () => (
     <div>
+        
         <Modal />
         <header className="name-navbar-container">
             <div className='app-name'>
@@ -14,6 +15,10 @@ const App = () => (
             </div>
             <NavBarContainer />
         </header>
+
+        <div className="test-container">
+            Everywhere you want to camp
+        </div>
     </div>
 );
 
