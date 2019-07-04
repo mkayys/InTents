@@ -18,7 +18,7 @@ class SignupForm extends React.Component {
     componentWillMount() {
         this.props.clearErrors();
     }
-    
+
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value

@@ -9,6 +9,8 @@ class LoginForm extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
+        this.emailTyper = this.emailTyper.bind(this);
+        this.passwordTyper = this.passwordTyper.bind(this);
     }
 
     componentWillMount() {
@@ -27,8 +29,7 @@ class LoginForm extends React.Component {
         this.props.processForm(user).then(this.props.closeModal);
     }
 
-    handleDemoSubmit(e) {
-        e.preventDefault();
+    handleDemoSubmit() {
         this.state = {
             email: 'rmapa@aa.io', 
             password: 'password'
@@ -37,6 +38,42 @@ class LoginForm extends React.Component {
         this.props.processForm(demoUser).then(this.props.closeModal);
     }
 
+    emailTyper() {
+        let i = 0;
+        let email = 'rmapa@aa.io'
+        const speed = 75; /* The speed/duration of the effect in milliseconds */
+        let email_field = document.getElementById("email");
+        email_field.value = "";
+
+        const typeWriter = () => {
+            if (i < email.length) {
+                email_field.value += email.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        };
+
+        typeWriter();
+        setTimeout(this.passwordTyper, 1000);
+        setTimeout(this.handleDemoSubmit, 1800);
+    };
+
+    passwordTyper() {
+        let i = 0;
+        const password = 'password'
+        const speed = 75; /* The speed/duration of the effect in milliseconds */
+        let password_field = document.getElementById("password");
+        password_field.value = "";
+
+        const typeWriter = () => {
+            if (i < password.length) {
+                password_field.value += password.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        };
+        typeWriter();
+    };
 
     renderErrors() {
         return (
@@ -52,10 +89,11 @@ class LoginForm extends React.Component {
         );
     }
 
+
     render() {
         return (
             <div className="login-form-container">
-                <form onSubmit={this.handleSubmit} className="login-form-box">
+                <form className="login-form-box">
                     <div className="login-header">
                         <h4>Hey, welcome back!</h4>
                         <h6>It's about time for another adventure</h6>
@@ -67,6 +105,7 @@ class LoginForm extends React.Component {
                                 value={this.state.email}
                                 onChange={this.update('email')}
                                 className="login-input"
+                                id="email"
                                 placeholder="Email address"
                             />
                         <br />
@@ -75,6 +114,7 @@ class LoginForm extends React.Component {
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 className="login-input"
+                                id="password"
                                 placeholder="Password"
                             />
                         <br />
@@ -84,12 +124,13 @@ class LoginForm extends React.Component {
                                 className='demo-user'
                                 type="submit"
                                 value="Demo User"
-                                onClick={this.handleDemoSubmit}
+                                onClick={this.emailTyper}
                             />
                             <input 
                                 className="login-submit" 
                                 type="submit" 
                                 value={this.props.formType} 
+                                onClick={this.handleSubmit}
                             />
                         </div>
                         <br />
