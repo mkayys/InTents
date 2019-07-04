@@ -38,29 +38,33 @@ class LoginForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome back to inTents!
+                    <div className="login-header">
+                        <h4>Hey, welcome back!</h4>
+                        <h6>It's about time for another adventure</h6>
+                    </div>
                 <br />
-                    {/* Please {this.props.formType} or {this.props.navLink} */}
                     {this.renderErrors()}
                     <div className="login-form">
                         <br />
-                        <label>Email:
                             <input type="text"
                                 value={this.state.email}
                                 onChange={this.update('email')}
                                 className="login-input"
+                                placeholder="Email address"
                             />
-                        </label>
                         <br />
-                        <label>Password:
+                        <br />
                             <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 className="login-input"
+                                placeholder="Password"
                             />
-                        </label>
+                        <br />
                         <br />
                         <input className="session-submit" type="submit" value={this.props.formType} />
+                        {/* <h6>By signing up, I agree to in-Tents's 
+                            terms and privacy policy.</h6> */}
                     </div>
                 </form>
             </div>

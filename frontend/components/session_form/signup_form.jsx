@@ -42,53 +42,54 @@ class SignupForm extends React.Component {
         return (
             <div className="signup-form-container">
                 <form onSubmit={this.handleSubmit} className="signup-form-box">
-                    Welcome to inTents!
-                <br />
-                    {/* Please {this.props.formType} or {this.props.navLink} */}
+                    <div className="signup-header">
+                        <h4>Join in-Tents</h4>
+                        <h6>Discover the best places to pitch your tent</h6>
+                    </div>    
                     {this.renderErrors()}
                     <div className="signup-form">
                         <br />
-                        <label>First Name:
                             <input type="text"
                                 value={this.state.first_name}
                                 onChange={this.update('first_name')}
                                 className="signup-input"
+                                placeholder="First name..."
                             />
-                        </label>
                         <br />
-                        <label>Last Name:
+                        <br />
                             <input type="text"
                                 value={this.state.last_name}
                                 onChange={this.update('last_name')}
-                                className="signup-input"
+                                className="signup-input" 
+                                placeholder="Last name..."
                             />
-                        </label>
                         <br />
-                        <label>Email:
+                        <br />
                             <input type="text"
                                 value={this.state.email}
                                 onChange={this.update('email')}
                                 className="signup-input"
+                                placeholder="Email address..."
                             />
-                        </label>
                         <br />
-                        <label>Password:
+                        <br />
                             <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 className="signup-input"
+                                placeholder="Password..."
                             />
-                        </label>
                         <br />
-                        <label>Zip Code:
+                        <br />
                             <input type="text"
                                 value={this.state.zip_code}
                                 onChange={this.update('zip_code')}
                                 className="signup-input"
+                                placeholder="Zip code..."
                             />
-                        </label>
                         <br />
-                        <input className="session-submit" type="submit" value={this.props.formType} />
+                        <br />
+                        <input className="session-submit" type="submit" value="Join in-Tents" />
                     </div>
                 </form>
             </div>

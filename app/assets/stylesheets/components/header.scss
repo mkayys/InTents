@@ -1,0 +1,61 @@
+.name-navbar-container {
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
+    width: 100%;
+    background-color: white;
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    .app-name{
+        font-weight: bold;
+        color: black;
+        font-size: 25px;
+        letter-spacing: 3px;
+        margin: auto 0;
+    }
+}
+
+.login-signup {
+    margin: auto 0;
+
+    #signupLink {
+        text-decoration: none;
+        padding: 3px 0px;
+        border-bottom: 1px solid silver;
+        color: rgb(80, 80, 80);
+    }
+
+    #signupLink:hover {
+        border-bottom: 1px solid rgb(51, 51, 51);
+    }
+
+    #loginLink {
+        text-decoration: none;
+        padding: 3px 0px;
+        border-bottom: 1px solid silver;
+        color: rgb(80, 80, 80);
+    }
+
+    #loginLink:hover {
+        border-bottom: 1px solid rgb(51, 51, 51);
+    }
+    
+}
+
+.header-group {
+    display: flex;
+
+    .header-name {
+        color: rgb(80, 80, 80);
+        padding: 0px 12px;
+        font-size: 15px;
+    }
+    
+    .header-button {
+        margin: auto;
+
+    }
+    .header-button:hover {
+        background-color: lavender;
+        border-radius: 5px;
+    }
+}

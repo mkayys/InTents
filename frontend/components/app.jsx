@@ -7,8 +7,11 @@ import Modal from './modal/modal';
 const App = () => (
     <div>
         <Modal />
-        <header>
-            <h1>inTents</h1>
+        <header className="name-navbar-container">
+            <div className='app-name'>
+                <i className="fas fa-campground"></i>
+                in-Tents
+            </div>
             <NavBarContainer />
         </header>
     </div>
