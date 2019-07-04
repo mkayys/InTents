@@ -120,17 +120,17 @@ class LoginForm extends React.Component {
                         <br />
                         <br />
                         <div className="login-form-footer">
-                            <input
-                                className='demo-user'
-                                type="submit"
-                                value="Demo User"
-                                onClick={this.emailTyper}
-                            />
                             <input 
                                 className="login-submit" 
                                 type="submit" 
                                 value={this.props.formType} 
                                 onClick={this.handleSubmit}
+                            />
+                            <input
+                                className='demo-user'
+                                type="submit"
+                                value="Demo User"
+                                onClick={this.emailTyper}
                             />
                         </div>
                         <br />
