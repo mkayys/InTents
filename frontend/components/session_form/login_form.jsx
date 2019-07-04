@@ -11,6 +11,10 @@ class LoginForm extends React.Component {
         this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
     }
 
+    componentWillMount() {
+        this.props.clearErrors();
+    }
+
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
@@ -48,10 +52,6 @@ class LoginForm extends React.Component {
         );
     }
 
-    // removeErrors() {
-    //     this.props.clearErrors();
-    // }
-
     render() {
         return (
             <div className="login-form-container">
@@ -68,7 +68,6 @@ class LoginForm extends React.Component {
                                 onChange={this.update('email')}
                                 className="login-input"
                                 placeholder="Email address"
-                                // onClick={this.removeErrors()}
                             />
                         <br />
                         <br />
