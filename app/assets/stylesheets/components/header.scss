@@ -20,7 +20,7 @@
     #signupLink {
         text-decoration: none;
         padding: 3px 0px;
-        border-bottom: 1px solid silver;
+        border-bottom: 1px solid rgb(230, 228, 228);
         color: rgb(80, 80, 80);
     }
 
@@ -31,7 +31,7 @@
     #loginLink {
         text-decoration: none;
         padding: 3px 0px;
-        border-bottom: 1px solid silver;
+        border-bottom: 1px solid rgb(230, 228, 228);
         color: rgb(80, 80, 80);
     }
 
@@ -43,6 +43,7 @@
 
 .header-group {
     display: flex;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
 
     .header-name {
         color: rgb(80, 80, 80);
@@ -52,10 +53,21 @@
     
     .header-button {
         margin: auto;
-
+        font-family: "Calibre", Helvetica, Arial, sans-serif;
+        border-radius: 5px;
+        background-color: rgb(97, 218, 173);
+        color: white;
+        padding: 3px;
+        font-weight: bold;
+        font-size: 12px;
+        border: 2px solid transparent;
     }
     .header-button:hover {
-        background-color: lavender;
+        background-color: white;
+        color: rgb(97, 218, 173);
+        border: 2px solid rgb(97, 218, 173);
+        cursor: pointer;
+        transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
         border-radius: 5px;
     }
 }

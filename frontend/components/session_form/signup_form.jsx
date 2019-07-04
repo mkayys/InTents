@@ -12,6 +12,7 @@ class SignupForm extends React.Component {
             zip_code: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
     }
 
     update(field) {
@@ -26,15 +27,27 @@ class SignupForm extends React.Component {
         this.props.processForm(user).then(this.props.closeModal);
     }
 
+    handleDemoSubmit(e) {
+        e.preventDefault();
+        this.state = {
+            email: 'rmapa@aa.io',
+            password: 'password'
+        }
+        const demoUser = Object.assign({}, this.state);
+        this.props.processOtherForm(demoUser).then(this.props.closeModal);
+    }
+
     renderErrors() {
         return (
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
+            <div>
+                <ul className='signup-errors'>
+                    {this.props.errors.map((error, i) => (
+                        <li key={`error-${i}`}>
+                            {error}
+                        </li>
+                    ))}
+                </ul>
+            </div>
         );
     }
 
@@ -44,11 +57,11 @@ class SignupForm extends React.Component {
                 <form onSubmit={this.handleSubmit} className="signup-form-box">
                     <div className="signup-header">
                         <h4>Join in-Tents</h4>
-                        <h6>Discover the best places to pitch your tent</h6>
-                    </div>    
+                        <h6>Discover the best places to pitch your tent</h6>  
+                    </div> 
                     {this.renderErrors()}
                     <div className="signup-form">
-                        <br />
+                    <br />
                         <div className='signup-fname-lname'>
                             <input type="text"
                                 value={this.state.first_name}
@@ -62,7 +75,7 @@ class SignupForm extends React.Component {
                                 className="signup-input lname" 
                                 placeholder="Last name..."
                             />
-                        </div>
+                    </div>
                         <br />
                             <input type="text"
                                 value={this.state.email}
@@ -92,10 +105,22 @@ class SignupForm extends React.Component {
                         <br />
                         <br />
                         <div className="signup-form-footer">By signing up, I agree to in-Tents's 
-                            terms and privacy policy.</div>
+                            terms and privacy policy.
+                            <br /> 
+                            <br />
+                            Already a in-Tents user? &nbsp;
+                            <div className='signup-to-demo'>
+                                <input 
+                                    className='demo-user' 
+                                    type="submit" 
+                                    value="Log in as a Demo User"
+                                    onClick={this.handleDemoSubmit} />
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
+        
         );
     
     }
