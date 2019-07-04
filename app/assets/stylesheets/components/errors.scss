@@ -2,6 +2,8 @@
     color: #D8000C;
 }
 
-.login-errors li {
-    list-style-type: none;
+.login-errors li,
+.signup-errors li {
+    list-style: none;
+    text-align: center;
 }
