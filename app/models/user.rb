@@ -19,6 +19,8 @@ class User < ApplicationRecord
     validates :email, uniqueness: true
 
     attr_reader :password
+    
+    has_one_attached :photo
 
     has_many :spots
     has_many :bookings
