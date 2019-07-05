@@ -2,7 +2,7 @@ import React from 'react';
 
 const NavBar = ({ currentUser, logout, openModal }) => {
     const sessionLinks = () => (
-        <nav className="login-signup w3-animate-top">
+        <nav className="login-signup">
             <a id="signupLink" href="#" onClick={() => openModal('signup')}>Sign up</a>
             &nbsp; &nbsp;
             <a id="loginLink" href="#" onClick={() => openModal('login')}>Log in</a>
