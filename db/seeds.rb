@@ -10,3 +10,4 @@ User.delete_all
 
 user = User.new(first_name: 'Ryan', last_name: 'Mapa', email: 'rmapa@aa.io', password: 'password', zip_code: 94111)
 user.save!
+
