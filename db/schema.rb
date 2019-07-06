@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_05_180528) do
+ActiveRecord::Schema.define(version: 2019_07_06_004011) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,36 @@ ActiveRecord::Schema.define(version: 2019_07_05_180528) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "spots", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "nearby", null: false
+    t.integer "host_id", null: false
+    t.text "about", null: false
+    t.float "price", null: false
+    t.integer "max_guests", null: false
+    t.string "check_in"
+    t.string "check_out"
+    t.string "cancellation"
+    t.string "on_arrival"
+    t.integer "min_nights"
+    t.float "latitude", null: false
+    t.float "longitude", null: false
+    t.boolean "parking", default: false
+    t.boolean "ada_access", default: false
+    t.boolean "toilets", default: false
+    t.boolean "pull_through", default: false
+    t.boolean "campfire", default: false
+    t.boolean "pets", default: false
+    t.boolean "hookups", default: false
+    t.boolean "potable_water", default: false
+    t.boolean "showers", default: false
+    t.boolean "picnic_table", default: false
+    t.boolean "bins", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["host_id"], name: "index_spots_on_host_id"
   end
 
   create_table "users", force: :cascade do |t|
