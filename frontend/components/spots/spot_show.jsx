@@ -8,13 +8,11 @@ class SpotShow extends React.Component {
     }
 
     render() {
-
         return (
             <div>
                 {this.props.spot.name}
                 {this.props.spot.nearby}
                 {this.props.spot.about}
-                <Link to='/'>All campsites</Link>
             </div>
         );
     }

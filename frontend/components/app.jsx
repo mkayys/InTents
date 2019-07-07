@@ -23,7 +23,7 @@ const App = () => (
         </div>
 
         <Switch>
-            <Route exact path="/" component={SpotIndexContainer} />
+            <Route exact path="/spots" component={SpotIndexContainer} />
             <Route exact path="/spots/:spotId" component={SpotShowContainer} />
         </Switch>
     </div>
