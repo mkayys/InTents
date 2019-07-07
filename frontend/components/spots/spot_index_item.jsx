@@ -3,19 +3,32 @@ import { Link } from 'react-router-dom';
 import Carousel from 'nuka-carousel';
 
 const SpotIndexItem = ({ spot }) => (
-    <div>
-        <li>
+    <div className='spot-list-items'>
+        <div className='spot-pictures'>
             <Carousel>
-                <img src={spot.photoUrls[0]} />
-                <img src={spot.photoUrls[1]} />
-                <img src={spot.photoUrls[2]} />
-                <img src={spot.photoUrls[3]} />
+                <img src={spot.photoUrls[0]} className='pic-slides' />
+                <img src={spot.photoUrls[1]} className='pic-slides' />
+                <img src={spot.photoUrls[2]} className='pic-slides' />
+                <img src={spot.photoUrls[3]} className='pic-slides' />       
             </Carousel>
-            {spot.name}
-            &nbsp;
-            {spot.nearby}
-        </li>
+        </div>
+
+        <div className='spot-info'>
+            <div className='spot-name'>
+                {spot.name}
+            </div>
+            <div className='spot-location'>
+                {spot.nearby}
+            </div>
+            <div className='extra-spot-info'>
+                <i className="fas fa-thumbs-up"></i>
+                <div className='spot-price'>
+                    ${spot.price}/night
+                </div>
+            </div>
+        </div>
     </div>
 );
+
 
 export default SpotIndexItem;

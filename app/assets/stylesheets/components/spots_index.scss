@@ -1,0 +1,51 @@
+.spot-list-items {
+    padding: 20px;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    display: inline-block;
+    background: white;
+    border: 1px solid white;
+    box-shadow: 5px 5px 5px 5px rgba(211, 211, 211, 0.7);
+    height: 400px;
+    width: 400px;
+}
+
+.spot-pictures {
+    height: 60%;
+    width: 100%;
+    display: block;
+}
+.pic-slides {
+    background-size: cover;
+    background-position: center;
+
+}
+
+.spot-info {
+    height: 40%;
+    width: 100%;
+    display: block;
+    font-size: 15px;
+
+    .spot-name {
+        font-size: 15px;
+    }
+    
+    .spot-location {
+        font-size: 12px;
+        font-weight: lighter;
+    }
+
+    .extra-spot-info {
+        display: flex;
+        justify-content: space-between;
+        .fas {
+            color: rgb(97, 218, 173);
+        }
+    
+        .spot-price {
+            font-size: 15px;
+        }
+
+    }
+}
