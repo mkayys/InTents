@@ -4,13 +4,13 @@ export const RECEIVE_SPOTS = 'RECEIVE_SPOTS';
 export const RECEIVE_SPOT = 'RECEIVE_SPOT';
 
 
-export const fetchPosts = () => dispatch => (
+export const fetchSpots = () => dispatch => (
     SpotApiUtil.fetchSpots()
         .then(spots => dispatch(receiveSpots(spots)))
 );
 
-export const fetchPost = (id) => dispatch => (
-    SpotApiUtil.fetchSpots(id)
+export const fetchSpot = (id) => dispatch => (
+    SpotApiUtil.fetchSpot(id)
         .then(spot => dispatch(receiveSpot(spot)))
 );
 

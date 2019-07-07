@@ -10,9 +10,9 @@ class Api::SpotsController < ApplicationController
         render 'api/spots/show'
     end
 
-    # private
-    # def spot_params
-    #     params.require(:spot).permit(:name, photos: [])
-    # end
+    private
+    def spot_params
+        params.require(:spot).permit(photos: [])
+    end
 
 end

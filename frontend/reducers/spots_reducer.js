@@ -2,6 +2,7 @@ import {
     RECEIVE_SPOTS,
     RECEIVE_SPOT
 } from '../actions/spot_actions';
+import merge from 'lodash/merge';
 
 const spotsReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -11,8 +12,7 @@ const spotsReducer = (state = {}, action) => {
             nextState = merge({}, state, action.spots);
             return nextState;
         case RECEIVE_SPOT:
-            nextState[action.spot.id] = action.spot;
-            return nextState;
+            return merge({}, state, {[action.spot.id]: action.spot});
         default:
             return state;
     }
