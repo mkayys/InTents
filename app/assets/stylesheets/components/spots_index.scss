@@ -7,22 +7,25 @@
     border: 1px solid white;
     box-shadow: 5px 5px 5px 5px rgba(211, 211, 211, 0.7);
     height: 400px;
-    width: 400px;
+    width: 350px;
+    margin: 10px;
 }
 
 .spot-pictures {
-    height: 60%;
+    height: 70%;
     width: 100%;
     display: block;
+    .slider {
+        height: 270px;
+    }
 }
+
 .pic-slides {
     background-size: cover;
-    background-position: center;
-
 }
 
 .spot-info {
-    height: 40%;
+    height: 30%;
     width: 100%;
     display: block;
     font-size: 15px;

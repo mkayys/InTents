@@ -4,6 +4,7 @@ import NavBarContainer from './navbar/navbar_container';
 import Modal from './modal/modal';
 import SpotIndexContainer from './spots/spot_index_container';
 import SpotShowContainer from './spots/spot_show_container';
+import SearchContainer from './search/search_container';
 
 
 const App = () => (
@@ -23,8 +24,9 @@ const App = () => (
         </div>
 
         <Switch>
-            <Route exact path="/spots" component={SpotIndexContainer} />
-            <Route exact path="/spots/:spotId" component={SpotShowContainer} />
+            {/* <Route exact path="/spots" component={SpotIndexContainer} /> */}
+            {/* <Route exact path="/spots/:spotId" component={SpotShowContainer} /> */}
+            <Route exact path="/spots/map" component={SearchContainer} />
         </Switch>
     </div>
 );
