@@ -134,7 +134,9 @@ class LoginForm extends React.Component {
                             />
                         </div>
                         <br />
-                        
+                        <div className='login-form-switch'>
+                            New to in-Tents? &nbsp; {this.props.otherForm}
+                        </div>
                     </div>
                 </form>
             </div>

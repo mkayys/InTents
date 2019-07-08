@@ -112,7 +112,7 @@ class SignupForm extends React.Component {
                             terms and privacy policy.
                             <br /> 
                             <br />
-                            Already a in-Tents user? &nbsp;
+                            Already a in-Tents user? &nbsp; {this.props.otherForm}
                             <div className='signup-to-demo'>
                                 
                                 <input 

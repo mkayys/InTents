@@ -110,6 +110,7 @@
     font-weight: bold;
     font-size: 12px;
     border: 2px solid transparent;
+    margin: 5px;
   }
   .demo-user[type=submit]:hover {
     background-color: white;
@@ -161,6 +162,54 @@
 
 }
 
+.signup-to-login {
+  margin: auto;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  border-radius: 5px;
+  background-color: rgb(97, 218, 173);
+  color: white;
+  padding: 3px;
+  font-weight: bold;
+  font-size: 12px;
+  border: 2px solid transparent;
+}
+
+.signup-to-login:hover {
+  background-color: white;
+  color: rgb(97, 218, 173);
+  border: 2px solid rgb(97, 218, 173);
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+  border-radius: 5px;
+}
+
+.login-to-signup {
+  margin: auto;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  border-radius: 5px;
+  background-color: rgb(97, 218, 173);
+  color: white;
+  padding: 3px;
+  font-weight: bold;
+  font-size: 12px;
+  border: 2px solid transparent;
+}
+
+.login-to-signup:hover {
+  background-color: white;
+  color: rgb(97, 218, 173);
+  border: 2px solid rgb(97, 218, 173);
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+  border-radius: 5px;
+}
+
+
+.login-form-switch {
+  font-size: 12px;
+  color: rgb(117, 117, 117);
+  text-align: center;
+}
 // .signup-form-container {
 //   position: absolute;
 //   top: 50%;
