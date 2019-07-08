@@ -8,6 +8,7 @@ class SpotShow extends React.Component {
     }
 
     render() {
+        if (this.props.spot === undefined) return null;
         return (
             <div className='spot-show-information'>
                 <div className='spot-show-description'>

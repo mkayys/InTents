@@ -13,7 +13,7 @@ const SpotIndexItem = ({ spot }) => (
             </Carousel>
         </div>
 
-        <div className='spot-info'>
+        <Link className='spot-info' to={`/spots/${spot.id}`}>
             <div className='spot-name'>
                 {spot.name}
             </div>
@@ -26,7 +26,7 @@ const SpotIndexItem = ({ spot }) => (
                     ${spot.price}/night
                 </div>
             </div>
-        </div>
+        </Link>
     </div>
 );
 
