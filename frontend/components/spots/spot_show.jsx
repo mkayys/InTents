@@ -9,10 +9,12 @@ class SpotShow extends React.Component {
 
     render() {
         return (
-            <div>
-                {this.props.spot.name}
-                {this.props.spot.nearby}
-                {this.props.spot.about}
+            <div className='spot-show-information'>
+                <div className='spot-show-description'>
+                    {this.props.spot.name}
+                    {this.props.spot.nearby}
+                    {this.props.spot.about}
+                </div>
             </div>
         );
     }

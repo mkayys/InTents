@@ -1,5 +1,5 @@
 
-export default class MarkerManager {
+class MarkerManager {
     constructor(map) {
         this.map = map;
         this.markers = {};
@@ -10,3 +10,5 @@ export default class MarkerManager {
     }
 
 }
+
+export default MarkerManager

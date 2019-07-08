@@ -24,13 +24,13 @@ const App = () => (
         </div>
 
         <div className="locations">
-            
+
         </div>
 
         <Switch>
-            {/* <Route exact path="/spots" component={SpotIndexContainer} /> */}
-            {/* <Route exact path="/spots/:spotId" component={SpotShowContainer} /> */}
-            <Route exact path="/spots/map" component={SearchContainer} />
+            <Route exact path="/spots" component={SpotIndexContainer} />
+            <Route exact path="/spots/:spotId" component={SpotShowContainer} />
+            {/* <Route exact path="/spots/map" component={SearchContainer} /> */}
         </Switch>
     </div>
 );
