@@ -94,6 +94,9 @@ class LoginForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form className="login-form-box">
+                    <div className='close-form' onClick={this.props.closeModal}>
+                        <i class="fas fa-times"></i>
+                    </div>
                     <div className="login-header">
                         <h4>Hey, welcome back!</h4>
                         <h6>It's about time for another adventure</h6>

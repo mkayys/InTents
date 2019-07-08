@@ -210,6 +210,17 @@
   color: rgb(117, 117, 117);
   text-align: center;
 }
+
+.close-form {
+  padding: 5px 10px;
+  text-align: right;
+  cursor: pointer;
+  margin-left: 270px;
+
+  .fas:hover {
+    color: rgb(97, 218, 173)
+  }
+}
 // .signup-form-container {
 //   position: absolute;
 //   top: 50%;

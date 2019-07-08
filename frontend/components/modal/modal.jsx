@@ -22,7 +22,7 @@ function Modal({ modal, closeModal }) {
             return null;
     }
     return (
-        <div className="modal-background" onClick={closeModal}>
+        <div className="modal-background">
             <div className="modal-child w3-animate-top" onClick={e => e.stopPropagation()}>
                 {component}
             </div>
