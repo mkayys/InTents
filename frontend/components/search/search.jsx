@@ -7,16 +7,16 @@ class Search extends React.Component {
     
     render() {
         return (
-            <div>
-                <div>
-                    <SpotMap
-                        spots={this.props.spots} />
-                
-                </div>
-                <div> 
+            <div className='index-page'>
+                <div className='spots-listed'> 
                     <SpotIndex
                         spots={this.props.spots}
                         fetchSpots={this.props.fetchSpots} />
+                </div>
+                <div className='spots-map'>
+                    <SpotMap
+                        spots={this.props.spots} />
+
                 </div>
             </div>
         )

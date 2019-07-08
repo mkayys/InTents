@@ -23,6 +23,10 @@ const App = () => (
             Everywhere you want to camp
         </div>
 
+        <div className="locations">
+            
+        </div>
+
         <Switch>
             {/* <Route exact path="/spots" component={SpotIndexContainer} /> */}
             {/* <Route exact path="/spots/:spotId" component={SpotShowContainer} /> */}
