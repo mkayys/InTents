@@ -60,7 +60,7 @@ class SignupForm extends React.Component {
             <div className="signup-form-container">
                 <form onSubmit={this.handleSubmit} className="signup-form-box">
                     <div className='close-form' onClick={this.props.closeModal}>
-                        <i class="fas fa-times"></i>
+                        <i className="fas fa-times"></i>
                     </div>
                     <div className="signup-header">
                         <h4>Join in-Tents</h4>
