@@ -3,20 +3,20 @@ class MarkerManager {
     constructor(map) {
         this.map = map;
         this.markers = {};
-        this.handleClick = handleClick;
+        // this.handleClick = handleClick;
     }
 
     updateMarkers(spots) {
         const spotsObj = {};
         spots.forEach(spot => spotsObj[spot.id] = spot);
 
-        spots
-            .filter(spot => !this.markers[spot.id])
-            .forEach(newSpot => this.createMarkerFromBench(newSpot, this.handleClick))
+        // spots
+        //     .filter(spot => !this.markers[spot.id])
+        //     .forEach(newSpot => this.createMarkerFromBench(newSpot, this.handleClick))
 
-        Object.keys(this.markers)
-            .filter(spotId => !spotsObj[spotId])
-            .forEach((spotId) => this.removeMarker(this.markers[spotId]))
+        // Object.keys(this.markers)
+        //     .filter(spotId => !spotsObj[spotId])
+        //     .forEach((spotId) => this.removeMarker(this.markers[spotId]))
     }
 
     createMarkerFromBench(spot) {
@@ -27,8 +27,8 @@ class MarkerManager {
             spotId: spot.id
         });
 
-        marker.addListener('click', () => this.handleClick(spot));
-        this.markers[marker.spotId] = marker;
+        // marker.addListener('click', () => this.handleClick(spot));
+        // this.markers[marker.spotId] = marker;
     }
 
     removeMarker(marker) {

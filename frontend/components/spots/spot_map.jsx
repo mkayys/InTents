@@ -5,10 +5,9 @@ import MarkerManager from '../../util/marker_manager';
 class SpotMap extends React.Component {
 
     componentDidMount() {
-        // set the map to show SF
         const mapOptions = {
-            center: { lat: 37.7758, lng: -122.435 }, // this is SF
-            zoom: 13
+            center: { lat: 33.873415, lng: -115.9009923 }, // this is Joshua Tree
+            zoom: 9
         };
 
         this.props.fetchSpots();

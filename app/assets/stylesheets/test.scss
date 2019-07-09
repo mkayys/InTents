@@ -1,9 +1,12 @@
 .test-container {
-    // color: black;
-    // background-image: url('main.jpg');
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // height: 1000px;
-    // width: 100%;
-    padding: 20px;
+    color: black;
+    background-image: url('main.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+    width: 100%;
+    padding: 100px 40px;
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
 }

@@ -16,7 +16,8 @@ class Search extends React.Component {
                 <div className='spots-map'>
                     <SpotMap
                         spots={this.props.spots}
-                        fetchSpots={this.props.fetchSpots} />
+                        fetchSpots={this.props.fetchSpots}
+                        updateBounds={this.props.updateBounds} />
 
                 </div>
             </div>

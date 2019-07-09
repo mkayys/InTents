@@ -1,9 +1,41 @@
 .spot-show-information {
     margin-top: 20px;
-    padding: 0px 35px;
-    border: 1px solid black;
+    padding: 0px 15px;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
 }
 
+.slider[style] {
+    height: 447px !important;
+}
 .spot-show-description {
-    background-color: red;
+    padding: 0px 70px;
+    .spot-show-name {
+        font-size: 40px;
+        .fas {
+            color: rgb(66, 152, 247);
+        }
+    }
+
+    .spot-show-details {
+        display: flex;
+        justify-content: space-around;
+        .spot-show-host {
+            .fas {
+                color: lavender;
+            }
+        }
+
+        .spot-show-about {
+            margin: 10px; 
+            width: 350px;
+        }
+
+        .spot-show-booking {
+            border: 1px solid black;
+            width: 200px;
+            position: sticky;
+            height: 100px;
+            z-index: 3;
+        }
+    }
 }
