@@ -19,7 +19,7 @@ export const receiveSpots = (spots) => ({
     spots
 });
 
-export const receiveSpot = (spot) => ({
+export const receiveSpot = (payload) => ({
     type: RECEIVE_SPOT,
-    spot
+    payload
 });

@@ -2,13 +2,28 @@
     margin-top: 20px;
     padding: 0px 15px;
     font-family: "Calibre", Helvetica, Arial, sans-serif;
+    .spot-show-pictures {
+        display: flex;
+        justify-content: space-evenly;
+        object-fit: scale-down;
+        .pic-slides {
+            max-height: auto;
+            max-width: auto;
+        }
+    }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .slider[style] {
-    height: 447px !important;
+    max-height: 447px !important;
 }
 .spot-show-description {
-    padding: 0px 70px;
+    padding: 0px 200px;
+    // margin-left: 20px;
     .spot-show-name {
         font-size: 40px;
         .fas {
@@ -18,24 +33,24 @@
 
     .spot-show-details {
         display: flex;
-        justify-content: space-around;
-        .spot-show-host {
-            .fas {
-                color: lavender;
-            }
-        }
-
+        justify-content: space-between;
+        margin-right: 300px; 
+    
         .spot-show-about {
             margin: 10px; 
-            width: 350px;
-        }
+            width: 400px;
 
-        .spot-show-booking {
+        }
+        
+    }
+
+    .spot-show-booking {
             border: 1px solid black;
             width: 200px;
             position: sticky;
+            top: 10px;
             height: 100px;
             z-index: 3;
+            padding: 10px;
         }
-    }
 }

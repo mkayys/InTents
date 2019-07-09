@@ -3,10 +3,18 @@ import { Link } from 'react-router-dom';
 import Carousel from 'nuka-carousel';
 
 class SpotShow extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
     componentDidMount() {
         this.props.fetchSpot(this.props.match.params.spotId);
+        // this.props.fetchUser(this.props.spot.hostId);
     }
+
+    // componentDidUpdate() {
+    //     this.props.fetchUser(this.props.spot.hostId);
+    // }
 
     render() {
         if (this.props.spot === undefined) return null;
@@ -28,6 +36,8 @@ class SpotShow extends React.Component {
                     <div className='spot-show-location'>
                         <strong>Nearby:</strong> {this.props.spot.nearby}
                     </div>
+                    <br />
+
                     <div className='spot-show-details'>
                         <div className='spot-show-host'>
                             <i className="fas fa-user-circle"></i> {this.props.spot.hostId}
@@ -35,9 +45,11 @@ class SpotShow extends React.Component {
                         <div className='spot-show-about'>
                             {this.props.spot.about}
                         </div>
-                        <div className='spot-show-booking'>
-                            {this.props.price}
-                        </div>
+                    </div>
+
+                    <div className='spot-show-booking'>
+                        ${this.props.spot.price}
+                        <br /> per night
                     </div>
                 </div>
             </div>

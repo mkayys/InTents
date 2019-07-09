@@ -30,13 +30,13 @@ const App = () => (
         </div>
 
         <Switch>
-            <Route exact path="/spots" component={SpotIndexContainer} />
+            <Route exact path="/" component={SpotIndexContainer} />
             <Route exact path="/spots/:spotId" component={SpotShowContainer} />
-            <Route exact path="/map" component={SearchContainer} />
-            <Route exact path="/" render={() => 
+            <Route exact path="/spotsmap" component={SearchContainer} />
+            {/* <Route exact path="/" render={() => 
                 <div className="test-container">
                     Where would you like to camp?
-                </div>} />
+                </div>} /> */}
         </Switch>
     </div>
 );

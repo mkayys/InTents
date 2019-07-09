@@ -16,10 +16,10 @@ const SpotIndexItem = ({ spot }) => (
         <Link className='spot-info' to={`/spots/${spot.id}`}>
             <div className='spot-name-tent'>
                 <div className='spot-name'>
-                    {spot.name} <i class="fas fa-check-circle"></i>
+                    {spot.name} <i className="fas fa-check-circle"></i>
                 </div>
                 <div className='spot-tent-icon'>
-                    <i class="fas fa-campground"></i>
+                    <i className="fas fa-campground"></i>
                 </div>
             </div>
             <div className='spot-location'>

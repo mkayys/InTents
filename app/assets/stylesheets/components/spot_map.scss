@@ -1,0 +1,30 @@
+.index-and-map-page {
+    margin: 135px;
+    // padding-top: 48px;
+}
+
+.index-page {
+    display: flex;
+}
+
+.spots-listed {
+    width: 800px;
+    // padding-top: 60px;
+}
+.spots-map {
+    position: left fixed;
+    // display: block;
+    // padding: 100px 0px;
+    padding-left: 20px;
+    z-index: 5;
+    
+}
+
+.map-container[style] {
+    position: left fixed;
+    top: 50px;
+    width: 500px;
+    height: 800px;
+    // border: 1px solid white;
+    box-shadow: 5px 5px 5px 5px rgba(211, 211, 211, 0.7);
+}

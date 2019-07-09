@@ -20,7 +20,14 @@ class SpotIndex extends React.Component {
         
         return (
             <div>
-                <ul>
+                <div className="test-container">
+                    Find yourself in a tent.
+                    <br />
+                    <span className='test-2'>
+                        Book adventures where your tent leads.
+                    </span>
+                </div>  
+                <ul className='spots-index-list'>
                    {spots}
                 </ul>
             </div>
