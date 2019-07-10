@@ -1,11 +1,11 @@
 .spot-show-information {
     margin-top: 20px;
     padding: 0px 15px;
-    font-family: "Calibre", Helvetica, Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     .spot-show-pictures {
         display: flex;
         justify-content: space-evenly;
-        object-fit: scale-down;
+        // object-fit: contain;
         .pic-slides {
             max-height: auto;
             max-width: auto;
@@ -21,6 +21,15 @@ img {
 .slider[style] {
     max-height: 447px !important;
 }
+
+.slider-list[style]{
+    height: 447px !important;
+}
+
+.slide-visible[style]{
+    height: 447px !important;  
+}
+
 .spot-show-description {
     padding: 0px 475px 0px 150px;
     // margin-left: 20px;
@@ -36,30 +45,33 @@ img {
         .fas {
             color: rgb(97, 218, 173);
         }
-        border-bottom: 1px solid rgb(235,235,235);
+    
     }
 
     .spot-show-host-about {
         display: flex;
         justify-content: space-between;
         // margin-right: 300px; 
+        border-top: 1px solid rgb(235,235,235);
+        color: rgb(60, 60, 60);
         
-    
-        .spot-show-about {
-            margin: 10px; 
-            width: 400px;
+        .spot-show-about, .spot-show-host {
+            padding-top: 20px;
+        }
 
+        .spot-show-about {
+            width: 400px;
         }
         
     }
 
     .spot-show-booking {
-            border: 1px solid black;
-            width: 200px;
-            position: sticky;
-            top: 10px;
-            height: 100px;
-            z-index: 3;
-            padding: 10px;
-        }
+        border: 1px solid black;
+        width: 200px;
+        position: sticky;
+        top: 10px;
+        height: 100px;
+        z-index: 3;
+        padding: 10px;
+    }
 }

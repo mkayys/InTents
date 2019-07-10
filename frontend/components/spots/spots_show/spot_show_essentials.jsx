@@ -12,23 +12,23 @@ class SpotShowEssentials extends React.Component {
                 <div className='essentials-title'>Essentials</div>
 
                 <div className='campfire'>
-                    {this.props.spot.campfire ? <i className="fas fa-dragon"> Campfires allowed</i> : <i className="fas fa-slash"> No campfires</i>}
+                    {this.props.spot.campfire ? <i className="fas fa-dragon"><span className='next-to-icon-text'> Campfires allowed</span></i> : <i className="fas fa-slash"><span className='next-to-icon-not-available-text'> No campfires</span></i>}
                 </div>
 
                 <div className='toilets'>
-                    {this.props.spot.toilets ? <i className="fas fa-toilet-paper"> Toilet available</i> : <i className="fas fa-slash"> No toilet</i>}
+                    {this.props.spot.toilets ? <i className="fas fa-toilet-paper"><span className='next-to-icon-text'> Toilet available</span></i> : <i className="fas fa-slash"><span className='next-to-icon-not-available-text'> No toilet</span></i>}
                 </div>
 
                 <div className='pets'>
-                    {this.props.spot.pets ? <i className="fas fa-dog"> Pets allowed</i> : <i className="fas fa-slash"> No pets</i>}
+                    {this.props.spot.pets ? <i className="fas fa-dog"><span className='next-to-icon-text'> Pets allowed</span></i> : <i className="fas fa-slash"><span className='next-to-icon-not-available-text'> No pets</span></i>}
                 </div>
 
                 <div className='pull-through'>
-                    {this.props.spot.pullThrough ? <i className="fas fa-arrows-alt-h"> Pull-through site</i> : <i className="fas fa-slash"> No pull-through</i>}
+                    {this.props.spot.pullThrough ? <i className="fas fa-arrows-alt-h"><span className='next-to-icon-text'> Pull-through site</span></i> : <i className="fas fa-slash"><span className='next-to-icon-not-available-text'> No pull-through</span></i>}
                 </div>
 
                 <div className='hookups'>
-                    {this.props.spot.hookups ? <i className="fas fa-exchange-alt"> Hookups available</i> : <i className="fas fa-slash"> No hookups</i>}
+                    {this.props.spot.hookups ? <i className="fas fa-exchange-alt"> <span className='next-to-icon-text'> Hookups available </span></i> : <i className="fas fa-slash"><span className='next-to-icon-not-available-text'> No hookups</span></i>}
                 </div>
 
             </div>

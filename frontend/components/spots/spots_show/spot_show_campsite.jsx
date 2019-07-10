@@ -16,11 +16,11 @@ class SpotShowCampsite extends React.Component {
                 </div>
 
                 <div className='parking'>
-                    {this.props.spot.parking ? <i className="fas fa-parking"> <span className='park-text'>Park at spot</span></i> : <i className="fas fa-hiking"> <span className='park-text'>Walk to spot</span></i> }
+                    {this.props.spot.parking ? <i className="fas fa-parking"> <span className='next-to-icon-text'>Park at spot</span></i> : <i className="fas fa-hiking"> <span className='next-to-icon-text'>Walk to spot</span></i> }
                 </div>
                 
                 <div className='ada-access'>
-                    {this.props.spot.adaAccess ? <i className="fab fa-accessible-icon"><span className='ada-text'> ADA access</span></i> : <i className="fas fa-slash"> No ADA access</i> }
+                    {this.props.spot.adaAccess ? <i className="fab fa-accessible-icon"><span className='next-to-icon-text'> ADA access</span></i> : <i className="fas fa-slash"><span className='next-to-icon-not-available-text'> No ADA access</span></i> }
                 </div>
 
             </div>
