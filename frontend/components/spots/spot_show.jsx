@@ -33,6 +33,13 @@ class SpotShow extends React.Component {
                     </Carousel>
                 </div>
                 <br />
+
+                {/* <div className='spot-show-booking-box'>
+                    <div className='spot-show-booking'>
+                        ${this.props.spot.price}
+                        <br /> per night
+                    </div>
+                </div> */}
                 <div className='spot-show-description'>
                     <div className='spot-show-name'>
                         {this.props.spot.name} <i className="fas fa-check-circle"></i>
@@ -58,12 +65,6 @@ class SpotShow extends React.Component {
                             {this.props.spot.about}
                         </div>
                     </div>
-
-                    <div className='spot-show-booking'>
-                        ${this.props.spot.price}
-                        <br /> per night
-                    </div>
-
 
                     <div className='spot-show-description-icons'>
                         <SpotShowCampsite spot={this.props.spot} />

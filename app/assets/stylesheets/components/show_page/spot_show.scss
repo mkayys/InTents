@@ -2,15 +2,31 @@
     margin-top: 20px;
     padding: 0px 15px;
     font-family: 'Lato', sans-serif;
+    // object-fit: contain;
     .spot-show-pictures {
         display: flex;
         justify-content: space-evenly;
+        // align-items: stretch;
         // object-fit: contain;
         .pic-slides {
             max-height: auto;
             max-width: auto;
         }
     }
+    // .spot-show-booking-box {
+    //     border: 1px solid black;
+    //     width: 200px;
+    //     display: flex;
+    //     // position: -webkit-sticky;
+    //     justify-content: flex-end;
+    //     .spot-show-booking {
+    //         position: sticky;
+    //         top: 10px;
+    //         height: 100px;
+    //         z-index: 3;
+    //         padding: 10px;
+    //     }
+    // }
 }
 
 img {
@@ -19,15 +35,15 @@ img {
 }
 
 .slider[style] {
-    max-height: 447px !important;
+    max-height: 600px !important;
 }
 
 .slider-list[style]{
-    height: 447px !important;
+    height: 600px !important;
 }
 
 .slide-visible[style]{
-    height: 447px !important;  
+    height: 600px !important;  
 }
 
 .spot-show-description {
@@ -65,13 +81,5 @@ img {
         
     }
 
-    .spot-show-booking {
-        border: 1px solid black;
-        width: 200px;
-        position: sticky;
-        top: 10px;
-        height: 100px;
-        z-index: 3;
-        padding: 10px;
-    }
+
 }

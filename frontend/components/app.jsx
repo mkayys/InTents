@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import SpotIndexContainer from './spots/spot_index_container';
 import SpotShowContainer from './spots/spot_show_container';
 import SearchContainer from './search/search_container';
-
+import Footer from './footer/footer';
 
 const App = () => (
     <div>
@@ -38,6 +38,10 @@ const App = () => (
                     Where would you like to camp?
                 </div>} /> */}
         </Switch>
+
+        <section className='main-footer-container'>
+            <Footer />
+        </section>
     </div>
 );
 

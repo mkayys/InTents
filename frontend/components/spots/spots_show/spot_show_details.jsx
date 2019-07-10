@@ -11,13 +11,23 @@ class SpotShowDetails extends React.Component {
             <div className='show-details-info'>
                 <div className='details-title'>Details</div>
 
-                <strong>Check in:</strong> {this.props.spot.checkIn}
-                <strong>Check out:</strong> {this.props.spot.checkOut}
-                <strong>Cancellation policy:</strong> {this.props.spot.cancellation}
+                <div className='details-info'>
+                    <div className='details-info-1'>
+                        <br />
+                        <strong>Check in:</strong> {this.props.spot.checkIn}
+                        <br />
+                        <strong>Check out:</strong> {this.props.spot.checkOut}
+                        <br />
+                        <strong>Cancellation policy:</strong> {this.props.spot.cancellation}
+                    </div>
 
-                <strong>On arrival:</strong> {this.props.spot.onArrival}
-                <strong>Minimum nights:</strong > {this.props.spot.minNights} night(s)
-
+                    <div className='details-info-2'>
+                        <br />
+                        <strong>On arrival:</strong> {this.props.spot.onArrival}
+                        <br />
+                        <strong>Minimum nights:</strong > {this.props.spot.minNights} night(s)
+                    </div>
+                </div>
             </div>
         );
     }

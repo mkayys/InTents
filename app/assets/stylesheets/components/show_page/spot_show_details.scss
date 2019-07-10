@@ -1,0 +1,31 @@
+.spot-show-details {
+    padding: 20px 0px;
+    font-family: 'Lato', sans-serif;
+}
+
+.spot-show-details-box {
+    border-top: 1px solid rgb(235,235,235);
+}
+
+.show-details-info {
+    display: flex;
+    justify-content: space-between;
+
+    .details-title {
+        padding: 10px;
+    }
+
+    .details-info {
+        display: flex;
+        justify-content: space-between;
+
+        .details-info-1 {
+            padding: 5px;
+        }
+
+        .details-info-2 {
+            margin-right: 10px;
+            padding: 5px;
+        }
+    }
+}
