@@ -22,7 +22,7 @@ img {
     max-height: 447px !important;
 }
 .spot-show-description {
-    padding: 0px 200px;
+    padding: 0px 475px 0px 150px;
     // margin-left: 20px;
     .spot-show-name {
         font-size: 40px;
@@ -30,11 +30,20 @@ img {
             color: rgb(66, 152, 247);
         }
     }
+    .spot-show-recommend {
+        padding-top: 10px;
+        font-size: 12px;
+        .fas {
+            color: rgb(97, 218, 173);
+        }
+        border-bottom: 1px solid rgb(235,235,235);
+    }
 
-    .spot-show-details {
+    .spot-show-host-about {
         display: flex;
         justify-content: space-between;
-        margin-right: 300px; 
+        // margin-right: 300px; 
+        
     
         .spot-show-about {
             margin: 10px; 

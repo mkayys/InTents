@@ -1,0 +1,94 @@
+.spot-show-description-icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
+    flex-wrap: wrap;
+}
+
+.show-campsite-details {
+    border: 1px solid rgb(235, 235, 235);
+    padding: 15px;
+    height: 340px;
+    width: 220px;
+    box-shadow: 1px 1px 1px 1px rgba(211, 211, 211, 0.2);
+
+    .campsite-title {
+        font-family: "Calibre", Helvetica, Arial, sans-serif;
+        font-size: 24px;
+        margin: 0 0 10px 4px;
+    }
+    
+    .max-guest {
+        margin-bottom: 10px;
+        font-size: 15px;
+        font-family: "Calibre", Helvetica, Arial, sans-serif;
+        .fas {
+            margin-right: 5px;
+        }
+    }
+
+    .parking {
+        font-family: "Calibre", Helvetica, Arial, sans-serif;
+        font-weight: lighter;
+        font-size: 15px;
+        margin-bottom: 10px;
+
+        .fas {
+            margin-right: 5px;
+            // font-weight: lighter;
+        }
+    }
+
+    .ada-access {
+        font-family: "Calibre", Helvetica, Arial, sans-serif;
+        font-weight: lighter;
+        font-size: 15px;
+        margin-bottom: 10px;
+
+        .fab {
+            margin-right: 5px;
+        }
+    }
+}
+
+.show-essentials-details {
+    border: 1px solid rgb(235, 235, 235);
+    padding: 15px;
+    height: 340px;
+    width: 220px;
+    box-shadow: 1px 1px 1px 1px rgba(211, 211, 211, 0.2);
+
+    .essentials-title {
+        font-size: 24px;
+        margin: 0 0 10px 4px;
+    }
+    
+    .campfire, .toilets, .pets, .pull-through, .hookups {
+        font-family: "Calibre", Helvetica, Arial, sans-serif;
+        font-weight: lighter;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+}
+
+.show-amenities-details {
+    border: 1px solid rgb(235, 235, 235);
+    padding: 15px;
+    height: 340px;
+    width: 220px;
+    box-shadow: 1px 1px 1px 1px rgba(211, 211, 211, 0.2);
+
+    .amenities-title {
+        font-size: 24px;
+        margin: 0 0 10px 4px;
+    }
+
+    .potable-water, .showers, .picnic-table, .bins {
+        font-family: "Calibre", Helvetica, Arial, sans-serif;
+        font-weight: lighter;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}

@@ -4,9 +4,15 @@ import { fetchSpot } from '../../actions/spot_actions';
 import { fetchUser } from '../../actions/user_actions';
 import SpotShow from './spot_show';
 
-const mapStateToProps = (state, ownProps) => ({
-    spot: state.entities.spots[ownProps.match.params.spotId]
-});
+const mapStateToProps = (state, ownProps) => {
+    const spot = state.entities.spots[ownProps.match.params.spotId];
+    const host = spot ? state.entities.users[spot.hostId] : {};
+    
+    return {
+        spot: spot,
+        host: host
+    }
+};
 
 const mapDispatchToProps = dispatch => ({
     fetchSpot: (id) => dispatch(fetchSpot(id)),

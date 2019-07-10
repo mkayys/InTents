@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Carousel from 'nuka-carousel';
+import SpotShowCampsite from './spots_show/spot_show_campsite';
+import SpotShowEssentials from './spots_show/spot_show_essentials';
+import SpotShowAmenities from './spots_show/spot_show_amenities';
+import SpotShowDetails from './spots_show/spot_show_details';
 
 class SpotShow extends React.Component {
     constructor(props) {
@@ -36,11 +40,19 @@ class SpotShow extends React.Component {
                     <div className='spot-show-location'>
                         <strong>Nearby:</strong> {this.props.spot.nearby}
                     </div>
+                    <div className='spot-show-recommend'>
+                        <i className="fas fa-thumbs-up"></i> &nbsp;<strong>Recommend</strong>
+                    </div>
                     <br />
 
-                    <div className='spot-show-details'>
+                    <div className='spot-show-host-about'>
                         <div className='spot-show-host'>
-                            <i className="fas fa-user-circle"></i> {this.props.spot.hostId}
+                            <i className="fas fa-user-circle"></i> 
+                            <div className='host-name'>
+                                Hosted by
+                                <br />
+                                {this.props.host.firstName} {this.props.host.lastName[0]}.
+                            </div>
                         </div> &nbsp;
                         <div className='spot-show-about'>
                             {this.props.spot.about}
@@ -51,7 +63,22 @@ class SpotShow extends React.Component {
                         ${this.props.spot.price}
                         <br /> per night
                     </div>
+
+
+                    <div className='spot-show-description-icons'>
+                        <SpotShowCampsite spot={this.props.spot} />
+                        <SpotShowEssentials spot={this.props.spot} />
+                        <SpotShowAmenities spot={this.props.spot} />
+                    </div> 
+
+                    <div className='spot-show-details'>
+                        <div className='spot-show-details-box'>
+                            <SpotShowDetails spot={this.props.spot} />
+                        </div>
+                    </div>
                 </div>
+
+
             </div>
         );
     }
