@@ -39,6 +39,10 @@ class Spot < ApplicationRecord
         foreign_key: :host_id,
         class_name: :User
     
+    has_many :bookings,
+        foreign_key: :spot_id,
+        class_name: :Booking
+
     has_many_attached :photos
 
 

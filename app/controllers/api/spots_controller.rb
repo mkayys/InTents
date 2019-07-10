@@ -1,7 +1,6 @@
 class Api::SpotsController < ApplicationController
 
     def index
-        # debugger
         # @spots = Spot.in_bounds(params[:bounds])
         @spots = Spot.all
         render 'api/spots/index'
