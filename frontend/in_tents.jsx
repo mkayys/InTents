@@ -4,6 +4,8 @@ import Root from './components/root';
 import { signup, login, logout } from './actions/session_actions';
 import configureStore from './store/store';
 import { fetchSpots, fetchSpot } from './actions/spot_actions';
+import { fetchBookings, fetchBooking, createBooking, deleteBooking } from './actions/booking_actions';
+// import { createBooking } from './util/booking_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -26,6 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // window.signup = signup;
     // window.login = login;
     // window.logout = logout;
+    window.createBooking = createBooking;
+    window.deleteBooking = deleteBooking;
+    window.fetchBookings = fetchBookings;
+    window.fetchBooking = fetchBooking;
     window.fetchSpots = fetchSpots;
     window.fetchSpot = fetchSpot;
     window.getState = store.getState;

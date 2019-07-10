@@ -33,6 +33,7 @@ const App = () => (
             <Route exact path="/" component={SpotIndexContainer} />
             <Route exact path="/spots/:spotId" component={SpotShowContainer} />
             <Route exact path="/spotsmap" component={SearchContainer} />
+            <Route exact path="/spot/bookings" component={BookingIndexContainer} />
             {/* <Route exact path="/" render={() => 
                 <div className="test-container">
                     Where would you like to camp?

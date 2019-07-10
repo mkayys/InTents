@@ -217,3 +217,49 @@ Spot.all.each_with_index do |spot, idx|
     end
 end
 
+
+# BOOKINGS
+
+num_spots = Spot.all.length
+
+Booking.destroy_all
+
+Booking.create(
+    guest_id: User.all.to_a.sample.id,
+    check_in: 20190718,
+    check_out: 20190720,
+    spot_id: Spot.all.to_a.sample.id,
+    num_guests: rand(1..4)
+)
+
+Booking.create(
+    guest_id: User.all.to_a.sample.id,
+    check_in: 20190721,
+    check_out: 20190722,
+    spot_id: Spot.all.to_a.sample.id,
+    num_guests: rand(1..4)
+)
+
+Booking.create(
+    guest_id: User.all.to_a.sample.id,
+    check_in: 20190801,
+    check_out: 20190806,
+    spot_id: Spot.all.to_a.sample.id,
+    num_guests: rand(1..4)
+)
+
+Booking.create(
+    guest_id: User.all.to_a.sample.id,
+    check_in: 20190723,
+    check_out: 20190725,
+    spot_id: Spot.all.to_a.sample.id,
+    num_guests: rand(1..4)
+)
+
+Booking.create(
+    guest_id: User.all.to_a.sample.id,
+    check_in: 20190729,
+    check_out: 20190730,
+    spot_id: Spot.all.to_a.sample.id,
+    num_guests: rand(1..4)
+)
