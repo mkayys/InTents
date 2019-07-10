@@ -47,6 +47,6 @@ class Spot < ApplicationRecord
         .where("latitude > ?", bounds[:southWest][:longitude])
         .where("longitude > ?", bounds[:southWest][:longitude])
         .where("longitude < ?", bounds[:northEast][:longitude])
-  end
+    end
 
 end

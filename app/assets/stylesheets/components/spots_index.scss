@@ -1,14 +1,17 @@
 
 .spots-index-list {
     padding: 40px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
     border-bottom: 1px solid white;
-    box-shadow: 5px 5px 5px 5px rgba(211, 211, 211, 0.7);
+    box-shadow: 0px 5px 5px -5px rgba(211, 211, 211, 0.7);
 }
 
 .site-additional-info {
     height: 500px;
     width: 500px;
     margin: 0 auto;
+    margin-top: 10px;
 }
 
 .spot-pictures .slider[style]{

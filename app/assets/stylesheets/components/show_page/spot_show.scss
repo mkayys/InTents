@@ -46,40 +46,80 @@ img {
     height: 600px !important;  
 }
 
-.spot-show-description {
-    padding: 0px 475px 0px 150px;
-    // margin-left: 20px;
-    .spot-show-name {
-        font-size: 40px;
-        .fas {
-            color: rgb(66, 152, 247);
-        }
-    }
-    .spot-show-recommend {
-        padding-top: 10px;
-        font-size: 12px;
-        .fas {
-            color: rgb(97, 218, 173);
-        }
-    
-    }
+.spot-show-parent-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
 
-    .spot-show-host-about {
-        display: flex;
-        justify-content: space-between;
-        // margin-right: 300px; 
-        border-top: 1px solid rgb(235,235,235);
-        color: rgb(60, 60, 60);
+    .spot-show-description {
+        width: 66%;
+
+        .spot-show-name {
+            font-size: 40px;
+            .fas {
+                color: rgb(66, 152, 247);
+            }
+        }
+        .spot-show-recommend {
+            padding-top: 10px;
+            font-size: 12px;
+            .fas {
+                color: rgb(97, 218, 173);
+            }
         
-        .spot-show-about, .spot-show-host {
-            padding-top: 20px;
         }
 
-        .spot-show-about {
-            width: 400px;
+        .spot-show-host-about {
+            display: flex;
+            justify-content: space-between;
+            // margin-right: 300px; 
+            border-top: 1px solid rgb(235,235,235);
+            color: rgb(60, 60, 60);
+            
+            .spot-show-about, .spot-show-host {
+                padding-top: 20px;
+            }
+
+            .spot-show-about {
+                width: 400px;
+            }
+            
         }
-        
+
+
     }
 
 
+    .booking-container {
+        flex: 1;
+        
+        .spot-show-booking-box {
+
+            position: sticky;
+            top: 0px;
+            margin-top: -60px;
+            border: 1px solid #ebebeb;
+            box-shadow: 1px 1px 1px 1px rgba(211, 211, 211, 0.2);
+            background-color: white;
+            z-index: 2;
+            width: 319px;
+
+            .booking-price-per-night {
+                padding: 13px 10px;
+
+                .booking-price {
+                    font-size: 20px;
+                    font-weight: 900px;
+                }
+                
+                .booking-per-night {
+                    font-size: 15px;
+                    color: rgb(191, 191, 191);
+                }
+            }
+
+        }
+    }
 }
+
+

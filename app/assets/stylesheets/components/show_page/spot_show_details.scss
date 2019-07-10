@@ -1,6 +1,7 @@
 .spot-show-details {
     padding: 20px 0px;
     font-family: 'Lato', sans-serif;
+    border-bottom: 1px solid rgb(235,235,235);
 }
 
 .spot-show-details-box {
@@ -10,9 +11,11 @@
 .show-details-info {
     display: flex;
     justify-content: space-between;
+    
 
     .details-title {
         padding: 10px;
+        margin-top: 12px;
     }
 
     .details-info {
@@ -20,12 +23,12 @@
         justify-content: space-between;
 
         .details-info-1 {
-            padding: 5px;
+            padding: 3px 20px;
         }
 
         .details-info-2 {
             margin-right: 10px;
-            padding: 5px;
+            padding: 3px;
         }
     }
 }

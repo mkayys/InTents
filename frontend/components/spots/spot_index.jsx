@@ -32,7 +32,7 @@ class SpotIndex extends React.Component {
                 </ul>
 
                 <div className='site-additional-info'>
-                    <img src='https://djqvcbmmgpti5.cloudfront.net/assets/admin/hipcamp-love-64ecf63c78497198695c5c1bb4e9e4be3ac72d4a6d51af3e1d9776089c1b8cc3.gif' className='logo-gif' />
+                    <img src='https://in-tents-seed.s3-us-west-1.amazonaws.com/main_images/tent-love.gif' className='logo-gif' />
                 </div>
             </div>
         );
