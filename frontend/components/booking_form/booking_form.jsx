@@ -42,9 +42,9 @@ class BookingForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         if (this.props.loggedIn) {
-            
+
             const booking = Object.assign({}, this.state);
-            console.log(this.state);
+            // console.log(this.state);
             this.props.processForm(booking);
             
         } else {
@@ -78,7 +78,7 @@ class BookingForm extends React.Component {
                         <div className="booking-check-in">
                             <div className='checkin-title'>Check in</div>
                             <DatePicker 
-                                // className='checkin-input'
+                                className='checkin-input booking-input'
                                 placeholderText="Select date"
                                 openToDate={new Date()}
                                 selected={this.state.check_in}
@@ -89,7 +89,7 @@ class BookingForm extends React.Component {
                         <div className="booking-check-out">
                             <div className='checkout-title'>Check out</div>
                             <DatePicker
-                                // className='checkout-input'
+                                className='checkout-input booking-input'
                                 placeholderText="Select date"
                                 selected={this.state.check_out}
                                 onChange={this.handleCheckOut} />
@@ -98,7 +98,8 @@ class BookingForm extends React.Component {
                         <div className="booking-num-guests">
                             <div className='guests-title'>Guests</div>
                             <input
-                                className="num-guests"
+                                className="num-guests booking-input"
+                                value={this.state.num_guests}
                                 type="number"
                                 onChange={this.update('num_guests')}
                             />

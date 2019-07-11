@@ -114,3 +114,17 @@
     padding-left: 10px;
     font-weight: bold;
 }
+
+.booking-input {
+    border: transparent;
+    padding-left: 10px;
+    width: 100px;
+}
+
+.booking-input:hover {
+    background-color: rgb(249, 249, 249);
+}
+
+.checkin-input, .checkout-input {
+    cursor: pointer;
+}
