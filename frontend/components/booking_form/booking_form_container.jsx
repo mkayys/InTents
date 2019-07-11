@@ -11,16 +11,10 @@ const mapStateToProps = ({ errors }) => {
 };
 
 const mapDispatchToProps = dispatch => {
-    // return {
-    //     processForm: (user) => dispatch(login(user)),
-    //     otherForm: (
-    //         <button className='login-to-signup' onClick={() => dispatch(openModal('signup'))}>
-    //             Sign up
-    //         </button>
-    //     ),
-    //     closeModal: () => dispatch(closeModal()),
-    //     clearErrors: () => dispatch(clearErrors())
-    // };
+    return {
+        processForm: (booking) => dispatch(createBooking(booking)),
+        clearErrors: () => dispatch(clearErrors())
+    };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookingForm);

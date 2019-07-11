@@ -1,30 +1,52 @@
 import React from 'react';
+import DatePicker from 'react-datepicker';
+
+import 'react-datepicker/dist/react-datepicker.css';
 
 class BookingForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            checkIn: '',
-            checkOut: '',
+            checkIn: 0,
+            checkOut: 0,
             numGuests: 1
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleCheckIn = this.handleCheckIn.bind(this);
+        this.handleCheckOut = this.handleCheckOut.bind(this);
     }
 
     // componentWillMount() {
     //     this.props.clearErrors();
     // }
 
+    componentWillUpdate() {
+        console.log(this.state);
+    }
+
     update(field) {
         return e => this.setState({
-            [field]: e.currentTarget.value
+            [field]: parseInt(e.currentTarget.value)
+        });
+    }
+
+    handleCheckIn(date) {
+        this.setState({
+            checkIn: date
+        });
+    }
+
+    handleCheckOut(date) {
+
+        this.setState({
+            checkOut: date
         });
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        const user = Object.assign({}, this.state);
-        this.props.processForm(user).then(this.props.closeModal);
+        const booking = Object.assign({}, this.state);
+        this.props.processForm(booking);
     }
 
 
@@ -45,55 +67,47 @@ class BookingForm extends React.Component {
 
     render() {
         return (
-            <div className="login-form-container">
-                <form className="login-form-box">
-                    <div className='close-form' onClick={this.props.closeModal}>
-                        <i className="fas fa-times"></i>
-                    </div>
-                    <div className="login-header">
-                        <h4>Hey, welcome back!</h4>
-                        <h6>It's about time for another adventure</h6>
-                    </div>
+            <div className="booking-form-container">
+                <form className="booking-form-box">
+
                     {this.renderErrors()}
-                    <div className="login-form">
-                        <br />
-                        <input type="text"
-                            value={this.state.email}
-                            onChange={this.update('email')}
-                            className="login-input"
-                            id="email"
-                            placeholder="Email address"
-                        />
-                        <br />
-                        <br />
-                        <input type="password"
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                            className="login-input"
-                            id="password"
-                            placeholder="Password"
-                        />
-                        <br />
-                        <br />
-                        <div className="login-form-footer">
-                            <input
-                                className="login-submit"
-                                type="submit"
-                                value={this.props.formType}
-                                onClick={this.handleSubmit}
-                            />
-                            <input
-                                className='demo-user'
-                                type="submit"
-                                value="Demo User"
-                                onClick={this.emailTyper}
-                            />
-                        </div>
-                        <br />
-                        <div className='login-form-switch'>
-                            New to in-Tents? &nbsp; {this.props.otherForm}
-                        </div>
+
+                    <div className="booking-check-in">
+                        <div className='checkin-title'>Check in</div>
+                        <DatePicker 
+                            placeholderText="Select date"
+                            openToDate={new Date()}
+                            selected={this.state.checkIn}
+                            onChange={this.handleCheckIn} />
+
                     </div>
+
+                    <div className="booking-check-out">
+                        <div className='checkout-title'>Check out</div>
+                        <DatePicker
+                            placeholderText="Select date"
+                            selected={this.state.checkOut}
+                            onChange={this.handleCheckOut} />
+                    </div>
+
+                    <div className="booking-num-guests">
+                        <div className='guests-title'>Guests</div>
+                        <input
+                            className="num-guests"
+                            type="number"
+                            onChange={this.update('numGuests')}
+                        />
+                    </div>
+
+                    <div className='booking-button-box'>
+                        <input
+                            className='booking-button'
+                            type="submit"
+                            value="Instant book"
+                            onClick={this.handleSubmit}
+                        />
+                    </div>
+                
                 </form>
             </div>
         );
