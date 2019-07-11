@@ -8,6 +8,8 @@ import SpotShowContainer from './spots/spot_show_container';
 import SearchContainer from './search/search_container';
 import Footer from './footer/footer';
 
+import BookingIndexContainer from './bookings/booking_index_container';
+
 const App = () => (
     <div>
         
@@ -33,7 +35,7 @@ const App = () => (
             <Route exact path="/" component={SpotIndexContainer} />
             <Route exact path="/spots/:spotId" component={SpotShowContainer} />
             <Route exact path="/spotsmap" component={SearchContainer} />
-            <Route exact path="/spot/bookings" component={BookingIndexContainer} />
+            <Route exact path="/bookings" component={BookingIndexContainer} />
             {/* <Route exact path="/" render={() => 
                 <div className="test-container">
                     Where would you like to camp?
