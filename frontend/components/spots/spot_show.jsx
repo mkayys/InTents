@@ -5,7 +5,7 @@ import SpotShowCampsite from './spots_show/spot_show_campsite';
 import SpotShowEssentials from './spots_show/spot_show_essentials';
 import SpotShowAmenities from './spots_show/spot_show_amenities';
 import SpotShowDetails from './spots_show/spot_show_details';
-import BookingFormContainer from '../booking_form/booking_form_container';
+import BookingForm from '../booking_form/booking_form_container';
 
 
 
@@ -89,7 +89,7 @@ class SpotShow extends React.Component {
                             </div>
                             
 
-                            <BookingFormContainer />
+                            <BookingForm spot={this.props.spot} />
                             {/* BOOKING COMPONENT HERE */}
                             {/* <div className='booking-calendar-guest'>
                                 <div className='booking-check-in'>

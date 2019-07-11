@@ -85,14 +85,14 @@
   padding: 20px 15px;
   font-weight: bold;
   font-size: 16px;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
 
 }
 
 .signup-submit[type=submit]:hover {
   background-color: white;
   color: rgb(97, 218, 173);
-  border: 2px solid rgb(97, 218, 173);
+  border: 3px solid rgb(97, 218, 173);
   cursor: pointer;
   transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
 }
@@ -109,13 +109,13 @@
     padding: 5px 15px;
     font-weight: bold;
     font-size: 12px;
-    border: 2px solid transparent;
+    border: 3px solid transparent;
     margin: 5px;
   }
   .demo-user[type=submit]:hover {
     background-color: white;
     color: rgb(97, 218, 173);
-    border: 2px solid rgb(97, 218, 173);
+    border: 3px solid rgb(97, 218, 173);
     cursor: pointer;
     transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
   }
@@ -134,13 +134,13 @@
     padding: 5px 15px;
     font-weight: bold;
     font-size: 16px;
-    border: 2px solid transparent;
+    border: 3px solid transparent;
     margin-left: 5px;
   }
   .demo-user[type=submit]:hover {
     background-color: white;
     color: rgb(97, 218, 173);
-    border: 2px solid rgb(97, 218, 173);
+    border: 3px solid rgb(97, 218, 173);
     cursor: pointer;
     transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
   }
@@ -171,13 +171,13 @@
   padding: 3px;
   font-weight: bold;
   font-size: 12px;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
 }
 
 .signup-to-login:hover {
   background-color: white;
   color: rgb(97, 218, 173);
-  border: 2px solid rgb(97, 218, 173);
+  border: 3px solid rgb(97, 218, 173);
   cursor: pointer;
   transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
   border-radius: 5px;
@@ -192,13 +192,13 @@
   padding: 3px;
   font-weight: bold;
   font-size: 12px;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
 }
 
 .login-to-signup:hover {
   background-color: white;
   color: rgb(97, 218, 173);
-  border: 2px solid rgb(97, 218, 173);
+  border: 3px solid rgb(97, 218, 173);
   cursor: pointer;
   transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
   border-radius: 5px;

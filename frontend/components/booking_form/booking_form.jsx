@@ -7,9 +7,10 @@ class BookingForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            checkIn: 0,
-            checkOut: 0,
-            numGuests: 1
+            spot_id: this.props.spot.id,
+            check_in: 0,
+            check_out: 0,
+            num_guests: 1
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleCheckIn = this.handleCheckIn.bind(this);
@@ -20,10 +21,6 @@ class BookingForm extends React.Component {
     //     this.props.clearErrors();
     // }
 
-    componentWillUpdate() {
-        console.log(this.state);
-    }
-
     update(field) {
         return e => this.setState({
             [field]: parseInt(e.currentTarget.value)
@@ -32,21 +29,27 @@ class BookingForm extends React.Component {
 
     handleCheckIn(date) {
         this.setState({
-            checkIn: date
+            check_in: date
         });
     }
 
     handleCheckOut(date) {
-
         this.setState({
-            checkOut: date
+            check_out: date
         });
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        const booking = Object.assign({}, this.state);
-        this.props.processForm(booking);
+        if (this.props.loggedIn) {
+            
+            const booking = Object.assign({}, this.state);
+            console.log(this.state);
+            this.props.processForm(booking);
+            
+        } else {
+            this.props.requireLogin();
+        }
     }
 
 
@@ -69,41 +72,44 @@ class BookingForm extends React.Component {
         return (
             <div className="booking-form-container">
                 <form className="booking-form-box">
+                    <div className='booking-inputs'>
+                        {this.renderErrors()}
 
-                    {this.renderErrors()}
+                        <div className="booking-check-in">
+                            <div className='checkin-title'>Check in</div>
+                            <DatePicker 
+                                // className='checkin-input'
+                                placeholderText="Select date"
+                                openToDate={new Date()}
+                                selected={this.state.check_in}
+                                onChange={this.handleCheckIn} />
 
-                    <div className="booking-check-in">
-                        <div className='checkin-title'>Check in</div>
-                        <DatePicker 
-                            placeholderText="Select date"
-                            openToDate={new Date()}
-                            selected={this.state.checkIn}
-                            onChange={this.handleCheckIn} />
+                        </div>
 
-                    </div>
+                        <div className="booking-check-out">
+                            <div className='checkout-title'>Check out</div>
+                            <DatePicker
+                                // className='checkout-input'
+                                placeholderText="Select date"
+                                selected={this.state.check_out}
+                                onChange={this.handleCheckOut} />
+                        </div>
 
-                    <div className="booking-check-out">
-                        <div className='checkout-title'>Check out</div>
-                        <DatePicker
-                            placeholderText="Select date"
-                            selected={this.state.checkOut}
-                            onChange={this.handleCheckOut} />
-                    </div>
-
-                    <div className="booking-num-guests">
-                        <div className='guests-title'>Guests</div>
-                        <input
-                            className="num-guests"
-                            type="number"
-                            onChange={this.update('numGuests')}
-                        />
+                        <div className="booking-num-guests">
+                            <div className='guests-title'>Guests</div>
+                            <input
+                                className="num-guests"
+                                type="number"
+                                onChange={this.update('num_guests')}
+                            />
+                        </div>
                     </div>
 
                     <div className='booking-button-box'>
                         <input
                             className='booking-button'
                             type="submit"
-                            value="Instant book"
+                            value="Request to book"
                             onClick={this.handleSubmit}
                         />
                     </div>

@@ -1,0 +1,116 @@
+.booking-form-container {
+    border-top: 1px solid #ebebeb;
+    display: flex;
+
+    .booking-form-box {
+        display: inline-block;
+        // justify-content: space-around;
+        width: 100%;
+
+        .booking-inputs {
+            display: flex;
+            justify-content: space-around;
+
+            .booking-check-in {
+                border-right: 1px solid #ebebeb;
+                border-bottom: 1px solid #ebebeb;
+                border-left: 1px solid transparent;
+                border-top: 1px solid transparent;
+            }
+            
+            .booking-check-out {
+                border-right: 1px solid #ebebeb;
+                border-bottom: 1px solid #ebebeb;
+                border-left: 1px solid transparent;
+                border-top: 1px solid transparent;
+            }
+
+            .booking-num-guests {
+                border-bottom: 1px solid #ebebeb;
+                border-top: 1px solid transparent;
+                border-right: 1px solid transparent;
+                border-left: 1px solid transparent;
+            }
+
+            .booking-check-in, .booking-check-out {
+                width: 36%;
+            }
+            
+            .booking-num-guests {
+                width: 28%;
+            }
+
+            .booking-check-in, .booking-check-out, .booking-num-guests {
+                // border: 1px solid transparent;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                color: #333333;
+                overflow: hidden;
+                // width: 100px;
+            }
+
+            .booking-check-in:hover {
+                border: 1px solid transparent;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                color: #333333;
+                transition: background-color 0.3s ease 0s;
+                background-color: rgb(249, 249, 249);
+                cursor: pointer;
+            }
+
+            .booking-check-out:hover {
+                border: 1px solid transparent;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                color: #333333;
+                transition: background-color 0.3s ease 0s;
+                background-color: rgb(249, 249, 249);
+                cursor: pointer;
+            }
+
+            .booking-num-guests:hover {
+                border: 1px solid transparent;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                color: #333333;
+                transition: background-color 0.3s ease 0s;
+                background-color: rgb(249, 249, 249);
+                cursor: pointer;
+            }
+            
+        }
+
+        .booking-button-box {
+            background-color: white;
+            border: 1px solid #ebebeb;
+            padding: 10px;
+            display: block;
+
+            .booking-button[type=submit] {
+                width: 100%;
+                font-family: "Calibre", Helvetica, Arial, sans-serif;
+                background-color: rgb(64, 217, 172);
+                color: white;
+                padding: 10px 15px;
+                font-weight: bold;
+                font-size: 16px;
+                border: 3px solid transparent;
+            }
+
+            .booking-button[type=submit]:hover {
+                background-color: white;
+                color: rgb(64, 217, 172);
+                border: 3px solid rgb(64, 217, 172);
+                cursor: pointer;
+                transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+            }
+        }
+    }
+}
+
+
+.checkin-title, .checkout-title, .guests-title {
+    padding-left: 10px;
+    font-weight: bold;
+}

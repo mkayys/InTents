@@ -2,18 +2,23 @@ import { connect } from 'react-redux';
 import React from 'react';
 import { createBooking } from '../../actions/booking_actions';
 import BookingForm from './booking_form';
+import { openModal } from '../../actions/modal_actions';
 
-const mapStateToProps = ({ errors }) => {
+const mapStateToProps = (state) => {
+    // const currentUser = state.session.currentUserId ? currentUserId : 'none';
     return {
-        errors: errors.booking,
-        formType: 'Create Booking'
-    };
+        errors: state.errors.booking,
+        formType: 'Create Booking',
+        loggedIn: !!state.session.currentUserId
+        // currentUser: currentUser
+    }
 };
 
 const mapDispatchToProps = dispatch => {
     return {
         processForm: (booking) => dispatch(createBooking(booking)),
-        clearErrors: () => dispatch(clearErrors())
+        clearErrors: () => dispatch(clearErrors()),
+        requireLogin: () => dispatch(openModal('login'))
     };
 };
 
