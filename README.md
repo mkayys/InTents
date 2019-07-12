@@ -33,3 +33,15 @@ in-Tents, a HipCamp clone, is a campsite booking application that allows users t
 
 ![in-Tents Homepage](app/assets/images/main_page.png)
 
+### Demo User Login
+![Demo-User](https://media.giphy.com/media/JshwNfEzPAJPAd4CLp/giphy.gif)
+
+
+## Possible future features
+
+In the future I would like to add:
+  * Map with Markers
+  * Search
+  * Users can create a spot
+  * Bookings can be edited
+  * Users can post, edit, and delete reviews
