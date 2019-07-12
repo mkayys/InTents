@@ -1,4 +1,7 @@
-# README
+# in-Tents
+---
+
+in-Tents, a HipCamp clone, is a campsite booking application that allows users to book campsites hosted by other users. It is exclusively for camping.
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
