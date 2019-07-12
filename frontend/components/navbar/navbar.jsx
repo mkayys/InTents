@@ -8,12 +8,15 @@ const NavBar = ({ currentUser, logout, openModal }) => {
             <a id="loginLink" href="#" onClick={() => openModal('login')}>Log in</a>
         </nav>
     );
-    const personalGreeting = () => (
+    const personalGreeting = () => {
+        // debugger
+        return (
         <hgroup className="header-group">
-            <h2 className="header-name">Hi, {currentUser.firstName} {currentUser.lastName[0].toUpperCase()}.</h2>
+            <h2 className="header-name">Hi, {currentUser.firstName} {currentUser.lastName.slice(0,1)}.</h2>
             <button className="header-button" onClick={logout}>Log out</button>
         </hgroup>
-    );
+        )
+    };
 
     return currentUser ? personalGreeting() : sessionLinks();
 };
