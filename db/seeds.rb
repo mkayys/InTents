@@ -217,6 +217,8 @@ Spot.all.each_with_index do |spot, idx|
     end
 end
 
+## NEW SPOT SEED DATA
+
 
 # BOOKINGS
 
