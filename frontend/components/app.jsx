@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import SpotIndexContainer from './spots/spot_index_container';
 import SpotShowContainer from './spots/spot_show_container';
 import SearchContainer from './search/search_container';
+import UserShowContainer from './user/user_show_container';
 import Footer from './footer/footer';
 
 import BookingIndexContainer from './bookings/booking_index_container';
@@ -33,6 +34,7 @@ const App = () => (
 
         <Switch>
             <Route exact path="/" component={SpotIndexContainer} />
+            <Route exact path='/profile' component={UserShowContainer} />
             <Route exact path="/spots/:spotId" component={SpotShowContainer} />
             <Route exact path="/spotsmap" component={SearchContainer} />
             <Route exact path="/bookings" component={BookingIndexContainer} />

@@ -1,5 +1,6 @@
 import React from 'react';
 import DatePicker from 'react-datepicker';
+import { withRouter } from 'react-router-dom';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -45,7 +46,7 @@ class BookingForm extends React.Component {
 
             const booking = Object.assign({}, this.state);
             // console.log(this.state);
-            this.props.processForm(booking);
+            this.props.processForm(booking).then(this.props.history.push('/profile'));
             
         } else {
             this.props.requireLogin();
@@ -99,6 +100,7 @@ class BookingForm extends React.Component {
                             <div className='guests-title'>Guests</div>
                             <input
                                 className="num-guests booking-input"
+                                id="guest-number"
                                 value={this.state.num_guests}
                                 type="number"
                                 onChange={this.update('num_guests')}
@@ -122,4 +124,4 @@ class BookingForm extends React.Component {
     }
 }
 
-export default BookingForm;
+export default withRouter(BookingForm);

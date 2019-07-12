@@ -23,8 +23,16 @@ class User < ApplicationRecord
     has_one_attached :photo
 
     has_many :spots
-    has_many :bookings
+
+    has_many :bookings,
+        foreign_key: :guest_id,
+        class_name: :Booking
+    
     has_many :reviews
+
+    has_many :booked_spots,
+        through: :bookings,
+        source: :spot
 
     after_initialize :ensure_session_token
 

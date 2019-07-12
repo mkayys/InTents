@@ -7,8 +7,8 @@ export const fetchUser = (id) => dispatch => (
         .then(user => dispatch(receiveUser(user)))
 );
 
-export const receiveUser = (user) => ({
+export const receiveUser = (payload) => ({
     type: RECEIVE_USER,
-    user
+    payload
 });
 
