@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // window.fetchBooking = fetchBooking;
     // window.fetchSpots = fetchSpots;
     // window.fetchSpot = fetchSpot;
-    window.getState = store.getState;
-    window.dispatch = store.dispatch;
+    // window.getState = store.getState;
+    // window.dispatch = store.dispatch;
     // TESTING END
 
     ReactDOM.render(<Root store={store} />, root);

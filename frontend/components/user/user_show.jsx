@@ -41,9 +41,18 @@ class UserShow extends React.Component {
         return (
             <div className='user-profile'>
                 <div className='user-info'>
-                    {this.props.user.firstName} {this.props.user.lastName[0]}.
+                    <div className='user-name-and-pic'>
+                        <img className='user-pic' src='https://in-tents-seed.s3-us-west-1.amazonaws.com/main_images/main-icon.png' />
+                        <span className='user-name'>
+                            {this.props.user.firstName} {this.props.user.lastName[0]}.
+                        </span>
+                        <div className='user-info'>
+                            <i className="fas fa-mountain"></i>Tent-a-holic since today 
+                        </div>
+                    </div>
                 </div>
 
+                
 
                 <div className='user-bookings-list'>
                     <ul className='list-bookings'>
