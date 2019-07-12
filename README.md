@@ -31,7 +31,5 @@ in-Tents, a HipCamp clone, is a campsite booking application that allows users t
 * After viewing a spot, users can create a booking by picking a check-in and check-out date on the calendar and inputting the number of guests.
 * Bookings are listed on the user's profile page, where the user can choose to cancel a booking.
 
-![in-Tents Homepage](docs/images/feed.png)
-<p align="center">
- <img width="600" height="375" src="https://github.com/sophiacheungshc/kitchen_fable/blob/master/app/assets/images/seconddemo.gif">
-</p>
+![in-Tents Homepage](app/assets/images/main_page.png)
+
