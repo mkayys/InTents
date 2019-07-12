@@ -8,7 +8,6 @@ class BookingIndexItem extends React.Component {
 
 
     render() {
-        // debugger
         const { booking, spot, deleteBooking } = this.props
         return (
             <li key={booking.id} className='all-bookings'>

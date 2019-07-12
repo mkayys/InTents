@@ -4,7 +4,6 @@ import { openModal } from '../../actions/modal_actions';
 import NavBar from './navbar';
 
 const mapStateToProps = (state) => {
-    // debugger
     return {
         currentUser: state.entities.users[state.session.currentUserId]
     };

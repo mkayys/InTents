@@ -10,7 +10,6 @@ const NavBar = ({ currentUser, logout, openModal }) => {
         </nav>
     );
     const personalGreeting = () => {
-        // debugger
         return (
         <hgroup className="header-group">
             <Link className='profile-page' to='/profile'>

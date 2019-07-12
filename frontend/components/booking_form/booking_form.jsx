@@ -45,7 +45,6 @@ class BookingForm extends React.Component {
         if (this.props.loggedIn) {
 
             const booking = Object.assign({}, this.state);
-            // console.log(this.state);
             this.props.processForm(booking).then(this.props.history.push('/profile'));
             
         } else {

@@ -18,12 +18,12 @@ class UserShow extends React.Component {
         if (this.props.user === undefined) return null;
         if (this.props.bookings === undefined) return null;
         if (this.props.spots === undefined) return null;
-        // debugger
+
         const bookings = this.props.bookings.map(booking => {
             let spot = undefined;
             this.props.spots.forEach( potentialSpot => {
                 if (booking.spotId === potentialSpot.id) {
-                    // debugger
+
                     spot = potentialSpot;
                 }
             })
