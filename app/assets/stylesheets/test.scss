@@ -3,7 +3,7 @@
     background-image: url('https://in-tents-seed.s3-us-west-1.amazonaws.com/main_images/main.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 800px;
+    height: 600px;
     width: 100%;
     padding: 100px 40px;
     font-size: 35px;
@@ -11,7 +11,13 @@
     font-family: "Calibre", Helvetica, Arial, sans-serif;
 }
 
+.test-1 {
+    font-size: 30px;
+    margin-left: 100px;
+}
+
 .test-2 {
     font-size: 20px;
     font-weight: lighter;
+    margin-left: 120px;
 }
