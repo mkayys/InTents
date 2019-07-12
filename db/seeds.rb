@@ -357,8 +357,8 @@ Spot.all.each_with_index do |spot, idx|
         end
     else
         (1..4).each do |pic_idx|
-            file = EzDownload.open("https://in-tents-seed.s3-us-west-1.amazonaws.com/spots/Y/0#{idx+1}-Y/0#{idx+1}-0#{pic_idx}-Y.jpg")
-            spot.photos.attach(io: file, filename: "0#{idx+1}-0#{pic_idx}-Y.jpg")
+            file = EzDownload.open("https://in-tents-seed.s3-us-west-1.amazonaws.com/spots/Y/0#{idx-4}-Y/0#{idx-4}-0#{pic_idx}-Y.jpg")
+            spot.photos.attach(io: file, filename: "0#{idx-4}-0#{pic_idx}-Y.jpg")
             spot.save!
         end
     end
