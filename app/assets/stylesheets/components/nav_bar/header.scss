@@ -52,7 +52,12 @@
     display: flex;
     font-family: "Calibre", Helvetica, Arial, sans-serif;
 
+    .profile-page {
+        text-decoration: none;
+    }
+
     .header-name {
+        // text-decoration: none;
         color: rgb(80, 80, 80);
         padding: 0px 12px;
         font-size: 15px;

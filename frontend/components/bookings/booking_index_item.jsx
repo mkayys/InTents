@@ -9,14 +9,33 @@ class BookingIndexItem extends React.Component {
 
     render() {
         // debugger
-        const { booking, spot } = this.props
+        const { booking, spot, deleteBooking } = this.props
         return (
-            <div className='booking-list-items'>
-                {booking.checkIn}
-                {booking.checkOut}
-                {spot.name}
-                {spot.nearby}
-            </div>
+            <li key={booking.id} className='all-bookings'>
+                <div className='booking-list-and-cancel'>
+                    <div className='booking-list'>
+                        <span className='trips'>Pitching tent...</span>
+                        <div className='trip-location-info'>
+                            <strong>at:</strong> {spot.name}
+                            {/* &nbsp; */}
+                            <div className='trip-place'>
+                                <strong>in:</strong> {spot.nearby}
+                            </div>
+                        </div>
+                        <div className='trip-duration-info'>
+                            <strong>from:</strong> {booking.checkIn}
+                            &nbsp;
+                            <span className='trip-checkout'>
+                                <strong>to:</strong> {booking.checkOut}
+                            </span>
+                        </div>
+                    </div>
+                    <div className='cancel-button'>
+                        <button className="cancel-booking-button" onClick={() => deleteBooking(booking.id)}>Cancel</button>
+                    </div>
+                </div>
+            </li>
+
 
         );
 

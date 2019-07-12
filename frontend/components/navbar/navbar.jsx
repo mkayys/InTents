@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NavBar = ({ currentUser, logout, openModal }) => {
     const sessionLinks = () => (
@@ -12,7 +13,9 @@ const NavBar = ({ currentUser, logout, openModal }) => {
         // debugger
         return (
         <hgroup className="header-group">
-            <h2 className="header-name">Hi, {currentUser.firstName} {currentUser.lastName.slice(0,1)}.</h2>
+            <Link className='profile-page' to='/profile'>
+                <h2 className="header-name">Hi, {currentUser.firstName} {currentUser.lastName.slice(0,1)}.</h2>
+            </Link>
             <button className="header-button" onClick={logout}>Log out</button>
         </hgroup>
         )

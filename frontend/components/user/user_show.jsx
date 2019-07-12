@@ -31,7 +31,8 @@ class UserShow extends React.Component {
                 <BookingIndexItem
                     key={booking.id}
                     booking={booking}
-                    spot={spot} />
+                    spot={spot}
+                    deleteBooking={this.props.deleteBooking} />
             )
 
         });
@@ -45,7 +46,7 @@ class UserShow extends React.Component {
 
 
                 <div className='user-bookings-list'>
-                    <ul>
+                    <ul className='list-bookings'>
                         {bookings}
                     </ul>
                 </div>
