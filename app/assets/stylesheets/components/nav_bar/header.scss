@@ -66,20 +66,20 @@
     .header-button {
         margin: auto;
         font-family: "Calibre", Helvetica, Arial, sans-serif;
-        border-radius: 5px;
+        // border-radius: 5px;
         background-color: rgb(97, 218, 173);
         color: white;
-        padding: 3px;
+        padding: 5px;
         font-weight: bold;
         font-size: 12px;
-        border: 3px solid transparent;
+        border: 1px solid transparent;
     }
     .header-button:hover {
         background-color: white;
         color: rgb(97, 218, 173);
-        border: 3px solid rgb(97, 218, 173);
+        border: 1px solid rgb(97, 218, 173);
         cursor: pointer;
         transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
-        border-radius: 5px;
+        // border-radius: 5px;
     }
 }

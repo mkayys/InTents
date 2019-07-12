@@ -11,7 +11,7 @@
 
     .user-bookings-list {
 
-        max-width: 70%;
+        // width: 70%;
         border-left: 1px solid rgb(80, 80, 80);
         // margin: 0 auto;
         // list-style: none;
@@ -23,22 +23,23 @@
         .cancel-booking-button {
             margin: auto;
             font-family: 'Lato', sans-serif;
-            // border-radius: 5px;
-            background-color: rgb(97, 218, 173);
+            background-color: #61daad;
             color: white;
-            padding: 3px;
+            padding: 5px 0px;
             font-weight: bold;
-            font-size: 12px;
-            border: 3px solid transparent;
+            font-size: 15px;
+            border: 2px solid transparent;
+            width: 90px;
         }
 
         .cancel-booking-button:hover {
             background-color: white;
             color: rgb(97, 218, 173);
-            border: 3px solid rgb(97, 218, 173);
+            border: 2px solid rgb(97, 218, 173);
             cursor: pointer;
             transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
             // border-radius: 5px;
+            width: 90px;
         }
     }
 
@@ -48,9 +49,9 @@
 .booking-list-and-cancel {
     display: flex;
     justify-content: space-between;
-    max-width: 900px;
+    width: 600px;
     margin: 0 auto;
-    
+    padding: 15px 0;
 
     .booking-list {
         width: 70%;
@@ -60,10 +61,12 @@
     
     .cancel-button {
         flex: 1;
+        padding: 32px;
     }
 
     .trips {
         font-size: 20px;
+        font-weight: 600;
         font-family: 'Lato', sans-serif;
     }
 

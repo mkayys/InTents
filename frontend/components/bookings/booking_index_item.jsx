@@ -14,7 +14,7 @@ class BookingIndexItem extends React.Component {
             <li key={booking.id} className='all-bookings'>
                 <div className='booking-list-and-cancel'>
                     <div className='booking-list'>
-                        <span className='trips'>Pitching tent...</span>
+                        <span className='trips'>Pitching tent ...</span>
                         <div className='trip-location-info'>
                             <strong>at:</strong> {spot.name}
                             {/* &nbsp; */}
