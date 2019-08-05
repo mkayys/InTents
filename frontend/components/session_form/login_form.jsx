@@ -38,7 +38,8 @@ class LoginForm extends React.Component {
         this.props.processForm(demoUser).then(this.props.closeModal);
     }
 
-    emailTyper() {
+    emailTyper(e) {
+        e.preventDefault();
         let i = 0;
         let email = 'rmapa@aa.io'
         const speed = 75; /* The speed/duration of the effect in milliseconds */

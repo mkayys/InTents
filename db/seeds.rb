@@ -8,8 +8,16 @@
 
 User.destroy_all
 
-user = User.new(first_name: 'Ryan', last_name: 'Mapa', email: 'rmapa@aa.io', password: 'password', zip_code: 94111)
+user = User.new(first_name: 'Guest', last_name: 'User', email: 'guestuser@in-tents.com', password: 'password', zip_code: 94111)
 user.save!
+
+User.create(
+    first_name: 'Ryan', 
+    last_name: 'Mapa', 
+    email: 'rmapa@aa.io', 
+    password: 'password', 
+    zip_code: 94111
+)
 
 User.create(
     first_name: 'Selam',
