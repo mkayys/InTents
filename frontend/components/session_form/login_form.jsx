@@ -31,7 +31,7 @@ class LoginForm extends React.Component {
 
     handleDemoSubmit() {
         this.state = {
-            email: 'rmapa@aa.io', 
+            email: 'guestuser@in-tents', 
             password: 'password'
         }
         const demoUser = Object.assign({}, this.state);
@@ -41,7 +41,7 @@ class LoginForm extends React.Component {
     emailTyper(e) {
         e.preventDefault();
         let i = 0;
-        let email = 'rmapa@aa.io'
+        let email = 'guestuser@in-tents'
         const speed = 75; /* The speed/duration of the effect in milliseconds */
         let email_field = document.getElementById("email");
         email_field.value = "";
@@ -55,8 +55,8 @@ class LoginForm extends React.Component {
         };
 
         typeWriter();
-        setTimeout(this.passwordTyper, 1000);
-        setTimeout(this.handleDemoSubmit, 1800);
+        setTimeout(this.passwordTyper, 1300);
+        setTimeout(this.handleDemoSubmit, 2000);
     };
 
     passwordTyper() {

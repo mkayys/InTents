@@ -8,7 +8,7 @@
 
 User.destroy_all
 
-user = User.new(first_name: 'Guest', last_name: 'User', email: 'guestuser@in-tents.com', password: 'password', zip_code: 94111)
+user = User.new(first_name: 'Guest', last_name: 'User', email: 'guestuser@in-tents', password: 'password', zip_code: 94111)
 user.save!
 
 User.create(
