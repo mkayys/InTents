@@ -43,7 +43,7 @@ class BookingForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         if (this.props.loggedIn) {
-
+            
             const booking = Object.assign({}, this.state);
             this.props.processForm(booking).then(this.props.history.push('/profile'));
             

@@ -27,7 +27,8 @@ class SpotIndex extends React.Component {
                         Book adventures where your tent leads.
                     </span>
                     <div className="search-bar"> 
-                        <input type="search"/>
+                        <input type="search" placeholder="Search..."/> 
+                        <input type="submit" value="search" />
                     </div>
                 </div>  
                 <ul className='spots-index-list'>

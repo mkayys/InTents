@@ -221,6 +221,15 @@
     color: rgb(97, 218, 173)
   }
 }
+
+// below: gets rid of blue outline on some of the input submits on signup modal form
+
+// input[type=submit]:focus {
+//   outline: 0;
+// }
+
+// end
+
 // .signup-form-container {
 //   position: absolute;
 //   top: 50%;

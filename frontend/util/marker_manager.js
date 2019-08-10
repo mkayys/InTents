@@ -10,16 +10,16 @@ class MarkerManager {
         const spotsObj = {};
         spots.forEach(spot => spotsObj[spot.id] = spot);
 
-        // spots
-        //     .filter(spot => !this.markers[spot.id])
-        //     .forEach(newSpot => this.createMarkerFromBench(newSpot, this.handleClick))
+        spots
+            .filter(spot => !this.markers[spot.id])
+            .forEach(newSpot => this.createMarkerFromSpot(newSpot, this.handleClick))
 
         // Object.keys(this.markers)
         //     .filter(spotId => !spotsObj[spotId])
         //     .forEach((spotId) => this.removeMarker(this.markers[spotId]))
     }
 
-    createMarkerFromBench(spot) {
+    createMarkerFromSpot(spot) {
         const position = new google.maps.LatLng(spot.latitude, spot.longitude);
         const marker = new google.maps.Marker({
             position,
@@ -28,7 +28,7 @@ class MarkerManager {
         });
 
         // marker.addListener('click', () => this.handleClick(spot));
-        // this.markers[marker.spotId] = marker;
+        this.markers[marker.spotId] = marker;
     }
 
     removeMarker(marker) {
