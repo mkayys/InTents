@@ -2,6 +2,10 @@ import React from 'react';
 import SpotIndexItem from './spot_index_item';
 import { Link } from 'react-router-dom';
 
+//loading:
+import LoadingIcon from '../loading/loading_icon';
+import { isThisISOWeek } from 'date-fns/esm';
+
 class SpotIndex extends React.Component {
     constructor(props) {
         super(props);
@@ -17,6 +21,10 @@ class SpotIndex extends React.Component {
                 key={spot.id}
                 spot={spot} />
         ));
+
+        if (this.props.loading) {
+            return <LoadingIcon />
+        }
         
         return (
             <div>
@@ -36,7 +44,7 @@ class SpotIndex extends React.Component {
                 </ul>
 
                 <div className='site-additional-info'>
-                    <img src='https://in-tents-seed.s3-us-west-1.amazonaws.com/main_images/tent-love.gif' className='logo-gif' />
+                    {/* <img src='https://in-tents-seed.s3-us-west-1.amazonaws.com/main_images/tent-love.gif' className='logo-gif' /> */}
                 </div>
             </div>
         );
