@@ -1,8 +1,7 @@
 .name-navbar-container {
-    font-family: "Calibre", Helvetica, Arial, sans-serif;
-    width: 100%;
+    font-family: 'Lato', sans-serif;
     background-color: white;
-    padding: 20px 35px;
+    padding: 15px 25px;
     display: flex;
     justify-content: space-between;
     .app-name{
@@ -48,42 +47,98 @@
     
 }
 
-.header-group {
-    display: flex;
-    font-family: "Calibre", Helvetica, Arial, sans-serif;
+.logged-in-dropdown {
+    position: relative;
+    display: inline-block;
 
-    .profile-page {
-        text-decoration: none;
-    }
-
-    .header-name {
-        // text-decoration: none;
-        color: rgb(80, 80, 80);
-        padding: 0px 12px;
-        font-size: 15px;
-    }
-    
-    .main-page {
-        text-decoration: none;
-    }
-    
-    .header-button {
-        margin: auto;
-        font-family: "Calibre", Helvetica, Arial, sans-serif;
-        // border-radius: 5px;
-        background-color: rgb(97, 218, 173);
-        color: white;
-        padding: 5px;
-        font-weight: bold;
-        font-size: 12px;
-        border: 1px solid transparent;
-    }
-    .header-button:hover {
+    .dropbtn {
         background-color: white;
-        color: rgb(97, 218, 173);
-        border: 1px solid rgb(97, 218, 173);
+        padding: 5px;
+        border: none;
         cursor: pointer;
-        transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
-        // border-radius: 5px;
     }
 }
+
+.logged-in-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-img {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    background-color: rgb(249, 249, 249);
+    
+}
+
+.profile-page, .main-page {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.logout-button {
+    margin: auto;
+    font-family: 'Lato', sans-serif;
+    // border-radius: 5px;
+    background-color: rgb(97, 218, 173);
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+// rewrite
+
+// .header-group {
+//     display: flex;
+//     font-family: "Calibre", Helvetica, Arial, sans-serif;
+
+//     .profile-page {
+//         text-decoration: none;
+//     }
+
+//     .header-name {
+//         // text-decoration: none;
+//         color: rgb(80, 80, 80);
+//         padding: 0px 12px;
+//         font-size: 15px;
+//     }
+    
+//     .main-page {
+//         text-decoration: none;
+//     }
+    
+//     .header-button {
+//         margin: auto;
+//         font-family: "Calibre", Helvetica, Arial, sans-serif;
+//         // border-radius: 5px;
+//         background-color: rgb(97, 218, 173);
+//         color: white;
+//         padding: 5px;
+//         font-weight: bold;
+//         font-size: 12px;
+//         border: 1px solid transparent;
+//     }
+//     .header-button:hover {
+//         background-color: white;
+//         color: rgb(97, 218, 173);
+//         border: 1px solid rgb(97, 218, 173);
+//         cursor: pointer;
+//         transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+//         // border-radius: 5px;
+//     }
+// }

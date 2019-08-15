@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Redirect  } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const NavBar = ({ currentUser, logout, openModal }) => {
     const sessionLinks = () => (
@@ -11,14 +11,19 @@ const NavBar = ({ currentUser, logout, openModal }) => {
     );
     const personalGreeting = () => {
         return (
-        <hgroup className="header-group">
-            <Link className='profile-page' to='/profile'>
-                <h2 className="header-name">Hi, {currentUser.firstName} {currentUser.lastName.slice(0,1)}.</h2>
-            </Link>
-            <Link className='main-page' to='/'>
-                <button className="header-button" onClick={logout}>Log out</button>
-            </Link>
-        </hgroup>
+        <div className="logged-in-dropdown">
+                <button className='dropbtn'>
+                    <img src='https://in-tents-seed.s3-us-west-1.amazonaws.com/main_images/main-icon.png' className='dropdown-img'/>
+                </button>
+                <div className='dropdown-content'>
+                    <Link className='profile-page' to='/profile'>
+                        Trips
+                    </Link>
+                    <Link className='main-page' to='/'>
+                        <button className="logout-button" onClick={logout}>Log out</button>
+                    </Link>
+                </div>
+        </div>
         )
     };
 

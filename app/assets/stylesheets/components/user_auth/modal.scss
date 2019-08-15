@@ -224,9 +224,13 @@
 
 // below: gets rid of blue outline on some of the input submits on signup modal form
 
-// input[type=submit]:focus {
-//   outline: 0;
-// }
+input[type=submit]:focus {
+  outline: 0;
+}
+
+button:focus {
+  outline: 0;
+}
 
 // end
 

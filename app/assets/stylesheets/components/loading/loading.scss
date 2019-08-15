@@ -1,0 +1,14 @@
+// styling left to do
+
+.loading-page {
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 1px solid red;
+
+    .loading-text {
+        font-size: 20px;
+        font-family: Lato;
+    }
+}

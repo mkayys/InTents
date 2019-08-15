@@ -8,10 +8,13 @@
 }
 
 .site-additional-info {
-    height: 500px;
-    width: 500px;
-    margin: 0 auto;
-    margin-top: 10px;
+    // width: 500px;
+    margin: 10px auto;
+    // margin-top: 10px;
+    text-align: center;
+    .main-image {
+        height: 300px;
+    }
 }
 
 .spot-pictures .slider[style]{
