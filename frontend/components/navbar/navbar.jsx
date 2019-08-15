@@ -16,12 +16,12 @@ const NavBar = ({ currentUser, logout, openModal }) => {
                     <img src='https://in-tents-seed.s3-us-west-1.amazonaws.com/main_images/main-icon.png' className='dropdown-img'/>
                 </button>
                 <div className='dropdown-content'>
-                    <Link className='profile-page' to='/profile'>
+                    <a href='/#/profile' className='profile-page'>
                         Trips
-                    </Link>
-                    <Link className='main-page' to='/'>
+                    </a>
+                    <a href='/#/' className='main-page'>
                         <button className="logout-button" onClick={logout}>Log out</button>
-                    </Link>
+                    </a>
                 </div>
         </div>
         )

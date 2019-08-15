@@ -72,6 +72,16 @@
     z-index: 1;
 }
 
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Lato', sans-serif;
+}
+
+
+
 .dropdown-img {
     border-radius: 50%;
     width: 35px;
@@ -92,12 +102,9 @@
     margin: auto;
     font-family: 'Lato', sans-serif;
     // border-radius: 5px;
-    background-color: rgb(97, 218, 173);
-    color: white;
+    background-color: white;
+    border: none;
     padding: 5px;
-    font-weight: bold;
-    font-size: 12px;
-    border: 1px solid transparent;
     cursor: pointer;
 }
 
