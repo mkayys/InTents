@@ -12,20 +12,21 @@ const NavBar = ({ currentUser, logout, openModal }) => {
     const personalGreeting = () => {
         return (
         <div className="logged-in-dropdown">
-                <button className='dropbtn'>
-                    <img src='https://in-tents-seed.s3-us-west-1.amazonaws.com/main_images/main-icon.png' className='dropdown-img'/>
-                </button>
-                <div className='dropdown-content'>
-                    <a href='/#/profile' className='profile-page'>
-                        Trips
-                    </a>
-                    <a href='/#/' className='main-page'>
-                        <button className="logout-button" onClick={logout}>Log out</button>
-                    </a>
-                    <a href='https://github.com/mkayys'>
-                        <img src='https://in-tents-seed.s3-us-west-1.amazonaws.com/main_images/GitHub-Mark-64px.png' alt='More Projects'/>
-                    </a>
-                </div>
+            <button className='dropbtn'>
+                <img src='https://in-tents-seed.s3-us-west-1.amazonaws.com/main_images/main-icon.png' className='dropdown-img'/>
+            </button>
+            
+            <div className='dropdown-content'>
+                <a href='/#/profile' className='profile-page'>
+                    Trips
+                </a>
+                <a href='/#/' className='main-page'>
+                    <button className="logout-button" onClick={logout}>Log out</button>
+                </a>
+                <a href='https://github.com/mkayys'>
+                    <img src='https://in-tents-seed.s3-us-west-1.amazonaws.com/main_images/GitHub-Mark-64px.png' alt='More Projects' className='github' />
+                </a>
+            </div>
         </div>
         )
     };

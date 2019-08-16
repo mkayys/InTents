@@ -1,23 +1,36 @@
 .name-navbar-container {
     font-family: 'Lato', sans-serif;
     background-color: white;
-    padding: 15px 25px;
+    // padding: 10px 25px 0px 25px;
     display: flex;
     justify-content: space-between;
     .app-name{
-        font-weight: bold;
-        color: black;
-        font-size: 25px;
-        letter-spacing: 3px;
-        margin: auto 0;
-        text-decoration: none;
-        .fas {
-            color: rgb(167, 58, 58);
+        // margin: auto 0;
+        padding: 0 29px;
+        flex-grow: 0;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        
+        .app-name-logo {
+            text-decoration: none;
+            font-weight: bolder;
+            color: black;
+            font-size: 25px;
+            letter-spacing: 3px;
+        }
+
+        .fa-campground {
+            font-size: 19px;
+            color: #EF5F5E;
         }
     }
     position: fixed;
     top: 0px;
     z-index: 2;
+    width: 100vw;
+    height: 70px;
+    min-height: 70px;
 }
 
 .login-signup {
@@ -53,28 +66,34 @@
 
     .dropbtn {
         background-color: white;
-        padding: 5px;
-        border: none;
+        padding: 5px 5px 0px 10px;
+        border: 1px solid transparent;
         cursor: pointer;
     }
 }
 
 .logged-in-dropdown:hover .dropdown-content {
     display: block;
+    
+}
+
+.dropbtn:hover {
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+    border-top: 1px solid #ebebeb;
 }
 
 .dropdown-content {
     margin-top: 0;
     margin-bottom: 11px;
     padding: 0px 10px;
-    display: none;
     position: absolute;
     background-color: white;
     min-width: 160px;
     border: 1px solid #ebebeb;
     // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    left: -120px;
+    left: -103px;
 }
 
 .dropdown-content a {
@@ -84,17 +103,17 @@
     display: block;
     font-family: 'Lato', sans-serif;
     border-bottom: 1px solid rgb(235, 235, 235);
+    transition: all 0.25s ease-in-out;
 }
 
 .dropdown-content a:hover{
-    transition: all 0.25s ease-out;
     padding-left: 35px;
 }
 
 .dropdown-img {
     border-radius: 50%;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background-size: cover;
     background-color: rgb(249, 249, 249);
     
@@ -113,8 +132,12 @@
     // border-radius: 5px;
     background-color: white;
     border: none;
-    // padding: 5px;
+    padding: 0px;
     cursor: pointer;
+}
+
+.github {
+    height: 30px;
 }
 
 // rewrite

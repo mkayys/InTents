@@ -16,7 +16,7 @@ const App = () => (
     <Modal />
     <header className="name-navbar-container">
       <div className="app-name">
-        <Link className="app-name" to="/">
+        <Link className="app-name-logo" to="/">
           IN<i className="fas fa-campground" />TENTS
         </Link>
       </div>
