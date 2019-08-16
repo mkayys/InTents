@@ -15,7 +15,7 @@ class BookingIndexItem extends React.Component {
                     <div className='booking-list'>
                         <span className='trips'>Pitching tent ...</span>
                         <div className='trip-location-info'>
-                            <strong>at:</strong> {spot.name}
+                            <strong>at:</strong> <Link to={`/spots/${spot.id}`} className='booking-to-spot-link'>{spot.name}</Link>
                             {/* &nbsp; */}
                             <div className='trip-place'>
                                 <strong>in:</strong> {spot.nearby}
