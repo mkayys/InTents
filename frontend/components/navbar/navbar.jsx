@@ -4,9 +4,13 @@ import { Link } from 'react-router-dom';
 const NavBar = ({ currentUser, logout, openModal }) => {
     const sessionLinks = () => (
         <nav className="login-signup">
-            <a id="signupLink" href="#" onClick={() => openModal('signup')}>Sign up</a>
-            &nbsp; &nbsp;
-            <a id="loginLink" href="#" onClick={() => openModal('login')}>Log in</a>
+            <div className='link-wrapper'>
+                <a id="signupLink" href="#" onClick={() => openModal('signup')}>Sign up</a>
+            </div>
+
+            <div className='link-wrapper'>
+                <a id="loginLink" href="#" onClick={() => openModal('login')}>Log in</a>
+            </div>
         </nav>
     );
     const personalGreeting = () => {
@@ -15,7 +19,7 @@ const NavBar = ({ currentUser, logout, openModal }) => {
             <button className='dropbtn'>
                 <img src='https://in-tents-seed.s3-us-west-1.amazonaws.com/main_images/main-icon.png' className='dropdown-img'/>
             </button>
-            
+
             <div className='dropdown-content'>
                 <a href='/#/profile' className='profile-page'>
                     Trips
