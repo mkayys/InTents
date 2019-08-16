@@ -106,13 +106,15 @@
         font-family: 'Lato', sans-serif;
     }
 
-    .trip-location-info {
+}
 
-    }
+.booking-to-spot-link {
+    text-decoration: none;
+}
 
-    .trip-duration-info {
-
-    }
+.booking-to-spot-link:hover {
+    transition: ease-in;
+    color: rgb(97, 218, 173);
 }
 
 .all-bookings {
