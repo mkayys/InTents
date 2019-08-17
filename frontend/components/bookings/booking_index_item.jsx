@@ -8,7 +8,8 @@ class BookingIndexItem extends React.Component {
 
 
     render() {
-        const { booking, spot, deleteBooking } = this.props
+        const { booking, spot, deleteBooking } = this.props;
+
         return (
             <li key={booking.id} className='all-bookings'>
                 <div className='booking-list-and-cancel'>
@@ -27,6 +28,7 @@ class BookingIndexItem extends React.Component {
                                 <strong>to:</strong> {booking.checkOut}
                             </span>
                         </div>
+                        
                     </div>
                     <div className='cancel-button'>
                         <button className="cancel-booking-button" onClick={() => deleteBooking(booking.id)}>Cancel</button>

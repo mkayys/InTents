@@ -66,39 +66,57 @@
 }
 
 .logged-in-dropdown {
-    position: relative;
-    display: inline-block;
+    // position: relative;
+    // display: inline-block;
+    // margin-right: 5px;
+    // z-index: 4;
+    // border: 1px solid transparent;
 
+    position: absolute;
+    top: 0;
+    margin-right: 5px;
+    right: 0;
+    height: 273px;
+    z-index: 6;
+    border: 1px solid transparent;
+    border-bottom: none;
     .dropbtn {
+        // background-color: white;
+        // padding: 14px 5px 0px 10px;
+        // border: 1px solid transparent;
+        // cursor: pointer;
+
         background-color: white;
-        padding: 5px 5px 0px 10px;
+        padding: 14px 5px 0px 10px;
         border: 1px solid transparent;
         cursor: pointer;
+        height: 70px;
+        z-index: 5;
     }
 }
 
 .logged-in-dropdown:hover .dropdown-content {
     display: block;
-    
 }
 
-.dropbtn:hover {
+.logged-in-dropdown:hover {
     border-left: 1px solid #ebebeb;
     border-right: 1px solid #ebebeb;
-    border-top: 1px solid #ebebeb;
 }
 
 .dropdown-content {
     margin-top: 0;
     margin-bottom: 11px;
-    padding: 0px 10px;
+    padding: 15px 10px;
     position: absolute;
     background-color: white;
-    min-width: 160px;
+    min-width: 235px;
     border: 1px solid #ebebeb;
+    display: none;
     // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    left: -103px;
+    z-index: -2;
+    left: -177px;
+    top: 68px;
 }
 
 .dropdown-content a {
@@ -107,7 +125,7 @@
     text-decoration: none;
     display: block;
     font-family: 'Lato', sans-serif;
-    border-bottom: 1px solid rgb(235, 235, 235);
+    // border-bottom: 1px solid rgb(235, 235, 235);
     transition: all 0.25s ease-in-out;
 }
 
@@ -129,6 +147,7 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    border-bottom: 1px solid rgb(235, 235, 235);
 }
 
 .logout-button {
@@ -139,6 +158,10 @@
     border: none;
     padding: 0px;
     cursor: pointer;
+}
+
+.github-link {
+    border-bottom: 1px solid transparent;
 }
 
 .github {

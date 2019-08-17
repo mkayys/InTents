@@ -33,10 +33,10 @@ class SpotIndex extends React.Component {
                     <span className='test-2'>
                         Book adventures where your tent leads.
                     </span>
-                    <div className="search-bar"> 
+                    {/* <div className="search-bar"> 
                         <input type="search" placeholder="Search..."/> 
                         <input type="submit" value="search" />
-                    </div>
+                    </div> */}
                 </div>  
                 <ul className='spots-index-list'>
                    {spots}

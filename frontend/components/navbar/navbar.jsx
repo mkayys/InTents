@@ -27,7 +27,7 @@ const NavBar = ({ currentUser, logout, openModal }) => {
                 <a href='/#/' className='main-page'>
                     <button className="logout-button" onClick={logout}>Log out</button>
                 </a>
-                <a href='https://github.com/mkayys'>
+                <a href='https://github.com/mkayys' className='github-link'>
                     <img src='https://in-tents-seed.s3-us-west-1.amazonaws.com/main_images/GitHub-Mark-64px.png' alt='More Projects' className='github' />
                 </a>
             </div>

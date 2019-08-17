@@ -3,6 +3,8 @@
     display: flex;
     max-width: 1200px;
     margin: 100px auto;
+    justify-content: center;
+    height: 37.9vh;
 
     .user-info {
         width: 30%;
@@ -54,6 +56,10 @@
         // .booking-list-item {
         //     list-style: none;
         // }
+
+        .list-bookings {
+            padding: 0px;
+        }
 
 
         .cancel-booking-button {
