@@ -43,10 +43,12 @@ class BookingForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         if (this.props.loggedIn) {
-            
-            const booking = Object.assign({}, this.state);
-            this.props.processForm(booking).then(() => this.props.history.push('/profile'), () => console.log('error'));
-            
+            if (this.state.num_guests > this.props.maxGuests){
+                console.log('TOOLTIP');
+            } else {
+                const booking = Object.assign({}, this.state);
+                this.props.processForm(booking).then(() => this.props.history.push('/profile'));
+            }    
         } else {
             this.props.requireLogin();
         }
@@ -88,6 +90,10 @@ class BookingForm extends React.Component {
                 </ul>
             </div>
         );
+    }
+
+    renderExceedGuestCount() {
+        // errors to render (tooltip)?
     }
 
 

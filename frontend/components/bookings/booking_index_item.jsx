@@ -28,6 +28,10 @@ class BookingIndexItem extends React.Component {
                                 <strong>to:</strong> {booking.checkOut}
                             </span>
                         </div>
+
+                        <div className='trip-with'>
+                            <strong>with:</strong> {booking.numGuests} guest(s)
+                        </div>
                         
                     </div>
                     <div className='cancel-button'>
