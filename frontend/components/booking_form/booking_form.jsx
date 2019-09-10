@@ -45,7 +45,7 @@ class BookingForm extends React.Component {
         if (this.props.loggedIn) {
             
             const booking = Object.assign({}, this.state);
-            this.props.processForm(booking).then(() => this.props.history.push('/profile'));
+            this.props.processForm(booking).then(() => this.props.history.push('/profile'), () => console.log('error'));
             
         } else {
             this.props.requireLogin();
@@ -130,6 +130,8 @@ class BookingForm extends React.Component {
                                 id="guest-number"
                                 value={this.state.num_guests}
                                 type="number"
+                                min="1"
+                                max={this.props.maxGuests}
                                 onChange={this.update('num_guests')}
                             />
                         </div>
