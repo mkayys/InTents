@@ -18,9 +18,9 @@ class BookingForm extends React.Component {
         this.handleCheckOut = this.handleCheckOut.bind(this);
     }
 
-    // componentWillMount() {
-    //     this.props.clearErrors();
-    // }
+    componentWillMount() {
+        this.props.clearErrors();
+    }
 
     update(field) {
         return e => this.setState({

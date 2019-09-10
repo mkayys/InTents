@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { createBooking } from '../../actions/booking_actions';
+import { createBooking, clearErrors } from '../../actions/booking_actions';
 import BookingForm from './booking_form';
 import { openModal } from '../../actions/modal_actions';
 
