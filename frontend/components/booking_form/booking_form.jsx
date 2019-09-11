@@ -23,9 +23,14 @@ class BookingForm extends React.Component {
     }
 
     update(field) {
-        return e => this.setState({
-            [field]: parseInt(e.currentTarget.value)
-        });
+        return e => {
+            if (e.currentTarget.value > this.props.maxGuests) {
+                e.currentTarget.value = this.props.maxGuests;
+            }
+            this.setState({
+                [field]: parseInt(e.currentTarget.value)
+            })
+        };
     }
 
     handleCheckIn(date) {
@@ -43,12 +48,12 @@ class BookingForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         if (this.props.loggedIn) {
-            if (this.state.num_guests > this.props.maxGuests){
-                console.log('TOOLTIP');
-            } else {
+            // if (this.state.num_guests > this.props.maxGuests){
+            //     console.log('TOOLTIP');
+            // } else {
                 const booking = Object.assign({}, this.state);
                 this.props.processForm(booking).then(() => this.props.history.push('/profile'));
-            }    
+            // }    
         } else {
             this.props.requireLogin();
         }
