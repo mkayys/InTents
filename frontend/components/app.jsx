@@ -27,10 +27,11 @@ const App = () => (
 
 
       <Switch>
-        <Route exact path="/" component={SpotIndexContainer} />
+        {/* <Route exact path="/" component={SpotIndexContainer} /> */}
+
+        <Route exact path="/" component={SearchContainer} />
         <Route exact path="/profile" component={UserShowContainer} />
         <Route exact path="/spots/:spotId" component={SpotShowContainer} />
-        <Route exact path="/spotsmap" component={SearchContainer} />
         <Route exact path="/bookings" component={BookingIndexContainer} />
         {/* <Route exact path="/" render={() => 
                     <div className="test-container">
