@@ -24,7 +24,7 @@ class MarkerManager {
         const marker = new google.maps.Marker({
             position,
             map: this.map,
-            title: spot.id,
+            title: `${spot.id}`,
             animation: google.maps.Animation.DROP
         });
 
