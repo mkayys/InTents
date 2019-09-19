@@ -75,6 +75,13 @@ User.create(
     zip_code: 94111
 )
 
+User.create(
+    first_name: 'Rebecca',
+    last_name: 'Lambert',
+    email: 'reba@lamb.io',
+    password: 'r3b3cca',
+    zip_code: 94502
+)
 
 # SPOTS
 
@@ -356,21 +363,21 @@ Spot.create(
 
 
 
-Spot.all.each_with_index do |spot, idx|
-    if (idx < 5) 
-        (1..4).each do |pic_idx|
-            file = EzDownload.open("https://in-tents-seed.s3-us-west-1.amazonaws.com/spots/JT/0#{idx+1}-JT/0#{idx+1}-0#{pic_idx}-JT.jpg")
-            spot.photos.attach(io: file, filename: "0#{idx+1}-0#{pic_idx}-JT.jpg")
-            spot.save!
-        end
-    else
-        (1..4).each do |pic_idx|
-            file = EzDownload.open("https://in-tents-seed.s3-us-west-1.amazonaws.com/spots/Y/0#{idx-4}-Y/0#{idx-4}-0#{pic_idx}-Y.jpg")
-            spot.photos.attach(io: file, filename: "0#{idx-4}-0#{pic_idx}-Y.jpg")
-            spot.save!
-        end
-    end
-end
+# Spot.all.each_with_index do |spot, idx|
+#     if (idx < 5) 
+#         (1..4).each do |pic_idx|
+#             file = EzDownload.open("https://in-tents-seed.s3-us-west-1.amazonaws.com/spots/JT/0#{idx+1}-JT/0#{idx+1}-0#{pic_idx}-JT.jpg")
+#             spot.photos.attach(io: file, filename: "0#{idx+1}-0#{pic_idx}-JT.jpg")
+#             spot.save!
+#         end
+#     else
+#         (1..4).each do |pic_idx|
+#             file = EzDownload.open("https://in-tents-seed.s3-us-west-1.amazonaws.com/spots/Y/0#{idx-4}-Y/0#{idx-4}-0#{pic_idx}-Y.jpg")
+#             spot.photos.attach(io: file, filename: "0#{idx-4}-0#{pic_idx}-Y.jpg")
+#             spot.save!
+#         end
+#     end
+# end
 
 
 
@@ -419,4 +426,84 @@ Booking.create(
     check_out: 20190730,
     spot_id: Spot.all.to_a.sample.id,
     num_guests: rand(1..4)
+)
+
+
+# REVIEWS
+
+Review.destroy_all
+
+Review.create(
+    guest_id: User.all.to_a.sample.id,
+    spot_id: Spot.all.to_a.sample.id,
+    body: 'awesome campsite, found a gold ring, sold it for 20K'
+)
+
+Review.create(
+    guest_id: User.all.to_a.sample.id,
+    spot_id: Spot.all.to_a.sample.id,
+    body: 'lame campsite, skunk ate my food; this is what war must feel like'
+)
+
+Review.create(
+    guest_id: User.all.to_a.sample.id,
+    spot_id: Spot.all.to_a.sample.id,
+    body: "I enjoyed myself here. I spent my time reading Thoreau and his essay on civil disobedience. I'm leaving feeling much more educated than when I came in. My life will never be the same. I took the road less traveled. And NOW... I am on the other side. Deuces, mic drop"
+)
+
+Review.create(
+    guest_id: User.all.to_a.sample.id,
+    spot_id: Spot.all.to_a.sample.id,
+    body: "
+    Two roads diverged in a yellow wood,
+And sorry I could not travel both
+And be one traveler, long I stood
+And looked down one as far as I could
+To where it bent in the undergrowth;
+
+Then took the other, as just as fair,
+And having perhaps the better claim,
+Because it was grassy and wanted wear;
+Though as for that the passing there
+Had worn them really about the same,
+
+And both that morning equally lay
+In leaves no step had trodden black.
+Oh, I kept the first for another day!
+Yet knowing how way leads on to way,
+I doubted if I should ever come back.
+
+I shall be telling this with a sigh
+Somewhere ages and ages hence:
+Two roads diverged in a wood, and I—
+I took the one less traveled by,
+And that has made all the difference.
+"
+)
+
+Review.create(
+    guest_id: User.all.to_a.sample.id,
+    spot_id: Spot.all.to_a.sample.id,
+    body: "
+    Whose woods these are I think I know.   
+His house is in the village though;   
+He will not see me stopping here   
+To watch his woods fill up with snow.   
+
+My little horse must think it queer   
+To stop without a farmhouse near   
+Between the woods and frozen lake   
+The darkest evening of the year.   
+
+He gives his harness bells a shake   
+To ask if there is some mistake.   
+The only other sound’s the sweep   
+Of easy wind and downy flake.   
+
+The woods are lovely, dark and deep,   
+But I have promises to keep,   
+And miles to go before I sleep,   
+And miles to go before I sleep.
+
+THIS IS A POEM, NOT A SONG. YOU FOOL!"
 )

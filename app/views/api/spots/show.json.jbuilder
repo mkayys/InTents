@@ -13,3 +13,4 @@ json.users do
         json.extract! @spot.host, :id, :first_name, :last_name
     end
 end
+
