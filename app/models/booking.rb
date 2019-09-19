@@ -14,7 +14,7 @@
 
 class Booking < ApplicationRecord
     validates :guest_id, :check_in, :check_out, :spot_id, :num_guests, presence: true
-    validate :start_must_come_before_end
+    # validate :start_must_come_before_end
 
     belongs_to :guest,
         foreign_key: :guest_id,

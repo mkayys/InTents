@@ -45,6 +45,9 @@ class Spot < ApplicationRecord
 
     has_many_attached :photos
 
+    has_many :reviews,
+        foreign_key: :spot_id,
+        class_name: :Review
 
     def self.in_bounds(bounds)
         # debugger

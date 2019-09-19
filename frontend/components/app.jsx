@@ -27,9 +27,9 @@ const App = () => (
 
 
       <Switch>
-        {/* <Route exact path="/" component={SpotIndexContainer} /> */}
+        <Route exact path="/" component={SpotIndexContainer} />
 
-        <Route exact path="/" component={SearchContainer} />
+        {/* <Route exact path="/" component={SearchContainer} /> */}
         <Route exact path="/profile" component={UserShowContainer} />
         <Route exact path="/spots/:spotId" component={SpotShowContainer} />
         <Route exact path="/bookings" component={BookingIndexContainer} />
