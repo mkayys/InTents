@@ -26,7 +26,7 @@ class Api::ReviewsController < ApplicationController
         if @review.update_attributes(review_params)
             
         else
-            render json: ["you fool"], status: 418
+            render json: @review.errors.full_messages, status: 422
         end
     end
 
