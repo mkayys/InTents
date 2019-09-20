@@ -16,12 +16,41 @@ const receiveReview = (review) => ({
     review
 });
 
-const removeBooking = (booking) => ({
+const removeReview = (review) => ({
     type: REMOVE_REVIEW,
-    bookingId: booking.id
+    reviewId: review.id
 });
 
 export const fetchReviews = () => dispatch => (
     ReviewApiUtil.fetchReviews()
         .then(reviews => dispatch(receiveReviews(reviews)))
 );
+
+export const fetchReview = (id) => dispatch => (
+    ReviewApiUtil.fetchReview(id)
+        .then(review => dispatch(receiveReview(review)))
+);
+
+export const createReview = (review) => dispatch => (
+    ReviewApiUtil.createReview(review)
+        .then(review => dispatch(receiveReview(review)),
+            err => (
+                console.log(err.responseJSON)
+            ))
+);
+
+
+export const updateReview = (review) => dispatch => (
+    ReviewApiUtil.updateReview(review)
+        .then(review => dispatch(receiveReview(review)),
+            err => (
+                console.log(err.responseJSON)
+            ))
+);
+
+export const deleteReview = (id) => dispatch => (
+    ReviewApiUtil.deleteReview(id)
+        .then(review => dispatch(removeReview(review)))
+);
+
+
