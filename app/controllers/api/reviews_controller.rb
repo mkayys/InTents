@@ -5,7 +5,8 @@ class Api::ReviewsController < ApplicationController
         @review.guest_id = current_user.id
 
         if @review.save
-            render 'api/reviews/show'
+            # render 'api/reviews/show'
+            render 'api/spots/show'
         else
             render json: @review.errors.full_messages, status: 422
         end
@@ -24,7 +25,8 @@ class Api::ReviewsController < ApplicationController
     def update
         @review = Review.find(params[:id])
         if @review.update_attributes(review_params)
-            
+            render 'api/reviews/show'
+            # i will need to render the reviews associated to a spot
         else
             render json: @review.errors.full_messages, status: 422
         end

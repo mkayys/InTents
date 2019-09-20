@@ -49,6 +49,10 @@ class Spot < ApplicationRecord
         foreign_key: :spot_id,
         class_name: :Review
 
+    has_many :authors,
+        through: :reviews,
+        source: :guest
+
     def self.in_bounds(bounds)
         # debugger
         bounds = JSON.parse(bounds)
