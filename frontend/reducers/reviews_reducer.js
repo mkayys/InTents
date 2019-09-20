@@ -8,15 +8,17 @@ import merge from 'lodash/merge';
 
 const reviewsReducer = (state = {}, action) => {
     Object.freeze(state);
-    let nextState = Object.assign({}, state)
     switch (action.type) {
-        case RECEIVE_SPOTS:
-            nextState = merge({}, state, action.spots);
+        case RECEIVE_REVIEWS:
+            return merge({}, state, action.reviews);
+        case RECEIVE_REVIEW:
+            return merge({}, state, action.payload.reviews);
+        case REMOVE_REVIEW:
+            let nextState = Object.assign({}, state);
+            delete nextState[action.reviewId]
             return nextState;
         case RECEIVE_SPOT:
-            return merge({}, state, action.payload.spots);
-        case RECEIVE_USER:
-            return merge({}, state, action.payload.spots)
+            return merge({}, state, action.payload.reviews)
         default:
             return state;
     }
