@@ -1,31 +1,31 @@
 import React from 'react';
-import BookingIndexItem from './booking_index_item';
+import ReviewIndexItem from './review_index_item';
 import { Link } from 'react-router-dom';
 
-class BookingIndex extends React.Component {
+class ReviewIndex extends React.Component {
     constructor(props) {
         super(props);
     }
 
     componentDidMount() {
-        this.props.fetchBookings();
+        this.props.fetchReviews();
     }
 
     render() {
-        const bookings = this.props.bookings.map(booking => (
-            <BookingIndexItem
-                key={booking.id}
-                booking={booking} />
+        const reviews = this.props.reviews.map(review => (
+            <ReviewIndexItem
+                key={review.id}
+                review={review} />
         ));
 
         return (
             <div>
-                <ul className='spots-index-list'>
-                    {bookings}
+                <ul className='reviews-index-list'>
+                    {reviews}
                 </ul>
             </div>
         );
     }
 }
 
-export default BookingIndex;
+export default ReviewIndex;

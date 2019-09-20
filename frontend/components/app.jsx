@@ -9,6 +9,7 @@ import SearchContainer from "./search/search_container";
 import UserShowContainer from "./user/user_show_container";
 import Footer from "./footer/footer";
 
+import ReviewIndexContainer from './reviews/review_index_container';
 import BookingIndexContainer from "./bookings/booking_index_container";
 
 const App = () => (
@@ -32,11 +33,14 @@ const App = () => (
         {/* <Route exact path="/" component={SearchContainer} /> */}
         <Route exact path="/profile" component={UserShowContainer} />
         <Route exact path="/spots/:spotId" component={SpotShowContainer} />
-        <Route exact path="/bookings" component={BookingIndexContainer} />
+
+        {/* <Route exact path="/bookings" component={BookingIndexContainer} /> */}
+        
         {/* <Route exact path="/" render={() => 
                     <div className="test-container">
                         Where would you like to camp?
                     </div>} /> */}
+        <Route exact path="/reviews" component={ReviewIndexContainer} />
       </Switch>
   
       <div className="main-footer-container">
