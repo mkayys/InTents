@@ -6,9 +6,9 @@ export const REMOVE_REVIEW = 'REMOVE_REVIEW';
 
 // need reviews errors
 
-const receiveReviews = (reviews) => ({
+const receiveReviews = (payload) => ({
     type: RECEIVE_REVIEWS,
-    reviews
+    payload
 });
 
 const receiveReview = (review) => ({
@@ -23,7 +23,7 @@ const removeReview = (review) => ({
 
 export const fetchReviews = () => dispatch => (
     ReviewApiUtil.fetchReviews()
-        .then(reviews => dispatch(receiveReviews(reviews)))
+        .then(payload => dispatch(receiveReviews(payload)))
 );
 
 export const fetchReview = (id) => dispatch => (

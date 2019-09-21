@@ -14,7 +14,7 @@ class ReviewIndexItem extends React.Component {
         return (
             <li key={review.id} className='all-reviews'>
                 <div className='review-list-and-cancel'>
-                    <div>Review written by: {review.guestId}</div>
+                    <div>Review written by: {user.firstName} {user.lastName}</div>
                     <div>{review.body}</div>
                 </div>
             </li>
