@@ -8,13 +8,14 @@ class ReviewIndexItem extends React.Component {
 
 
     render() {
-        const { review } = this.props;
+        const { review, user } = this.props;
+
 
         return (
             <li key={review.id} className='all-reviews'>
                 <div className='review-list-and-cancel'>
-                    {review.id}
-                    {review.body}
+                    <div>Review written by: {review.guestId}</div>
+                    <div>{review.body}</div>
                 </div>
             </li>
 

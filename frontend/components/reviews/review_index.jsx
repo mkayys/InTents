@@ -12,11 +12,20 @@ class ReviewIndex extends React.Component {
     }
 
     render() {
-        const reviews = this.props.reviews.map(review => (
-            <ReviewIndexItem
-                key={review.id}
-                review={review} />
-        ));
+        const reviews = this.props.reviews.map(review => {
+            let user = undefined;
+            this.props.users.forEach(potentialUser => {
+                if (review.guestId === potentialUser.id) {
+                    user = potentialUser;
+                }
+            })
+            return (
+                <ReviewIndexItem
+                    key={review.id}
+                    review={review}
+                    user={user} />
+            )
+        });
 
         return (
             <div>
