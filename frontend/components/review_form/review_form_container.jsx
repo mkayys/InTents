@@ -7,9 +7,7 @@ import { openModal } from '../../actions/modal_actions';
 const mapStateToProps = (state, ownProps) => {
     // const currentUser = state.session.currentUserId ? currentUserId : 'none';
     return {
-        maxGuests: ownProps.spot.maxGuests,
         errors: state.errors.booking,
-        formType: 'Create Booking',
         loggedIn: !!state.session.currentUserId
         // currentUser: currentUser
     }
@@ -17,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        processForm: (booking) => dispatch(createBooking(booking)),
+        createReview: (review) => dispatch(createReview(review)),
         clearErrors: () => dispatch(clearErrors()),
         requireLogin: () => dispatch(openModal('login'))
     };
