@@ -1,8 +1,5 @@
 import React from 'react';
-import DatePicker from 'react-datepicker';
-import { withRouter } from 'react-router-dom';
 
-import 'react-datepicker/dist/react-datepicker.css';
 
 class ReviewForm extends React.Component {
     constructor(props) {
@@ -61,15 +58,15 @@ class ReviewForm extends React.Component {
                     <div className='review-inputs'>
                         {/* {this.renderErrors()} */}
 
-                    <div className='review-button-box'>
-                        <input
-                            className='review-button'
-                            type="submit"
-                            value="Request to book"
-                            onClick={this.handleSubmit}
-                        />
+                        <div className='review-button-box'>
+                            <input
+                                className='review-button'
+                                type="submit"
+                                value="Request to book"
+                                onClick={this.handleSubmit}
+                            />
+                        </div>
                     </div>
-
                 </form>
             </div>
         );
@@ -77,4 +74,4 @@ class ReviewForm extends React.Component {
     }
 }
 
-export default withRouter(ReviewForm);
+export default ReviewForm;
