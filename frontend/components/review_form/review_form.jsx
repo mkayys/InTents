@@ -5,11 +5,12 @@ class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            // spot_id: this.props.spot.id,
+            spot_id: this.props.spot.id,
             body: ""
         }
         // spot_id is coming from prop threading in the spot show page
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.updateBody = this.updateBody.bind(this);
         
     }
 
@@ -32,6 +33,10 @@ class ReviewForm extends React.Component {
         } else {
             this.props.requireLogin();
         }
+    }
+
+    updateBody(e) {
+        this.setState({ body: e.target.value })
     }
 
 
@@ -58,6 +63,9 @@ class ReviewForm extends React.Component {
                 <form className="review-form-box">
                     <div className='review-inputs'>
                         {/* {this.renderErrors()} */}
+                        <input 
+                            type="text" 
+                            onChange={this.updateBody}/>
 
                         <div className='review-button-box'>
                             <input
