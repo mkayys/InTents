@@ -5,8 +5,8 @@ class Api::ReviewsController < ApplicationController
         @review.guest_id = current_user.id
 
         if @review.save
-            # render 'api/reviews/show'
-            render 'api/spots/show'
+            render 'api/reviews/show'
+            # render 'api/spots/show'
         else
             render json: @review.errors.full_messages, status: 422
         end

@@ -8,7 +8,7 @@ import ReviewForm from './review_form';
 const mapStateToProps = (state, ownProps) => {
     // const currentUser = state.session.currentUserId ? currentUserId : 'none';
     return {
-        errors: state.errors.booking,
+        // errors: state.errors.review,
         loggedIn: !!state.session.currentUserId
         // currentUser: currentUser
     }
