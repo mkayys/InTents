@@ -24,7 +24,9 @@ class ReviewIndex extends React.Component {
                 <ReviewIndexItem
                     key={review.id}
                     review={review}
-                    user={user} />
+                    user={user}
+                    deleteReview={this.props.deleteReview}
+                    currentUserId={this.props.currentUserId} />
             )
         });
 
