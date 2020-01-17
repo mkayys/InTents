@@ -8,6 +8,8 @@ import configureStore from './store/store';
 // import { createBooking } from './util/booking_api_util';
 // import { fetchUser } from './actions/user_actions';
 
+import { fetchReviewsForSpot } from './util/review_api_util';
+
 document.addEventListener('DOMContentLoaded', () => {
     let store;
     if (window.currentUser) {
@@ -38,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // window.fetchSpot = fetchSpot;
     // window.getState = store.getState;
     // window.dispatch = store.dispatch;
+    window.fetchReviewsForSpot = fetchReviewsForSpot;
     // TESTING END
 
     ReactDOM.render(<Root store={store} />, root);

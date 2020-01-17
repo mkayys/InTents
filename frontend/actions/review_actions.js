@@ -21,10 +21,19 @@ const removeReview = (review) => ({
     reviewId: review.id
 });
 
+// testing
+
+export const fetchReviewsForSpot = (spotId) => dispatch => (
+    ReviewApiUtil.fetchReviewsForSpot(spotId)
+        .then(payload => dispatch(receiveReviews(payload)))
+);
+
+//
 export const fetchReviews = () => dispatch => (
     ReviewApiUtil.fetchReviews()
         .then(payload => dispatch(receiveReviews(payload)))
 );
+
 
 export const fetchReview = (id) => dispatch => (
     ReviewApiUtil.fetchReview(id)

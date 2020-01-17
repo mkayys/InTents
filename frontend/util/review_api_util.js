@@ -5,6 +5,14 @@ export const fetchReviews = () => {
     });
 };
 
+//testing
+export const fetchReviewsForSpot = (spotId) => {
+    return $.ajax({
+        method: 'get',
+        url: `/api/reviews?spot_id=${spotId}`
+    });
+};
+
 export const fetchReview = (id) => {
     return $.ajax({
         method: 'get',

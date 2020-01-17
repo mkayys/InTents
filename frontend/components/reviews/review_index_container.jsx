@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchReviews } from '../../actions/review_actions';
+import { fetchReviews, fetchReviewsForSpot } from '../../actions/review_actions';
 import ReviewIndex from './review_index';
 
 const mapStateToProps = state => ({
@@ -8,7 +8,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    fetchReviews: () => dispatch(fetchReviews())
+    fetchReviews: () => dispatch(fetchReviews()),
+    fetchReviewsForSpot: (spotId) => dispatch(fetchReviewsForSpot(spotId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReviewIndex);

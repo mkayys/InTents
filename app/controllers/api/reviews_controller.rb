@@ -13,7 +13,8 @@ class Api::ReviewsController < ApplicationController
     end
 
     def index
-        @reviews = Review.all
+        @reviews = Review.where(spot_id: params[:spot_id])
+        # refactor review to fetch reviews that are only for that spot
         render :index
     end
 

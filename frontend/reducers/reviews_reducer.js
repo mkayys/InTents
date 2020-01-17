@@ -18,7 +18,7 @@ const reviewsReducer = (state = {}, action) => {
             delete nextState[action.reviewId]
             return nextState;
         case RECEIVE_SPOT:
-            return merge({}, state, action.payload.reviews)
+            return action.payload.reviews;
         default:
             return state;
     }
