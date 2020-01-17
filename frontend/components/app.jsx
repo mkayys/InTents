@@ -40,7 +40,7 @@ const App = () => (
                     <div className="test-container">
                         Where would you like to camp?
                     </div>} /> */}
-        <Route exact path="/reviews" component={ReviewIndexContainer} />
+        {/* <Route exact path="/reviews" component={ReviewIndexContainer} /> */}
       </Switch>
   
       <div className="main-footer-container">

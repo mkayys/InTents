@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { createReview } from '../../actions/review_actions';
 import { openModal } from '../../actions/modal_actions';
 
+import ReviewForm from './review_form';
 
 const mapStateToProps = (state, ownProps) => {
     // const currentUser = state.session.currentUserId ? currentUserId : 'none';

@@ -10,6 +10,7 @@ import BookingFormContainer from '../booking_form/booking_form_container';
 //testing
 
 import ReviewIndexContainer from '../reviews/review_index_container';
+import ReviewFormContainer from '../review_form/review_form_container';
 
 
 class SpotShow extends React.Component {
@@ -119,6 +120,7 @@ class SpotShow extends React.Component {
 
                 <div>
                     <h1>REVIEWS</h1>
+                    <ReviewFormContainer spot={this.props.spot} />
                     <ReviewIndexContainer spot={this.props.spot} />
                 </div>
 

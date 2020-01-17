@@ -5,7 +5,7 @@ class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            spot_id: this.props.spot.id,
+            // spot_id: this.props.spot.id,
             body: ""
         }
         // spot_id is coming from prop threading in the spot show page
@@ -54,6 +54,7 @@ class ReviewForm extends React.Component {
     render() {
         return (
             <div className="review-form-container">
+
                 <form className="review-form-box">
                     <div className='review-inputs'>
                         {/* {this.renderErrors()} */}
@@ -62,7 +63,7 @@ class ReviewForm extends React.Component {
                             <input
                                 className='review-button'
                                 type="submit"
-                                value="Request to book"
+                                value="Submit Review"
                                 onClick={this.handleSubmit}
                             />
                         </div>
