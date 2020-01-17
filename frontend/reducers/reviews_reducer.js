@@ -3,7 +3,7 @@ import {
     RECEIVE_REVIEW,
     REMOVE_REVIEW,
 } from '../actions/review_actions';
-import { RECEIVE_SPOT } from '../actions/spot_actions';
+// import { RECEIVE_SPOT } from '../actions/spot_actions';
 import merge from 'lodash/merge';
 
 const reviewsReducer = (state = {}, action) => {
@@ -17,8 +17,8 @@ const reviewsReducer = (state = {}, action) => {
             let nextState = Object.assign({}, state);
             delete nextState[action.reviewId]
             return nextState;
-        case RECEIVE_SPOT:
-            return action.payload.reviews;
+        // case RECEIVE_SPOT:
+        //     return action.payload.reviews;
         default:
             return state;
     }
