@@ -6,17 +6,12 @@ class ReviewForm extends React.Component {
         super(props);
         this.state = {
             spot_id: this.props.spot.id,
-            body: ""
+            body: "" 
         }
         // spot_id is coming from prop threading in the spot show page
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.updateBody = this.updateBody.bind(this);
+        // this.updateBody = this.updateBody.bind(this);
         
-    }
-
-    componentWillMount() {
-        // this.props.clearErrors();
-        // need to create a review clear errors action
     }
 
 
@@ -35,9 +30,9 @@ class ReviewForm extends React.Component {
         }
     }
 
-    updateBody(e) {
-        this.setState({ body: e.target.value })
-    }
+    // updateBody(e) {
+    //     this.setState({ body: e.target.value })
+    // }
 
 
     // renderErrors() {
@@ -65,7 +60,8 @@ class ReviewForm extends React.Component {
                         {/* {this.renderErrors()} */}
                         <input 
                             type="text" 
-                            onChange={this.updateBody}/>
+                            value={this.state.body}
+                            onChange={this.props.updateBody}/>
 
                         <div className='review-button-box'>
                             <input

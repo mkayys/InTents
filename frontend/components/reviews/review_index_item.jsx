@@ -8,8 +8,7 @@ class ReviewIndexItem extends React.Component {
 
 
     render() {
-        const { review, user, currentUserId, deleteReview } = this.props;
-   
+        const { review, user, currentUserId, deleteReview, handleReviewFormState } = this.props;
 
         return (
             <li key={review.id} className='all-reviews'>
@@ -19,7 +18,9 @@ class ReviewIndexItem extends React.Component {
                     <div>
                         {review.guestId === currentUserId ? 
                         <div>
-                            <i onClick={() => deleteReview(review.id)} className="fas fa-trash-alt"></i>
+                                <i onClick={() => handleReviewFormState(review)} className="far fa-edit"></i>
+                                <i onClick={() => deleteReview(review.id)} className="fas fa-trash"></i>
+                            {/* <i onClick={() => deleteReview(review.id)} className="fas fa-trash-alt"></i> */}
                             {/* <button onClick={() => deleteReview(review.id)}>Remove Review</button> */}
                         </div> : <div></div> }
                     </div>
