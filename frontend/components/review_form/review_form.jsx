@@ -52,6 +52,7 @@ class ReviewForm extends React.Component {
 
 
     render() {
+        debugger
         return (
             <div className="review-form-container">
 
@@ -64,12 +65,18 @@ class ReviewForm extends React.Component {
                             onChange={this.props.updateBody}/>
 
                         <div className='review-button-box'>
-                            <input
+                            {this.props.type === 'create' ? <input
                                 className='review-button'
                                 type="submit"
                                 value="Submit Review"
                                 onClick={this.handleSubmit}
-                            />
+                            /> : 
+                                <input
+                                className='review-button'
+                                type="submit"
+                                value="Submit Review"
+                                onClick={this.props.handleUpdateSubmit} />}
+                            
                         </div>
                     </div>
                 </form>

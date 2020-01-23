@@ -11,6 +11,8 @@ class ReviewIndex extends React.Component {
             spot_id: this.props.spot.id,
             body: ""
         }
+
+        this.type = 'create';
         this.handleReviewFormState = this.handleReviewFormState.bind(this);
         this.updateBody = this.updateBody.bind(this);
         this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this);
@@ -24,7 +26,7 @@ class ReviewIndex extends React.Component {
     handleReviewFormState(review) {
         this.setState({ body: review.body})
         // console.log(this.state)
-        debugger
+        // debugger
         // return (e) => {
         //     e.preventDefault();
         //     this.setState({
@@ -34,6 +36,7 @@ class ReviewIndex extends React.Component {
         //     console.log(this.state)
             
         // }
+        this.type = 'update';
     }
 
     updateBody(e) {
@@ -67,7 +70,8 @@ class ReviewIndex extends React.Component {
 
         return (
             <div>
-                <ReviewFormContainer 
+                <ReviewFormContainer
+                    type={this.type}
                     spot={this.state}
                     updateBody={this.updateBody}
                     handleUpdateSubmit={this.handleUpdateSubmit} />
