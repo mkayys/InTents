@@ -13,6 +13,7 @@ class ReviewIndex extends React.Component {
         }
         this.handleReviewFormState = this.handleReviewFormState.bind(this);
         this.updateBody = this.updateBody.bind(this);
+        this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this);
     }
 
     componentDidMount() {
@@ -39,6 +40,12 @@ class ReviewIndex extends React.Component {
         this.setState({ body: e.target.value })
     }
 
+    handleUpdateSubmit(e) {
+        e.preventDefault();
+        const review = Object.assign({}, this.state);
+        this.props.updateReview(review);
+    }
+
     render() {
         const reviews = this.props.reviews.map(review => {
             let user = undefined;
@@ -61,8 +68,9 @@ class ReviewIndex extends React.Component {
         return (
             <div>
                 <ReviewFormContainer 
-                    spot={this.props.spot}
-                    updateBody={this.updateBody} />
+                    spot={this.state}
+                    updateBody={this.updateBody}
+                    handleUpdateSubmit={this.handleUpdateSubmit} />
                 <ul className='reviews-index-list'>
                     {reviews}
                 </ul>
