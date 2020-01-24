@@ -15,7 +15,9 @@ class ReviewIndex extends React.Component {
         this.type = 'create';
         this.handleReviewFormState = this.handleReviewFormState.bind(this);
         this.updateBody = this.updateBody.bind(this);
-        this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this);
+        // this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this);
+
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
@@ -24,7 +26,9 @@ class ReviewIndex extends React.Component {
     }
 
     handleReviewFormState(review) {
-        this.setState({ body: review.body})
+        // debugger
+        // this.reviewId = review.id;
+        this.setState({ body: review.body, id: review.id })
         // console.log(this.state)
         // debugger
         // return (e) => {
@@ -43,10 +47,34 @@ class ReviewIndex extends React.Component {
         this.setState({ body: e.target.value })
     }
 
-    handleUpdateSubmit(e) {
+    // handleUpdateSubmit(e) {
+    //     e.preventDefault();
+    //     const review = Object.assign({}, this.state);
+    //     this.props.updateReview(review);
+    // }
+
+    handleSubmit(e) {
         e.preventDefault();
-        const review = Object.assign({}, this.state);
-        this.props.updateReview(review);
+        if (this.type === 'create') {
+            if (this.props.loggedIn) {
+                // if (this.state.num_guests > this.props.maxGuests){
+                //     console.log('TOOLTIP');
+                // } else {
+                let review = Object.assign({}, this.state);
+                this.props.createReview(review);
+                // this.props.processForm(booking).then(() => this.props.history.push('/profile'));
+                // }    
+            } else {
+                this.props.requireLogin();
+            }
+        } else {
+            const review = Object.assign({}, this.state);
+            this.props.updateReview(review)
+                .then(() => {
+                    this.type = 'create'
+                    this.setState({ body: '', id: null })
+                });
+        }
     }
 
     render() {
@@ -74,7 +102,7 @@ class ReviewIndex extends React.Component {
                     type={this.type}
                     spot={this.state}
                     updateBody={this.updateBody}
-                    handleUpdateSubmit={this.handleUpdateSubmit} />
+                    handleSubmit={this.handleSubmit} />
                 <ul className='reviews-index-list'>
                     {reviews}
                 </ul>

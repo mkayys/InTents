@@ -16,9 +16,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        createReview: (review) => dispatch(createReview(review)),
-        clearErrors: () => dispatch(clearErrors()),
-        requireLogin: () => dispatch(openModal('login')),
+        // createReview: (review) => dispatch(createReview(review)),
+        // clearErrors: () => dispatch(clearErrors()),
+        // requireLogin: () => dispatch(openModal('login')),
         // updateReview: (review) => dispatch(updateReview(review))
     };
 };
