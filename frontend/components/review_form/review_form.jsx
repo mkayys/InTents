@@ -60,6 +60,7 @@ class ReviewForm extends React.Component {
                     <div className='review-inputs'>
                         {/* {this.renderErrors()} */}
                         <input 
+                            className="review-body"
                             type="text" 
                             value={this.props.spot.body}
                             onChange={this.props.updateBody}/>
