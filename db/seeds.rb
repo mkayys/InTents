@@ -224,7 +224,89 @@ Spot.create(
     bins: true
 )
 
-## NEW SPOT SEED DATA
+Spot.create(
+    name: "High Desert Rock Pile", 
+    nearby: "Joshua Tree", 
+    host_id: User.all.to_a.sample.id,
+    about: "A secluded camp site nestled at the base of a rock pile formation of large sand stone and granite boulders. Enjoy views of San Jacinto and San Gregornio. Only 15 minutes to JTNP or Giant Rock and the Integratron. Even Pioneertown is close!",  
+    price: 80, 
+    max_guests: 8,             
+    check_in: "after 12pm", 
+    check_out: "before 12pm", 
+    cancellation: "flexible", 
+    on_arrival: "meet and greet", 
+    min_nights: 1,
+    latitude: 34.169, 
+    longitude: -116.429999, 
+    parking: true, 
+    ada_access: true, 
+    toilets: true, 
+    pull_through: true,
+    campfire: true, 
+    pets: true, 
+    hookups: false, 
+    potable_water: false, 
+    showers: false, 
+    picnic_table: false, 
+    bins: true
+)
+
+Spot.create(
+    name: "Camp at Boulder Gardens", 
+    nearby: "Joshua Tree", 
+    host_id: User.all.to_a.sample.id,
+    about: "This listing allows you to pick from ten spots chosen for rural camping. Or choose car, van or RV spots without hookups. Most are only a small walk away from the main area, and have all access to same the amenities as all the listings do. Our camp areas may be selected near to a ancient Pinion Pine tree, next to massive boulders, or even in a cave. Parking is close by. The landscape is cluttered with massive boulder and Joshua Trees.",  
+    price: 48, 
+    max_guests: 9,             
+    check_in: "after 2pm", 
+    check_out: "before 12pm", 
+    cancellation: "moderate", 
+    on_arrival: "meet and greet", 
+    min_nights: 1,
+    latitude: 34.21194, 
+    longitude: -116.577919, 
+    parking: true, 
+    ada_access: true, 
+    toilets: true, 
+    pull_through: false,
+    campfire: false, 
+    pets: true, 
+    hookups: false, 
+    potable_water: true, 
+    showers: true, 
+    picnic_table: true, 
+    bins: false
+)
+
+Spot.create(
+    name: "Auntie Berts Farm", 
+    nearby: "Joshua Tree", 
+    host_id: User.all.to_a.sample.id,
+    about: "Located in Sunny Southern California, this desert escape is filled with cool pieces of history and entertainment, fun for the whole family. A 162 Acre piece of private property lays home to a private campground, welcoming campers looking to drop off the grid, camp, hike and even take a dip in some watering holes. As a true oasis we have 2 swimming holes nestled into a beautiful valley filled with hiking, plenty of shade and a great view waiting at the top of any ridge. A relaxed atmosphere around this RURAL campground, a building sense of community throughout the campground, regularly held pot lucks and group campfires sharing in the beauty of the Southern California Desert.",  
+    price: 50, 
+    max_guests: 6,             
+    check_in: "after 1pm", 
+    check_out: "before 11am", 
+    cancellation: "strict", 
+    on_arrival: "meet and greet", 
+    min_nights: 1,
+    latitude: 34.075046, 
+    longitude: -116.541938, 
+    parking: true, 
+    ada_access: false, 
+    toilets: true, 
+    pull_through: false,
+    campfire: false, 
+    pets: true, 
+    hookups: false, 
+    potable_water: false, 
+    showers: true, 
+    picnic_table: true, 
+    bins: true
+)
+
+
+## Yosemite
 
 Spot.create(
     name: "A little piece of the planet", 

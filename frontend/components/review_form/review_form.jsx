@@ -59,11 +59,17 @@ class ReviewForm extends React.Component {
                 <form className="review-form-box">
                     <div className='review-inputs'>
                         {/* {this.renderErrors()} */}
-                        <input 
+                        {/* <input 
                             className="review-body"
                             type="text" 
                             value={this.props.spot.body}
-                            onChange={this.props.updateBody}/>
+                            onChange={this.props.updateBody}/> */}
+                        <textarea 
+                            className="review-body"
+                            cols="75" rows="2"
+                            onChange={this.props.updateBody} >
+                            {this.props.spot.body}
+                        </textarea>
 
                         <div className='review-button-box'>
                             <input
