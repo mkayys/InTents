@@ -305,6 +305,60 @@ Spot.create(
     bins: true
 )
 
+Spot.create(
+    name: "Horse With No Name", 
+    nearby: "Joshua Tree", 
+    host_id: User.all.to_a.sample.id,
+    about: "🌵One of the few properties in the area that lies next to its own mountain, Horse With No Name is the perfect spot to enjoy a relaxing weekend of cookouts, hiking, and starry nights. 🌜Night sky photographers love us because we're in the darkest gray scale on the nigh sky map - even darker than in the Park!",  
+    price: 29, 
+    max_guests: 4,             
+    check_in: "after 7am", 
+    check_out: "before 11am", 
+    cancellation: "strict", 
+    on_arrival: "go straight to camp", 
+    min_nights: 2,
+    latitude: 34.1364, 
+    longitude: -116.167799, 
+    parking: false, 
+    ada_access: false, 
+    toilets: true, 
+    pull_through: false,
+    campfire: true, 
+    pets: false, 
+    hookups: false, 
+    potable_water: true, 
+    showers: true, 
+    picnic_table: true, 
+    bins: true
+)
+
+Spot.create(
+    name: "Horse With No Name", 
+    nearby: "Joshua Tree", 
+    host_id: User.all.to_a.sample.id,
+    about: "The ULTIMATE luxury campground experience! Featured on HGTV: The Castle House Estate brings outdoor living to another level located in the heart of Joshua Tree, just minutes from the National Park. This unique medieval compound blends indoor-outdoor living with an emphasis on entertaining. The Castle House Estate is situated on eight picturesque acres, surrounded by many more private undeveloped acres.",  
+    price: 40, 
+    max_guests: 36,             
+    check_in: "after 2pm", 
+    check_out: "before 12pm", 
+    cancellation: "strict", 
+    on_arrival: "go straight to camp", 
+    min_nights: 1,
+    latitude: 34.166133, 
+    longitude: -116.282299, 
+    parking: true, 
+    ada_access: true, 
+    toilets: true, 
+    pull_through: true,
+    campfire: true, 
+    pets: true, 
+    hookups: false, 
+    potable_water: true, 
+    showers: true, 
+    picnic_table: true, 
+    bins: true
+)
+
 
 ## Yosemite
 
@@ -443,7 +497,142 @@ Spot.create(
     bins: true
 )
 
+Spot.create(
+    name: "Frog Hollow - Creekbed Canyon", 
+    nearby: "Yosemite", 
+    host_id: User.all.to_a.sample.id,
+    about: "Enjoy two acres of private land located in historic Mariposa. Right off the highway and only 10 minutes to town; you will get to enjoy the serene peace and quiet on our mostly secluded land. We are surrounded by several scenic local spots and a 45 minute drive to Yosemite National Park. Additionally, each site comes with picnic table, flat spot for tents, and close to camp parking. Disclaimer: Please note that the shower is not available until further notice.",  
+    price: 30, 
+    max_guests: 4,             
+    check_in: "after 1pm", 
+    check_out: "before 12pm", 
+    cancellation: "super strict", 
+    on_arrival: "go straight to camp", 
+    min_nights: 1,
+    latitude: 37.4833, 
+    longitude: -120.041799, 
+    parking: true, 
+    ada_access: false, 
+    toilets: true, 
+    pull_through: false,
+    campfire: true, 
+    pets: true, 
+    hookups: false, 
+    potable_water: false, 
+    showers: false, 
+    picnic_table: true, 
+    bins: false
+)
 
+
+Spot.create(
+    name: "Big Sage", 
+    nearby: "Yosemite", 
+    host_id: User.all.to_a.sample.id,
+    about: "This our large group camping area. We can accomodate large groups up to 40 or more. This area offers shady flat camping . A large fire pit, tables and chairs . There is also a pit toilet as well we have a porta potty . The views from this location are legendary! Kids camp free! We now have firewood available 10$ a bundle!",  
+    price: 50, 
+    max_guests: 45,             
+    check_in: "after 2pm", 
+    check_out: "before 12pm", 
+    cancellation: "flexible", 
+    on_arrival: "meet and greet", 
+    min_nights: 1,
+    latitude: 38.0813, 
+    longitude: -119.053599, 
+    parking: true, 
+    ada_access: false, 
+    toilets: true, 
+    pull_through: true,
+    campfire: true, 
+    pets: true, 
+    hookups: false, 
+    potable_water: true, 
+    showers: false, 
+    picnic_table: true, 
+    bins: false
+)
+
+
+Spot.create(
+    name: "Piñon Camp", 
+    nearby: "Yosemite", 
+    host_id: User.all.to_a.sample.id,
+    about: "Come camp in the shade of the Pinion trees. This camp is ready for tents and campers, small r.v . Complete with fire pit , cooking table, and pit toilet. Excellent views of the Mono lake and the Sierra Nevada. Kids camp free! Firewood available 10$ a bundle!",  
+    price: 20, 
+    max_guests: 12,             
+    check_in: "after 2pm", 
+    check_out: "before 12pm", 
+    cancellation: "flexible", 
+    on_arrival: "go straight to camp", 
+    min_nights: 1,
+    latitude: 38.0854, 
+    longitude: -119.062499, 
+    parking: true, 
+    ada_access: false, 
+    toilets: true, 
+    pull_through: false,
+    campfire: true, 
+    pets: true, 
+    hookups: false, 
+    potable_water: true, 
+    showers: false, 
+    picnic_table: false, 
+    bins: false
+)
+
+Spot.create(
+    name: "Mountain Views • Right On the Water", 
+    nearby: "Yosemite", 
+    host_id: User.all.to_a.sample.id,
+    about: "Welcome to Bridgeport Reservoir Marina and Campground. Classic camping and fishing with excellent views of the mountains and lake We have developed tent and campervan sites right on the water. Lies within the Toiyabe National Forest area and near two distinct hot springs. The lake is great for fishing in the spring through fall. In proximity to great river and stream fishing as well. 30 minutes or 31 miles to Tioga pass into Yosemite National Park. Plenty of mountain biking and 4x4 trails access. Bodie Ghost Town is very close as well.",  
+    price: 28, 
+    max_guests: 7,             
+    check_in: "after 2pm", 
+    check_out: "before 2pm", 
+    cancellation: "strict", 
+    on_arrival: "meet and greet", 
+    min_nights: 1,
+    latitude: 38.2808, 
+    longitude: -119.238999, 
+    parking: true, 
+    ada_access: false, 
+    toilets: true, 
+    pull_through: true,
+    campfire: true, 
+    pets: true, 
+    hookups: true, 
+    potable_water: true, 
+    showers: true, 
+    picnic_table: true, 
+    bins: true
+)
+
+Spot.create(
+    name: "Starry views on Anahata lake", 
+    nearby: "Yosemite", 
+    host_id: User.all.to_a.sample.id,
+    about: "Pitch your tent or park your camper by a wonderful lake on our 80-acre oak woodland and enjoy the sounds of nature -- birds on the lake, frogs, and crickets. You may see deer, geese, turkeys or a jack rabbit in the early morning. Our dark skies are great for relaxing under the stars. The location is perfect for wine tasting in Murphys (5 minutes), attending a concert at Ironstone (10 minutes) site seeing in the gold country, hiking in the Sierra, and playing in high alpine lakes. We are about half way between Yosemite and Lake Tahoe.",  
+    price: 45, 
+    max_guests: 4,             
+    check_in: "after 2pm", 
+    check_out: "before 12pm", 
+    cancellation: "flexible", 
+    on_arrival: "meet and greet", 
+    min_nights: 1,
+    latitude: 38.0837, 
+    longitude: -120.476587, 
+    parking: true, 
+    ada_access: false, 
+    toilets: true, 
+    pull_through: true,
+    campfire: false, 
+    pets: false, 
+    hookups: false, 
+    potable_water: true, 
+    showers: true, 
+    picnic_table: false, 
+    bins: true
+)
 
 # Spot.all.each_with_index do |spot, idx|
 #     if (idx < 5) 
