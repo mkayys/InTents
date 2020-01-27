@@ -23,3 +23,19 @@
     margin: 0 auto;
     border: 1px solid purple;
 }
+
+// REVIEW INDEX ITEM: edit button
+
+
+.review-list-and-cancel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-edit {
+    color: rgb(64, 217, 172);
+}
+
+.fa-trash {
+    // color: rgb(64, 217, 172);
+}
