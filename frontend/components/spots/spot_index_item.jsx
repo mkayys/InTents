@@ -26,7 +26,7 @@ const SpotIndexItem = ({ spot }) => (
                 {spot.nearby}
             </div>
             <div className='extra-spot-info'>
-                <i className="fas fa-thumbs-up"></i>
+                <i className="fas fa-thumbs-up"></i> 
                 <div className='spot-price'>
                     ${spot.price}/night
                 </div>

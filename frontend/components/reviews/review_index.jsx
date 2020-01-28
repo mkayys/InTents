@@ -61,7 +61,10 @@ class ReviewIndex extends React.Component {
                 //     console.log('TOOLTIP');
                 // } else {
                 let review = Object.assign({}, this.state);
-                this.props.createReview(review);
+                this.props.createReview(review)
+                    .then(() => {
+                        this.setState({ body: '', id: null })
+                    });
                 // this.props.processForm(booking).then(() => this.props.history.push('/profile'));
                 // }    
             } else {
