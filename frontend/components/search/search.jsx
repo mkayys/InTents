@@ -14,13 +14,13 @@ class Search extends React.Component {
                             spots={this.props.spots}
                             fetchSpots={this.props.fetchSpots} />
                     </div>
-                    {/* <div className='spots-map'>
+                    <div className='spots-map'>
                         <SpotMap
                             spots={this.props.spots}
                             fetchSpots={this.props.fetchSpots}
                             updateBounds={this.props.updateBounds} />
 
-                    </div> */}
+                    </div>
                 </div>
             </div>
         )
