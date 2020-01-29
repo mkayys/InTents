@@ -55,31 +55,33 @@ class ReviewForm extends React.Component {
         // debugger
         return (
             <div className="review-form-container">
+                <fieldset>
+                    <legend>Write Review:</legend>
+                    <div className="review-form-box">
+                        <div className='review-inputs'>
+                            {/* {this.renderErrors()} */}
+                            <input 
+                                className="review-body"
+                                type="text" 
+                                value={this.props.spot.body}
+                                onChange={this.props.updateBody}/>
+                            {/* <textarea 
+                                className="review-body"
+                                cols="75" rows="2"
+                                onChange={this.props.updateBody} >
+                                {this.props.spot.body}
+                            </textarea> */}
 
-                <form className="review-form-box">
-                    <div className='review-inputs'>
-                        {/* {this.renderErrors()} */}
-                        <input 
-                            className="review-body"
-                            type="text" 
-                            value={this.props.spot.body}
-                            onChange={this.props.updateBody}/>
-                        {/* <textarea 
-                            className="review-body"
-                            cols="75" rows="2"
-                            onChange={this.props.updateBody} >
-                            {this.props.spot.body}
-                        </textarea> */}
-
-                        <div className='review-button-box'>
-                            <input
-                                className='review-button'
-                                type="submit"
-                                value="Submit Review"
-                                onClick={this.props.handleSubmit} />  
+                            <div className='review-button-box'>
+                                <input
+                                    className='review-button'
+                                    type="submit"
+                                    value="Submit Review"
+                                    onClick={this.props.handleSubmit} />  
+                            </div>
                         </div>
                     </div>
-                </form>
+                </fieldset>
             </div>
         );
 
