@@ -9,7 +9,8 @@ const mapStateToProps = (state, ownProps) => {
     return {
         // errors: state.errors.review,
         loggedIn: !!state.session.currentUserId,
-        type: ownProps.type
+        type: ownProps.type,
+        errors: state.errors.review
         // currentUser: currentUser
     }
 };

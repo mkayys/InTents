@@ -14,6 +14,9 @@ class ReviewForm extends React.Component {
         
     }
 
+    componentDidMount() {
+
+    }
 
     // handleSubmit(e) {
     //     e.preventDefault();
@@ -35,20 +38,19 @@ class ReviewForm extends React.Component {
     // }
 
 
-    // renderErrors() {
-    //     return (
-    //         <div>
-    //             <ul className='login-errors'>
-    //                 { console.log(this.props.errors) }
-    //                 {this.props.errors.map((error, i) => (
-    //                     <li key={`error-${i}`}>
-    //                         {error}
-    //                     </li>
-    //                 ))}
-    //             </ul>
-    //         </div>
-    //     );
-    // }
+    renderErrors() {
+        return (
+            <div>
+                <ul className='login-errors'>
+                    {this.props.errors.map((error, i) => (
+                        <li key={`error-${i}`}>
+                            {error}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        );
+    }
 
 
     render() {
@@ -59,7 +61,7 @@ class ReviewForm extends React.Component {
                     <legend>Write Review:</legend>
                     <div className="review-form-box">
                         <div className='review-inputs'>
-                            {/* {this.renderErrors()} */}
+                            {this.renderErrors()}
                             <input 
                                 className="review-body"
                                 type="text" 

@@ -22,7 +22,7 @@ const removeReview = (review) => ({
     reviewId: review.id
 });
 
-export const receiveErrors = (errors) => ({
+const receiveErrors = (errors) => ({
     type: RECEIVE_REVIEW_ERRORS,
     errors
 });
@@ -51,7 +51,7 @@ export const createReview = (review) => dispatch => (
         .then(payload => dispatch(receiveReview(payload)),
             err => (
                 // console.log(err.responseJSON)
-                dispatch(receiveErrors(err))
+                dispatch(receiveErrors(err.responseJSON))
             ))
 );
 
