@@ -4,6 +4,7 @@ export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const REMOVE_REVIEW = 'REMOVE_REVIEW';
 export const RECEIVE_REVIEW_ERRORS = 'RECEIVE_REVIEW_ERRORS';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
 // need reviews errors
 
@@ -26,6 +27,10 @@ const receiveErrors = (errors) => ({
     type: RECEIVE_REVIEW_ERRORS,
     errors
 });
+
+export const clearErrors = () => ({
+    type: CLEAR_ERRORS
+})
 
 // testing
 

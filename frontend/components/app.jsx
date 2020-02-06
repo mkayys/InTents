@@ -44,8 +44,9 @@ const App = () => (
       </Switch>
   
       <div className="main-footer-container">
-        <Footer />
+        {/* <Footer /> */}
       </div>
+
   </div>
 );
 

@@ -1,7 +1,7 @@
 import {
     RECEIVE_REVIEW_ERRORS,
     // RECEIVE_BOOKING,
-    // CLEAR_ERRORS
+    CLEAR_ERRORS
 } from '../actions/review_actions';
 
 const reviewErrorsReducer = (state = [], action) => {
@@ -11,8 +11,8 @@ const reviewErrorsReducer = (state = [], action) => {
             return action.errors;
         // case RECEIVE_BOOKING:
         //     return [];
-        // case CLEAR_ERRORS:
-        //     return [];
+        case CLEAR_ERRORS:
+            return [];
         default:
             return state;
     }
