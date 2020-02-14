@@ -22,7 +22,7 @@
     "redux-thunk": "^2.3.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.35.2",
-    "yarn": "^1.16.0"
+    "yarn": "^1.22.0"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
