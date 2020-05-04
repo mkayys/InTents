@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { fetchReviews, fetchReviewsForSpot, deleteReview, updateReview, createReview } from '../../actions/review_actions';
 import ReviewIndex from './review_index';
 import { openModal } from '../../actions/modal_actions';
+import { clearErrors } from '../../actions/review_actions';
 
 const mapStateToProps = state => ({
     reviews: Object.values(state.entities.reviews),
@@ -16,7 +17,8 @@ const mapDispatchToProps = dispatch => ({
     deleteReview: (id) => dispatch(deleteReview(id)),
     updateReview: (review) => dispatch(updateReview(review)),
     requireLogin: () => dispatch(openModal('login')),
-    createReview: (review) => dispatch(createReview(review))
+    createReview: (review) => dispatch(createReview(review)),
+    clearErrors: () => dispatch(clearErrors())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReviewIndex);

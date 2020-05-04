@@ -78,6 +78,7 @@ class ReviewIndex extends React.Component {
                     this.setState({ body: '', id: null })
                 });
         }
+        
     }
 
     render() {
