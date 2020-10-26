@@ -82,7 +82,9 @@ class ReviewIndex extends React.Component {
     }
 
     render() {
-        const reviews = this.props.reviews.map(review => {
+        const recentFirst = this.props.reviews.reverse();
+        // const reviews = this.props.reviews.map(review => {
+        const reviews = recentFirst.map(review => {
             let user = undefined;
             this.props.users.forEach(potentialUser => {
                 if (review.guestId === potentialUser.id) {

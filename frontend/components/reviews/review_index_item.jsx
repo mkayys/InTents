@@ -14,10 +14,11 @@ class ReviewIndexItem extends React.Component {
             <li key={review.id} className='all-reviews'>
                 <div className='review-list-and-cancel'>
                     <div className='review-info'>
-                        <div>Review written by: {user.firstName} {user.lastName}</div>
+                        <div>{user.firstName} {user.lastName[0]}. says: </div> 
                         <div>{review.body}</div>
                     </div>
                     <div className='edit-options'>
+                        {/* <div>{review.createdAt}</div> */}
                         {review.guestId === currentUserId ? 
                         <div>
                                 <i onClick={() => handleReviewFormState(review)} className="far fa-edit"></i>
