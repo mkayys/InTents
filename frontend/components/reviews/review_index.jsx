@@ -12,7 +12,7 @@ class ReviewIndex extends React.Component {
             body: ""
         }
 
-        this.type = 'create';
+        // this.type = 'create';
         this.handleReviewFormState = this.handleReviewFormState.bind(this);
         this.updateBody = this.updateBody.bind(this);
         // this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this);
@@ -82,9 +82,9 @@ class ReviewIndex extends React.Component {
     }
 
     render() {
-        const recentFirst = this.props.reviews.reverse();
-        // const reviews = this.props.reviews.map(review => {
-        const reviews = recentFirst.map(review => {
+        // const recentFirst = this.props.reviews.reverse();
+        const reviews = this.props.reviews.map(review => {
+        // const reviews = recentFirst.map(review => {
             let user = undefined;
             this.props.users.forEach(potentialUser => {
                 if (review.guestId === potentialUser.id) {
@@ -98,14 +98,15 @@ class ReviewIndex extends React.Component {
                     user={user}
                     deleteReview={this.props.deleteReview}
                     currentUserId={this.props.currentUserId}
-                    handleReviewFormState={this.handleReviewFormState} />
+                    handleReviewFormState={this.handleReviewFormState} 
+                    />
             )
         });
 
         return (
             <div>
                 <ReviewFormContainer
-                    type={this.type}
+                    // type={this.type}
                     spot={this.state}
                     updateBody={this.updateBody}
                     handleSubmit={this.handleSubmit} />

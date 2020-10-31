@@ -1,14 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//testing
+import ReviewFormContainer from '../review_form/review_form_container';
+
 class ReviewIndexItem extends React.Component {
     constructor(props) {
         super(props)
     }
 
 
+    // handle
+
+
     render() {
         const { review, user, currentUserId, deleteReview, handleReviewFormState } = this.props;
+
+        // const editReview  = (
+        //     <ReviewFormContainer
+        //         type={this.type}
+        //         spot={this.state}
+        //         updateBody={this.updateBody}
+        //         handleSubmit={this.handleSubmit} />
+        // )
 
         return (
             <li key={review.id} className='all-reviews'>
@@ -22,6 +36,7 @@ class ReviewIndexItem extends React.Component {
                         {review.guestId === currentUserId ? 
                         <div>
                                 <i onClick={() => handleReviewFormState(review)} className="far fa-edit"></i>
+                                {/* <i onClick={} className="far fa-edit"></i> */}
                                 <i onClick={() => deleteReview(review.id)} className="fas fa-trash-alt"></i>
                                 {/* <i onClick={() => deleteReview(review.id)} className="fas fa-trash"></i> */}
                             {/* <i onClick={() => deleteReview(review.id)} className="fas fa-trash-alt"></i> */}
