@@ -6,21 +6,25 @@ import { openModal } from '../../actions/modal_actions';
 import ReviewForm from './review_form';
 
 const mapStateToProps = (state, ownProps) => {
+    // debugger
     return {
         // errors: state.errors.review,
         loggedIn: !!state.session.currentUserId,
         type: ownProps.type,
-        errors: state.errors.review
+        errors: state.errors.review,
         // currentUser: currentUser
+        spotId: ownProps.spotId,
+        //review only if from edit
+        review: ownProps.review
     }
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        // createReview: (review) => dispatch(createReview(review)),
+        createReview: (review) => dispatch(createReview(review)),
         clearErrors: () => dispatch(clearErrors()),
         // requireLogin: () => dispatch(openModal('login')),
-        // updateReview: (review) => dispatch(updateReview(review))
+        updateReview: (review) => dispatch(updateReview(review))
     };
 };
 

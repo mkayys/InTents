@@ -65,7 +65,8 @@ export const updateReview = (review) => dispatch => (
     ReviewApiUtil.updateReview(review)
         .then(review => dispatch(receiveReview(review)),
             err => (
-                console.log(err.responseJSON)
+                // console.log(err.responseJSON)
+                dispatch(receiveErrors(err.responseJSON))
             ))
 );
 
