@@ -29,6 +29,16 @@ class SpotShow extends React.Component {
     render() {
         if (this.props.spot === undefined) return null;
         if (this.props.host === undefined) return null;
+
+        const images = this.props.spot.photoUrls.map((photo, idx) => {
+            return (
+                <div id={idx}>
+                    <img src={photo}/>
+                </div>
+            )
+        })
+
+
         return (
             <div className='spot-show-information'>
                 <div className='spot-show-pictures'>
@@ -115,7 +125,11 @@ class SpotShow extends React.Component {
                         </div>
                     </div>
                 </div>
-
+                
+                <div className="spot-photo-grid">
+                    <h1>Vibe at {this.props.spot.name}</h1>
+                    {images}
+                </div>
 
                 <div>
                     <h1>Reviews</h1>

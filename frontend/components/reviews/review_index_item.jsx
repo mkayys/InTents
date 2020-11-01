@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 //testing
-import ReviewFormContainer from '../review_form/review_form_container';
+import EditReviewFormContainer from '../review_form/edit_review_form_container';
 
 class ReviewIndexItem extends React.Component {
     constructor(props) {
@@ -28,12 +27,14 @@ class ReviewIndexItem extends React.Component {
 
         if (this.state.editing) {
             return (
-                <ReviewFormContainer
-                    type="edit"
-                    spotId={review.spotId}
-                    review={review}
-                    toggleEditStatus={this.toggleEditStatus}
-                    />
+                <div>
+                    <EditReviewFormContainer
+                        spotId={review.spotId}
+                        review={review}
+                        toggleEditStatus={this.toggleEditStatus}
+                        />
+                    
+                </div>
             )
         } else {
             return (

@@ -1,19 +1,18 @@
 import React from 'react';
 
-
-class ReviewForm extends React.Component {
+class EditReviewForm extends React.Component {
     constructor(props) {
         super(props);
         // debugger
         this.state = {
             spot_id: this.props.spotId,
             // body: (this.props.review ? this.props.review.body : '')
-            body: ''
+            body: this.props.review.body
         }
         // spot_id is coming from prop threading in the spot show page
         this.handleSubmit = this.handleSubmit.bind(this);
         this.updateBody = this.updateBody.bind(this);
-        
+
     }
 
 
@@ -24,16 +23,10 @@ class ReviewForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        if (this.props.loggedIn) {
-            let review = Object.assign({}, this.state);
-            this.props.createReview(review)
-                .then(() => {
-                    this.setState({ body: '', id: null });
-                    this.props.clearErrors();
-                }); 
-        } else {
-            this.props.requireLogin();
-        }
+        const review = Object.assign({}, this.state);
+        review.id = this.props.review.id;
+        this.props.updateReview(review)
+            .then(this.props.toggleEditStatus);
 
     }
 
@@ -62,15 +55,15 @@ class ReviewForm extends React.Component {
         return (
             <div className="review-form-container">
                 <fieldset>
-                    <legend>Write Review:</legend>
+                    <legend>Write a Review:</legend>
                     <div className="review-form-box">
                         <div className='review-inputs'>
                             {this.renderErrors()}
-                            <input 
+                            <input
                                 className="review-body"
-                                type="text" 
+                                type="text"
                                 value={this.state.body}
-                                onChange={this.updateBody}/>
+                                onChange={this.updateBody} />
                             {/* <textarea 
                                 className="review-body"
                                 cols="75" rows="2"
@@ -82,8 +75,8 @@ class ReviewForm extends React.Component {
                                 <input
                                     className='review-button'
                                     type="submit"
-                                    value="Submit Review"
-                                    onClick={this.handleSubmit} />  
+                                    value="Submit"
+                                    onClick={this.handleSubmit} />
                             </div>
                         </div>
                     </div>
@@ -94,4 +87,4 @@ class ReviewForm extends React.Component {
     }
 }
 
-export default ReviewForm;
+export default EditReviewForm;
