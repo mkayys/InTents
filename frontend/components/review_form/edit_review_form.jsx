@@ -53,11 +53,9 @@ class EditReviewForm extends React.Component {
     render() {
         // debugger
         return (
-            <div className="review-form-container">
-                <fieldset>
-                    <legend>Write a Review:</legend>
-                    <div className="review-form-box">
-                        <div className='review-inputs'>
+            <div className="edit-review-form-container">
+                    {/* <div className="review-form-box"> */}
+                        {/* <div className='review-inputs'> */}
                             {this.renderErrors()}
                             <input
                                 className="review-body"
@@ -71,16 +69,18 @@ class EditReviewForm extends React.Component {
                                 {this.props.spot.body}
                             </textarea> */}
 
-                            <div className='review-button-box'>
-                                <input
-                                    className='review-button'
-                                    type="submit"
-                                    value="Submit"
-                                    onClick={this.handleSubmit} />
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
+                            {/* <div className='review-button-box'> */}
+                            <input
+                                className='review-button'
+                                type="submit"
+                                value="Update Review"
+                                onClick={this.handleSubmit} />
+
+                            <i className="fas fa-times"
+                                onClick={this.props.toggleEditStatus}></i>
+                            {/* </div> */}
+                        {/* </div> */}
+                    {/* </div> */}
             </div>
         );
 

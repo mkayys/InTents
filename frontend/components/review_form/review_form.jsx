@@ -62,7 +62,7 @@ class ReviewForm extends React.Component {
         return (
             <div className="review-form-container">
                 <fieldset>
-                    <legend>Write Review:</legend>
+                    <legend>What did you think?</legend>
                     <div className="review-form-box">
                         <div className='review-inputs'>
                             {this.renderErrors()}
