@@ -69,9 +69,9 @@ class SpotShow extends React.Component {
 
         const images = this.props.spot.photoUrls.map((photo, idx) => {
             return (
-                <div id={idx}>
-                    <img src={photo}/>
-                </div>
+                // <div id={idx}>
+                    <img className="spot-img" src={photo}/>
+                // </div>
             )
         })
 
@@ -131,7 +131,9 @@ class SpotShow extends React.Component {
 
                         <div className="spot-photo-grid">
                             <h1>Vibe at {this.props.spot.name}</h1>
-                            {images}
+                            <div className="img-gallery">
+                                {images}
+                            </div>
                         </div>
 
                         <div className="review-form-and-list">

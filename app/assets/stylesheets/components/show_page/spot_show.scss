@@ -88,6 +88,23 @@ img {
 
         .spot-photo-grid {
             border-bottom: 1px solid rgb(235,235,235);
+            // display: grid;
+
+            .img-gallery {
+                display: grid;
+                grid-template-columns: repeat(3, 30vh);
+                grid-template-rows: repeat(3, 30vw);
+                grid-gap: 20px;
+
+                .spot-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
+                }
+            }
+
+
         }
 
         .review-form-and-list {
