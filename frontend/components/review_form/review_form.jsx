@@ -24,16 +24,16 @@ class ReviewForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        if (this.props.loggedIn) {
+        // if (this.props.loggedIn) {
             let review = Object.assign({}, this.state);
             this.props.createReview(review)
                 .then(() => {
                     this.setState({ body: '', id: null });
                     this.props.clearErrors();
                 }); 
-        } else {
-            this.props.requireLogin();
-        }
+        // } else {
+        //     this.props.requireLogin();
+        // }
 
     }
 

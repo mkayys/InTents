@@ -1,8 +1,5 @@
 import React from 'react';
 import ReviewIndexItem from './review_index_item';
-import { Link } from 'react-router-dom';
-
-import ReviewFormContainer from '../review_form/review_form_container';
 
 class ReviewIndex extends React.Component {
     constructor(props) {
@@ -34,9 +31,6 @@ class ReviewIndex extends React.Component {
 
         return (
             <div>
-                <ReviewFormContainer
-                    type='create'
-                    spotId={this.props.spot.id} />
                 <ul className='reviews-index-list'>
                     {reviews}
                 </ul>

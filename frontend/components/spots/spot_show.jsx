@@ -6,6 +6,7 @@ import SpotShowEssentials from './spots_show/spot_show_essentials';
 import SpotShowAmenities from './spots_show/spot_show_amenities';
 import SpotShowDetails from './spots_show/spot_show_details';
 import BookingFormContainer from '../booking_form/booking_form_container';
+import ReviewFormContainer from '../review_form/review_form_container';
 
 //testing
 
@@ -15,16 +16,44 @@ import ReviewIndexContainer from '../reviews/review_index_container';
 class SpotShow extends React.Component {
     constructor(props) {
         super(props);
+
+        this.removeUserIconFromNavBar = this.removeUserIconFromNavBar.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchSpot(this.props.match.params.spotId);
         // this.props.fetchUser(this.props.spot.hostId);
+
+        //
+        this.removeUserIconFromNavBar();
+        // document.addEventListener('scroll', this.removeUserIconFromNavBar)
+        //
     }
 
     // componentDidUpdate() {
     //     this.props.fetchUser(this.props.spot.hostId);
     // }
+
+    //test
+    componentWillUnmount() {
+        // document.removeEventListener('scroll', this.removeUserIconFromNavBar)
+    }
+    //
+
+    removeUserIconFromNavBar() {
+        let userDrpdwn = document.getElementsByClassName('logged-in-dropdown')[0];
+        let prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                userDrpdwn.style.visibility = "visible";
+            } else {
+                userDrpdwn.style.visibility = "hidden";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    }
+
 
     render() {
         if (this.props.spot === undefined) return null;
@@ -90,6 +119,23 @@ class SpotShow extends React.Component {
                                 <SpotShowDetails spot={this.props.spot} />
                             </div>
                         </div>
+
+
+                        <div className="spot-photo-grid">
+                            <h1>Vibe at {this.props.spot.name}</h1>
+                            {images}
+                        </div>
+
+                        <div>
+                            <h1>Reviews</h1>
+
+                            {this.props.loggedIn ? <ReviewFormContainer spotId={this.props.spot.id} /> : ""}
+                            
+                            <ReviewIndexContainer spot={this.props.spot} />
+                        </div>
+
+
+
                     </div>
 
                     <div className='booking-container'>
@@ -126,16 +172,7 @@ class SpotShow extends React.Component {
                     </div>
                 </div>
                 
-                <div className="spot-photo-grid">
-                    <h1>Vibe at {this.props.spot.name}</h1>
-                    {images}
-                </div>
 
-                <div>
-                    <h1>Reviews</h1>
-                    
-                    <ReviewIndexContainer spot={this.props.spot} />
-                </div>
 
             </div>
         );

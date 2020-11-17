@@ -54,33 +54,22 @@ class EditReviewForm extends React.Component {
         // debugger
         return (
             <div className="edit-review-form-container">
-                    {/* <div className="review-form-box"> */}
-                        {/* <div className='review-inputs'> */}
-                            {this.renderErrors()}
-                            <input
-                                className="review-body"
-                                type="text"
-                                value={this.state.body}
-                                onChange={this.updateBody} />
-                            {/* <textarea 
-                                className="review-body"
-                                cols="75" rows="2"
-                                onChange={this.props.updateBody} >
-                                {this.props.spot.body}
-                            </textarea> */}
+                {this.renderErrors()}
+                <input
+                    className="review-body"
+                    type="text"
+                    value={this.state.body}
+                    onChange={this.updateBody} />
 
-                            {/* <div className='review-button-box'> */}
-                            <input
-                                className='review-button'
-                                type="submit"
-                                value="Update Review"
-                                onClick={this.handleSubmit} />
+                <input
+                    className='review-button'
+                    type="submit"
+                    value="Update Review"
+                    onClick={this.handleSubmit} />
 
-                            <i className="fas fa-times"
-                                onClick={this.props.toggleEditStatus}></i>
-                            {/* </div> */}
-                        {/* </div> */}
-                    {/* </div> */}
+                <i className="fas fa-times"
+                    onClick={this.props.toggleEditStatus}></i>
+
             </div>
         );
 

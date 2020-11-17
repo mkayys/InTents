@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { createReview, clearErrors } from '../../actions/review_actions';
+import { openModal } from '../../actions/modal_actions';
 
 import ReviewForm from './review_form';
 
@@ -22,7 +23,7 @@ const mapDispatchToProps = dispatch => {
     return {
         createReview: (review) => dispatch(createReview(review)),
         clearErrors: () => dispatch(clearErrors()),
-        // requireLogin: () => dispatch(openModal('login')),
+        requireLogin: () => dispatch(openModal('login')),
         // updateReview: (review) => dispatch(updateReview(review))
     };
 };
