@@ -64,7 +64,7 @@ class EditReviewForm extends React.Component {
                 <input
                     className='review-button'
                     type="submit"
-                    value="Update Review"
+                    value="Update"
                     onClick={this.handleSubmit} />
 
                 <i className="fas fa-times"

@@ -18,6 +18,7 @@ class SpotShow extends React.Component {
         super(props);
 
         this.removeUserIconFromNavBar = this.removeUserIconFromNavBar.bind(this);
+        this.removeOnScrollAction = this.removeOnScrollAction.bind(this);
     }
 
     componentDidMount() {
@@ -36,6 +37,7 @@ class SpotShow extends React.Component {
 
     //test
     componentWillUnmount() {
+        this.removeOnScrollAction();
         // document.removeEventListener('scroll', this.removeUserIconFromNavBar)
     }
     //
@@ -43,6 +45,8 @@ class SpotShow extends React.Component {
     removeUserIconFromNavBar() {
         let userDrpdwn = document.getElementsByClassName('logged-in-dropdown')[0];
         let prevScrollpos = window.pageYOffset;
+
+        // debugger
         window.onscroll = function () {
             var currentScrollPos = window.pageYOffset;
             if (prevScrollpos > currentScrollPos) {
@@ -52,6 +56,10 @@ class SpotShow extends React.Component {
             }
             prevScrollpos = currentScrollPos;
         }
+    }
+
+    removeOnScrollAction() {
+        window.onScroll = function () {};
     }
 
 
@@ -126,9 +134,7 @@ class SpotShow extends React.Component {
                             {images}
                         </div>
 
-                        <div>
-                            <h1>Reviews</h1>
-
+                        <div className="review-form-and-list">
                             {this.props.loggedIn ? <ReviewFormContainer spotId={this.props.spot.id} /> : ""}
                             
                             <ReviewIndexContainer spot={this.props.spot} />
