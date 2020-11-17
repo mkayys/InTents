@@ -1,0 +1,77 @@
+.review-form-container {
+    // border: 1px solid red;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.review-form-box {
+    // border: 1px solid blue;
+}
+
+.review-inputs {
+    display: flex;
+}
+
+.review-body {
+    // border: 1px solid yellow;
+    padding: 10px;
+    width: 500px;
+    resize: none;
+}
+
+// .review-button-box {
+//     border: 1px solid orange;
+// }
+
+// .review-button {
+//     margin: 0 auto;
+//     border: 1px solid purple;
+// }
+
+
+.review-button-box {
+    background-color: white;
+    border: 1px solid #ebebeb;
+    // padding: 10px;
+    margin-left: 5px;
+    display: block;
+
+    .review-button[type=submit] {
+        width: 100%;
+        font-family: 'Lato', sans-serif;
+        background-color: rgb(64, 217, 172);
+        color: white;
+        padding: 10px 15px;
+        font-weight: bold;
+        font-size: 16px;
+        border: 3px solid transparent;
+    }
+
+    .review-button[type=submit]:hover {
+        background-color: white;
+        color: rgb(64, 217, 172);
+        border: 3px solid rgb(64, 217, 172);
+        cursor: pointer;
+        transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+    }
+}
+
+// REVIEW INDEX ITEM: edit button
+
+
+.review-list-and-cancel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-edit {
+    color: rgb(64, 217, 172);
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.fa-trash-alt {
+    // color: rgb(64, 217, 172);
+    font-size: 25px;
+}

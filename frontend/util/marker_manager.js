@@ -24,7 +24,8 @@ class MarkerManager {
         const marker = new google.maps.Marker({
             position,
             map: this.map,
-            spotId: spot.id
+            title: `${spot.id}`,
+            animation: google.maps.Animation.DROP
         });
 
         // marker.addListener('click', () => this.handleClick(spot));

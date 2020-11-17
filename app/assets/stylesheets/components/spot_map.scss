@@ -1,5 +1,5 @@
 .index-and-map-page {
-    margin: 135px;
+    margin: 135px 20px;
     // padding-top: 48px;
 }
 
@@ -15,16 +15,17 @@
     position: left fixed;
     // display: block;
     // padding: 100px 0px;
-    padding-left: 20px;
+    padding-left: 5px;
     z-index: 5;
     
 }
 
 .map-container[style] {
-    position: left fixed;
+    // position: left fixed;
+    position: sticky;
     top: 50px;
-    width: 500px;
-    height: 800px;
+    width: 400px;
+    height: 700px;
     // border: 1px solid white;
     box-shadow: 5px 5px 5px 5px rgba(211, 211, 211, 0.7);
 }

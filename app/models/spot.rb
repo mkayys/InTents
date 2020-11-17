@@ -45,12 +45,22 @@ class Spot < ApplicationRecord
 
     has_many_attached :photos
 
+    has_many :reviews,
+        foreign_key: :spot_id,
+        class_name: :Review
+
+    has_many :authors,
+        through: :reviews,
+        source: :guest
 
     def self.in_bounds(bounds)
+        # debugger
+        bounds = JSON.parse(bounds)
+
         self.where("latitude < ?", bounds[:northEast][:lat])
-        .where("latitude > ?", bounds[:southWest][:lat])
-        .where("longitude > ?", bounds[:southWest][:lng])
-        .where("longitude < ?", bounds[:northEast][:lng])
+            .where("latitude > ?", bounds[:southWest][:lat])
+            .where("longitude > ?", bounds[:southWest][:lng])
+            .where("longitude < ?", bounds[:northEast][:lng])
     end
 
 end

@@ -10,7 +10,8 @@ const mapStateToProps = (state, ownProps) => {
     
     return {
         spot: spot,
-        host: host
+        host: host,
+        loggedIn: !!state.session.currentUserId,
     }
 };
 

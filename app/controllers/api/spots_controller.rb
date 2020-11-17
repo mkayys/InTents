@@ -1,9 +1,15 @@
 class Api::SpotsController < ApplicationController
 
     def index
-        # @spots = Spot.in_bounds(params[:bounds])
-        @spots = Spot.all
-        render 'api/spots/index'
+        # debugger
+        @spots = params[:bounds] ? Spot.in_bounds(params[:bounds]) : Spot.all
+        if @spots
+            render 'api/spots/index'
+        else
+            render json: ["No spots found"], status: 422
+        end
+
+        # @spots = Spot.all
     end
 
     def show
@@ -16,5 +22,6 @@ class Api::SpotsController < ApplicationController
         params.require(:spot).permit(:name, :nearby, :host_id, :about, :price, :max_guests, 
                                     :latitude, :longitude, photos: [])
     end
+
 
 end

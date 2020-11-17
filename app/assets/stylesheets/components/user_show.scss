@@ -1,12 +1,14 @@
 .user-profile {
 
+    // background-image: url(camping.jpg);
     display: flex;
     max-width: 1200px;
     margin: 100px auto;
     justify-content: center;
-    height: 37.9vh;
+    // height: 100%;
 
     .user-info {
+        // position: fixed;
         width: 30%;
         // border: 1px solid rgb(80, 80, 80);
         .user-name-and-pic {
@@ -48,7 +50,7 @@
     }
 
     .user-bookings-list {
-
+        // overflow: scroll;
         // width: 70%;
         // border-left: 1px solid rgb(80, 80, 80);
         // margin: 0 auto;

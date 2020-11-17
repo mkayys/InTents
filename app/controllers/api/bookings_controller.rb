@@ -28,6 +28,7 @@ class Api::BookingsController < ApplicationController
 
         render json: @booking
     end
+    
 
     private
 

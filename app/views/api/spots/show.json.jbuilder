@@ -12,4 +12,18 @@ json.users do
     json.set! @spot.host.id do
         json.extract! @spot.host, :id, :first_name, :last_name
     end
+    # @spot.authors.each do |author|
+    #     json.set! author.id do
+    #         json.extract! author, :id, :first_name, :last_name
+    #     end
+    # end
 end
+
+
+# json.reviews do
+#     @spot.reviews.each do |review|
+#         json.set! review.id do
+#             json.extract! review, :id, :guest_id, :spot_id, :body
+#         end
+#     end
+# end

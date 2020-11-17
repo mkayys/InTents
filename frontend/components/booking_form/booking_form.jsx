@@ -18,14 +18,19 @@ class BookingForm extends React.Component {
         this.handleCheckOut = this.handleCheckOut.bind(this);
     }
 
-    // componentWillMount() {
-    //     this.props.clearErrors();
-    // }
+    componentWillMount() {
+        this.props.clearErrors();
+    }
 
     update(field) {
-        return e => this.setState({
-            [field]: parseInt(e.currentTarget.value)
-        });
+        return e => {
+            if (e.currentTarget.value > this.props.maxGuests) {
+                e.currentTarget.value = this.props.maxGuests;
+            }
+            this.setState({
+                [field]: parseInt(e.currentTarget.value)
+            })
+        };
     }
 
     handleCheckIn(date) {
@@ -43,28 +48,57 @@ class BookingForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         if (this.props.loggedIn) {
-            
-            const booking = Object.assign({}, this.state);
-            this.props.processForm(booking).then(this.props.history.push('/profile'));
-            
+            // if (this.state.num_guests > this.props.maxGuests){
+            //     console.log('TOOLTIP');
+            // } else {
+                const booking = Object.assign({}, this.state);
+                this.props.processForm(booking).then(() => this.props.history.push('/profile'));
+            // }    
         } else {
             this.props.requireLogin();
         }
     }
 
 
-    renderErrors() {
+    // renderErrors() {
+    //     return (
+    //         <div>
+    //             <ul className='login-errors'>
+    //                 { console.log(this.props.errors) }
+    //                 {this.props.errors.map((error, i) => (
+    //                     <li key={`error-${i}`}>
+    //                         {error}
+    //                     </li>
+    //                 ))}
+    //             </ul>
+    //         </div>
+    //     );
+    // }
+
+    renderCheckInError() {
+        let { errors } = this.props;
         return (
             <div>
                 <ul className='login-errors'>
-                    {this.props.errors.map((error, i) => (
-                        <li key={`error-${i}`}>
-                            {error}
-                        </li>
-                    ))}
+                    {errors.includes("Check in can't be blank") ? <li>{errors[errors.indexOf("Check in can't be blank")]}</li> : ""}
                 </ul>
             </div>
         );
+    }
+
+    renderCheckOutError() {
+        let { errors } = this.props;
+        return (
+            <div>
+                <ul className='login-errors'>
+                    {errors.includes("Check out can't be blank") ? <li>{errors[errors.indexOf("Check out can't be blank")]}</li> : ""}
+                </ul>
+            </div>
+        );
+    }
+
+    renderExceedGuestCount() {
+        // errors to render (tooltip)?
     }
 
 
@@ -73,7 +107,7 @@ class BookingForm extends React.Component {
             <div className="booking-form-container">
                 <form className="booking-form-box">
                     <div className='booking-inputs'>
-                        {this.renderErrors()}
+                        {/* {this.renderErrors()} */}
 
                         <div className="booking-check-in">
                             <div className='checkin-title'>Check in</div>
@@ -83,6 +117,8 @@ class BookingForm extends React.Component {
                                 openToDate={new Date()}
                                 selected={this.state.check_in}
                                 onChange={this.handleCheckIn} />
+                            
+                            {this.renderCheckInError()}
 
                         </div>
 
@@ -93,6 +129,9 @@ class BookingForm extends React.Component {
                                 placeholderText="Select date"
                                 selected={this.state.check_out}
                                 onChange={this.handleCheckOut} />
+
+                            {this.renderCheckOutError()}
+
                         </div>
 
                         <div className="booking-num-guests">
@@ -102,6 +141,8 @@ class BookingForm extends React.Component {
                                 id="guest-number"
                                 value={this.state.num_guests}
                                 type="number"
+                                min="1"
+                                max={this.props.maxGuests}
                                 onChange={this.update('num_guests')}
                             />
                         </div>

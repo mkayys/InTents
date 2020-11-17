@@ -6,26 +6,76 @@ import SpotShowEssentials from './spots_show/spot_show_essentials';
 import SpotShowAmenities from './spots_show/spot_show_amenities';
 import SpotShowDetails from './spots_show/spot_show_details';
 import BookingFormContainer from '../booking_form/booking_form_container';
+import ReviewFormContainer from '../review_form/review_form_container';
 
+//testing
+
+import ReviewIndexContainer from '../reviews/review_index_container';
 
 
 class SpotShow extends React.Component {
     constructor(props) {
         super(props);
+
+        this.removeUserIconFromNavBar = this.removeUserIconFromNavBar.bind(this);
+        this.removeOnScrollAction = this.removeOnScrollAction.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchSpot(this.props.match.params.spotId);
         // this.props.fetchUser(this.props.spot.hostId);
+
+        //
+        this.removeUserIconFromNavBar();
+        // document.addEventListener('scroll', this.removeUserIconFromNavBar)
+        //
     }
 
     // componentDidUpdate() {
     //     this.props.fetchUser(this.props.spot.hostId);
     // }
 
+    //test
+    componentWillUnmount() {
+        this.removeOnScrollAction();
+        // document.removeEventListener('scroll', this.removeUserIconFromNavBar)
+    }
+    //
+
+    removeUserIconFromNavBar() {
+        let userDrpdwn = document.getElementsByClassName('logged-in-dropdown')[0];
+        let prevScrollpos = window.pageYOffset;
+
+        // debugger
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                userDrpdwn.style.visibility = "visible";
+            } else {
+                userDrpdwn.style.visibility = "hidden";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    }
+
+    removeOnScrollAction() {
+        window.onScroll = function () {};
+    }
+
+
     render() {
         if (this.props.spot === undefined) return null;
         if (this.props.host === undefined) return null;
+
+        const images = this.props.spot.photoUrls.map((photo, idx) => {
+            return (
+                <div id={idx}>
+                    <img src={photo}/>
+                </div>
+            )
+        })
+
+
         return (
             <div className='spot-show-information'>
                 <div className='spot-show-pictures'>
@@ -77,6 +127,21 @@ class SpotShow extends React.Component {
                                 <SpotShowDetails spot={this.props.spot} />
                             </div>
                         </div>
+
+
+                        <div className="spot-photo-grid">
+                            <h1>Vibe at {this.props.spot.name}</h1>
+                            {images}
+                        </div>
+
+                        <div className="review-form-and-list">
+                            {this.props.loggedIn ? <ReviewFormContainer spotId={this.props.spot.id} /> : ""}
+                            
+                            <ReviewIndexContainer spot={this.props.spot} />
+                        </div>
+
+
+
                     </div>
 
                     <div className='booking-container'>
@@ -112,6 +177,8 @@ class SpotShow extends React.Component {
                         </div>
                     </div>
                 </div>
+                
+
 
             </div>
         );

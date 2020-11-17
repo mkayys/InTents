@@ -5,11 +5,11 @@ class SignupForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            first_name: '',
-            last_name: '',
+            firstName: '',
+            lastName: '',
             email: '',
             password: '',
-            zip_code: ''
+            zipCode: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
@@ -71,14 +71,14 @@ class SignupForm extends React.Component {
                     <br />
                         <div className='signup-fname-lname'>
                             <input type="text"
-                                value={this.state.first_name}
-                                onChange={this.update('first_name')}
+                                value={this.state.firstName}
+                                onChange={this.update('firstName')}
                                 className="signup-input fname"
                                 placeholder="First name..."
                             />
                             <input type="text"
-                                value={this.state.last_name}
-                                onChange={this.update('last_name')}
+                                value={this.state.lastName}
+                                onChange={this.update('lastName')}
                                 className="signup-input lname" 
                                 placeholder="Last name..."
                             />
@@ -101,8 +101,8 @@ class SignupForm extends React.Component {
                         <br />
                         <br />
                             <input type="text"
-                                value={this.state.zip_code}
-                                onChange={this.update('zip_code')}
+                                value={this.state.zipCode}
+                                onChange={this.update('zipCode')}
                                 className="signup-input"
                                 placeholder="Zip code..."
                             />
