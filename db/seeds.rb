@@ -89,6 +89,8 @@ num_users = User.all.length
 
 Spot.destroy_all
 
+## Joshua Tree - 8
+
 Spot.create(
     name: "Wendy's Kick it Spot", 
     nearby: "Joshua Tree", 
@@ -197,32 +199,6 @@ Spot.create(
     bins: true
 )
 
-Spot.create(
-    name: "A View of Joshua Tree", 
-    nearby: "Joshua Tree", 
-    host_id: User.all.to_a.sample.id,
-    about: "Pitch a tent. It is a short drive to Joshua Tree National Park for hiking or climbing. There is a small mountain to climb right across the dirt road from my house. It is quiet and peaceful in the middle of the desert. Not fancy. This is a clothing optional 420-friendly and LGBTQ friendly place.",  
-    price: 25, 
-    max_guests: 10,             
-    check_in: "after 12pm", 
-    check_out: "before 12pm", 
-    cancellation: "flexible", 
-    on_arrival: "meet and greet", 
-    min_nights: 1,
-    latitude: 34.1451, 
-    longitude: -116.199199, 
-    parking: true, 
-    ada_access: false, 
-    toilets: true, 
-    pull_through: true,
-    campfire: false, 
-    pets: false, 
-    hookups: false, 
-    potable_water: true, 
-    showers: true, 
-    picnic_table: true, 
-    bins: true
-)
 
 Spot.create(
     name: "High Desert Rock Pile", 
@@ -332,35 +308,9 @@ Spot.create(
     bins: true
 )
 
-Spot.create(
-    name: "Horse With No Name", 
-    nearby: "Joshua Tree", 
-    host_id: User.all.to_a.sample.id,
-    about: "The ULTIMATE luxury campground experience! Featured on HGTV: The Castle House Estate brings outdoor living to another level located in the heart of Joshua Tree, just minutes from the National Park. This unique medieval compound blends indoor-outdoor living with an emphasis on entertaining. The Castle House Estate is situated on eight picturesque acres, surrounded by many more private undeveloped acres.",  
-    price: 40, 
-    max_guests: 36,             
-    check_in: "after 2pm", 
-    check_out: "before 12pm", 
-    cancellation: "strict", 
-    on_arrival: "go straight to camp", 
-    min_nights: 1,
-    latitude: 34.166133, 
-    longitude: -116.282299, 
-    parking: true, 
-    ada_access: true, 
-    toilets: true, 
-    pull_through: true,
-    campfire: true, 
-    pets: true, 
-    hookups: false, 
-    potable_water: true, 
-    showers: true, 
-    picnic_table: true, 
-    bins: true
-)
 
 
-## Yosemite
+## Yosemite - 9
 
 Spot.create(
     name: "A little piece of the planet", 
@@ -443,32 +393,6 @@ Spot.create(
     bins: true
 )
 
-Spot.create(
-    name: "Lakeshore Tent Camping", 
-    nearby: "Yosemite", 
-    host_id: User.all.to_a.sample.id,
-    about: "Enjoy mellow community vibe, kayaks, stargazing, outdoor kitchen, bonfire nights,and more.. Camp right on the shores of Bridgeport Reservoir with a backdropofsnowcapped Sawtooth Mountain Range and an easy access to trails.",  
-    price: 34, 
-    max_guests: 4,             
-    check_in: "after 1pm", 
-    check_out: "before 11am", 
-    cancellation: "strict", 
-    on_arrival: "meet and greet", 
-    min_nights: 2,
-    latitude: 38.288795, 
-    longitude: -119.236785, 
-    parking: true, 
-    ada_access: false, 
-    toilets: true, 
-    pull_through: false,
-    campfire: true, 
-    pets: true, 
-    hookups: false, 
-    potable_water: true, 
-    showers: true, 
-    picnic_table: true, 
-    bins: true
-)
 
 Spot.create(
     name: "Camp Heather in Tuolumne City", 
@@ -635,16 +559,16 @@ Spot.create(
 )
 
 # Spot.all.each_with_index do |spot, idx|
-#     if (idx < 5) 
-#         (1..4).each do |pic_idx|
+#     if (idx < 8) 
+#         (1..9).each do |pic_idx|
 #             file = EzDownload.open("https://in-tents-seed.s3-us-west-1.amazonaws.com/spots/JT/0#{idx+1}-JT/0#{idx+1}-0#{pic_idx}-JT.jpg")
 #             spot.photos.attach(io: file, filename: "0#{idx+1}-0#{pic_idx}-JT.jpg")
 #             spot.save!
 #         end
 #     else
-#         (1..4).each do |pic_idx|
-#             file = EzDownload.open("https://in-tents-seed.s3-us-west-1.amazonaws.com/spots/Y/0#{idx-4}-Y/0#{idx-4}-0#{pic_idx}-Y.jpg")
-#             spot.photos.attach(io: file, filename: "0#{idx-4}-0#{pic_idx}-Y.jpg")
+#         (1..9).each do |pic_idx|
+#             file = EzDownload.open("https://in-tents-seed.s3-us-west-1.amazonaws.com/spots/Y/0#{idx-8}-Y/0#{idx-8}-0#{pic_idx}-Y.jpg")
+#             spot.photos.attach(io: file, filename: "0#{idx-8}-0#{pic_idx}-Y.jpg")
 #             spot.save!
 #         end
 #     end

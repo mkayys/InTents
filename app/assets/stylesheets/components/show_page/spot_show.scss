@@ -93,7 +93,7 @@ img {
             .img-gallery {
                 display: grid;
                 grid-template-columns: repeat(3, 30vh);
-                grid-template-rows: repeat(3, 30vw);
+                grid-template-rows: repeat(2, 30vw);
                 grid-gap: 20px;
 
                 .spot-img {

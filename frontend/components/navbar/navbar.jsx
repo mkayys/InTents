@@ -5,11 +5,11 @@ const NavBar = ({ currentUser, logout, openModal }) => {
     const sessionLinks = () => (
         <nav className="login-signup">
             <div className='link-wrapper'>
-                <a id="signupLink" href="#" onClick={() => openModal('signup')}>Sign up</a>
+                <a id="signupLink" onClick={() => openModal('signup')}>Sign up</a>
             </div>
 
             <div className='link-wrapper'>
-                <a id="loginLink" href="#" onClick={() => openModal('login')}>Log in</a>
+                <a id="loginLink" onClick={() => openModal('login')}>Log in</a>
             </div>
         </nav>
     );
