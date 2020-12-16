@@ -72,7 +72,7 @@ class SpotShow extends React.Component {
         const images = this.props.spot.photoUrls.map((photo, idx) => {
             return (
                 // <div id={idx}>
-                    <img className="spot-img" src={photo}/>
+                    <img key={idx} className="spot-img" src={photo}/>
                 // </div>
             )
         })
