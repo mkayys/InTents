@@ -44,17 +44,17 @@ class SpotShow extends React.Component {
 
     removeUserIconFromNavBar() {
         let userDrpdwn = document.getElementsByClassName('logged-in-dropdown')[0];
-        let prevScrollpos = window.pageYOffset;
+        // let prevScrollpos = window.pageYOffset;
 
         // debugger
         window.onscroll = function () {
             var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
+            if (currentScrollPos < 20) {
                 userDrpdwn.style.visibility = "visible";
             } else {
                 userDrpdwn.style.visibility = "hidden";
             }
-            prevScrollpos = currentScrollPos;
+            // prevScrollpos = currentScrollPos;
         }
     }
 
