@@ -22,3 +22,10 @@
     font-weight: lighter;
     margin-left: 130px;
 }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}

@@ -13,7 +13,7 @@ class LoginForm extends React.Component {
         this.passwordTyper = this.passwordTyper.bind(this);
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.props.clearErrors();
     }
 

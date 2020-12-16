@@ -56,13 +56,13 @@ class EditReviewForm extends React.Component {
             <div className="edit-review-form-container">
                 {this.renderErrors()}
                 <input
-                    className="review-body"
+                    className="edit-review-body"
                     type="text"
                     value={this.state.body}
                     onChange={this.updateBody} />
 
                 <input
-                    className='review-button'
+                    className='edit-review-button'
                     type="submit"
                     value="Update"
                     onClick={this.handleSubmit} />

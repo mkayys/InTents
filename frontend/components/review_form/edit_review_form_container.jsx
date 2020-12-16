@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { updateReview, clearErrors } from '../../actions/review_actions';
 // import { openModal } from '../../actions/modal_actions';
+import { checkIfEdit } from '../../reducers/review_errors_selector';
+
 
 import EditReviewForm from './edit_review_form';
 
@@ -11,7 +13,7 @@ const mapStateToProps = (state, ownProps) => {
         // errors: state.errors.review,
         loggedIn: !!state.session.currentUserId,
         // type: ownProps.type,
-        errors: state.errors.review,
+        errors: checkIfEdit(state.errors.review),
         // currentUser: currentUser
         spotId: ownProps.spotId,
         //review only if from edit

@@ -18,7 +18,7 @@ class BookingForm extends React.Component {
         this.handleCheckOut = this.handleCheckOut.bind(this);
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.props.clearErrors();
     }
 

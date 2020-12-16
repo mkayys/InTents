@@ -47,14 +47,16 @@ class SpotShow extends React.Component {
         // let prevScrollpos = window.pageYOffset;
 
         // debugger
-        window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
-            if (currentScrollPos < 20) {
-                userDrpdwn.style.visibility = "visible";
-            } else {
-                userDrpdwn.style.visibility = "hidden";
+        if (userDrpdwn) {
+            window.onscroll = function () {
+                var currentScrollPos = window.pageYOffset;
+                if (currentScrollPos < 20) {
+                    userDrpdwn.style.visibility = "visible";
+                } else {
+                    userDrpdwn.style.visibility = "hidden";
+                }
+                // prevScrollpos = currentScrollPos;
             }
-            // prevScrollpos = currentScrollPos;
         }
     }
 
