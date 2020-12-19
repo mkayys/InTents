@@ -14,6 +14,9 @@
 #
 
 class User < ApplicationRecord
+    include ActionView::Helpers::DateHelper
+
+
     validates :first_name, :last_name, :zip_code, :email, :password_digest, :session_token, presence: true
     validates :password, length: { minimum: 6, allow_nil: true }
     validates :email, uniqueness: true
@@ -62,4 +65,9 @@ class User < ApplicationRecord
         self.session_token
     end
 
+    # custom
+
+    def joined
+        time_ago_in_words(created_at)
+    end
 end

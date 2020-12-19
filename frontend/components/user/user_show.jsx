@@ -39,25 +39,27 @@ class UserShow extends React.Component {
         
 
         return (
-            <div className='user-profile'>
-                <div className='user-info'>
-                    <div className='user-name-and-pic'>
-                        <img className='user-pic' src='https://in-tents-seed.s3-us-west-1.amazonaws.com/main_images/main-icon.png' />
-                        <span className='user-name'>
-                            {this.props.user.firstName} {this.props.user.lastName[0]}.
+            <div className="user-profile-background">
+                <div className='user-profile'>
+                    <div className='user-info'>
+                        <div className='user-name-and-pic'>
+                            <img className='user-pic' src='https://in-tents-seed.s3-us-west-1.amazonaws.com/main_images/main-icon.png' />
+                            <span className='user-name'>
+                                {this.props.user.firstName} {this.props.user.lastName[0]}.
                         </span>
-                        <div className='user-info'>
-                            <i className="fas fa-mountain"></i>Tent-a-holic since today 
+                            <div className='user-info'>
+                                <i className="fas fa-mountain"></i>Tent-a-holic for {this.props.user.joined}
+                        </div>
                         </div>
                     </div>
-                </div>
 
-                
 
-                <div className='user-bookings-list'>
-                    <ul className='list-bookings'>
-                        {bookings}
-                    </ul>
+
+                    <div className='user-bookings-list'>
+                        <ul className='list-bookings'>
+                            {bookings.length === 0 ? "Start booking your adventures!" : bookings}
+                        </ul>
+                    </div>
                 </div>
             </div>
         );

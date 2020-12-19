@@ -1,6 +1,7 @@
 json.users do
     json.set! @user.id do
         json.extract! @user, :id, :first_name, :last_name, :email
+        json.joined @user.joined
     end
 end
 
