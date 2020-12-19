@@ -45,6 +45,7 @@ class ReviewIndexItem extends React.Component {
                     </div>
                     <div className='edit-options'>
                         {/* <div>{review.createdAt}</div> */}
+                        <div>{review.posted}</div>
                         {review.guestId === currentUserId ?
                             <div>
                                 <i onClick={this.toggleEditStatus} className="far fa-edit"></i>

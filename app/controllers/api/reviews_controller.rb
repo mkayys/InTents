@@ -15,7 +15,6 @@ class Api::ReviewsController < ApplicationController
     def index
         @reviews = Review.where(spot_id: params[:spot_id])
         # refactor review to fetch reviews that are only for that spot
-        # debugger
         if @reviews.empty?
             render json: { reviews: {} }
         else

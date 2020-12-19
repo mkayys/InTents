@@ -1,5 +1,6 @@
 .user-profile-background {
     background-image: image-url(show-profile);
+    // background-image: image-url(main);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -33,7 +34,6 @@
             padding: 15px;
             // margin-left: 15px;
             box-shadow: 0 0 10px 3px rgba(0,0,0,0.1);
-            height: 60%;
             background-color: rgba(235,235,235,0.4);
             
 
@@ -80,6 +80,7 @@
         // .booking-list-item {
         //     list-style: none;
         // }
+        width: 570px;
 
         .list-bookings {
             padding: 0px;

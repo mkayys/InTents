@@ -19,6 +19,7 @@ const App = () => (
       <div className="app-name">
         <Link className="app-name-logo" to="/">
           IN<i className="fas fa-campground" />TENTS
+          {/* <img src={window.logo} alt=""/> */}
         </Link>
       </div>
       <NavBarContainer />

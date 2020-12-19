@@ -1,10 +1,11 @@
 export const mostRecentFirst = (reviews) => {
     let orderedReviews = Object.values(reviews).reverse();
-
+    if(orderedReviews.length === 0) return [];
     return orderedReviews.map((review) => {
-        return parseReviewDate(review.posted);
-    })
-
+        review.posted = parseReviewDate(review.posted);
+        return review;
+    });
+    // return orderedReviews;
 }
 
 const months = {
@@ -20,13 +21,17 @@ const months = {
     "10": "October",
     "11": "November",
     "12": "December"
-}
+};
 
-const parseReviewDate = (date) => {
-    let dateArr = date.split("-");
+const parseReviewDate = (postDate) => {
+    if (!postDate.includes("-")) return postDate;
+    let dateArr = postDate.split("-");
     // ["2020", "12", "17"]
     let newDateStr = "";
     let month = months[dateArr[1]];
-    if (dateArr[2])
-    return `${month} ${dateArr[2]}, ${dateArr[3]}`
+    let date = dateArr[2];
+    if (dateArr[2][0] === "0") {
+        date = dateArr[2][1];
+    }
+    return `${month} ${date}, ${dateArr[0]}`
 }
