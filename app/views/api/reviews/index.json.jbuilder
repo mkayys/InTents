@@ -1,7 +1,8 @@
 json.reviews do  
    @reviews.each do |review|
       json.set! review.id do
-         json.extract! review, :id, :guest_id, :spot_id, :body, :created_at
+         json.extract! review, :id, :guest_id, :spot_id, :body
+         json.posted review.created_at.to_s[0..9]
       end
    end
 end

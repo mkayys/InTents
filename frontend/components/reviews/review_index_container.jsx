@@ -3,9 +3,10 @@ import { fetchReviews, fetchReviewsForSpot, deleteReview, updateReview, createRe
 import ReviewIndex from './review_index';
 import { openModal } from '../../actions/modal_actions';
 import { clearErrors } from '../../actions/review_actions';
+import { mostRecentFirst } from '../../reducers/reviews_selector';
 
 const mapStateToProps = state => ({
-    reviews: Object.values(state.entities.reviews).reverse(),
+    reviews: mostRecentFirst(state.entities.reviews),
     users: Object.values(state.entities.users),
     currentUserId: state.session.currentUserId,
     loggedIn: !!state.session.currentUserId
