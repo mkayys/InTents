@@ -15,6 +15,10 @@ class SpotIndex extends React.Component {
         this.props.fetchSpots();
     }
 
+    handleSearch() {
+
+    }
+
     render() {
         const spots = this.props.spots.map(spot => (
             <SpotIndexItem
@@ -22,9 +26,9 @@ class SpotIndex extends React.Component {
                 spot={spot} />
         ));
 
-        if (this.props.loading) {
-            return <LoadingIcon />
-        }
+        // if (this.props.loading) {
+        //     return <LoadingIcon />
+        // }
         
         return (
             <div className="">
@@ -34,13 +38,16 @@ class SpotIndex extends React.Component {
                     <span className='test-2'>
                         Book adventures where your tent leads.
                     </span>
-                    {/* <div className="search-bar"> 
-                        <input type="search" placeholder="Search..."/> 
-                        <input type="submit" value="search" />
-                    </div> */}
+                    <div className="search-bar"> 
+                        <input type="search" placeholder="Try Yosemite"/>
+                        <div className="search-button">
+                            <i className="fas fa-search" ></i>
+                        </div> 
+                    </div>
                 </div>  
                 <ul className='spots-index-list'>
-                   {spots}
+                   {/* {spots} */}
+                   {this.props.loading ? <LoadingIcon /> : spots}
                 </ul>
 
                 <div className='site-additional-info'>

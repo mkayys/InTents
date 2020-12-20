@@ -1,8 +1,11 @@
 .test-container {
   color: black;
   // background-image: url('https://in-tents-seed.s3-us-west-1.amazonaws.com/main_images/main.jpg');
+  background-image: image-url(hill);
+  background-position: center;
+  height: 100vh;
   // background-size: cover;
-  // background-repeat: no-repeat;
+  background-repeat: no-repeat;
   // height: 900px;
   width: 100%;
   // padding: 100px 40px 10px;
@@ -10,6 +13,7 @@
   font-weight: bold;
   font-family: "Calibre", Helvetica, Arial, sans-serif;
   padding-top: 100px;
+  color: white;
 }
 
 .test-1 {

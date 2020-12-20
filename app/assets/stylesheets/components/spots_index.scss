@@ -1,4 +1,37 @@
 
+.search-bar {
+    background-color: #F3F2EF;
+    border: 1px solid #F0F0EC;
+    border-radius: 38px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px 0px;
+
+    input[type=search] {
+        margin: auto;
+        border: 1px solid #F0F0EC;
+        border-radius: 38px;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px 0px;
+        height: 30px;
+    }
+
+    .search-button {
+        background-color: rgb(0, 197, 133);
+        cursor: pointer;
+        border-radius: 50%;
+        width: 58px;
+        height: 60px;
+        margin: auto;
+
+        .fa-search {
+            color: white;
+            margin: 11px 0px 0px 11px;
+        }
+    }
+}
+
+
 .spots-index-list {
     padding: 40px 40px;
     max-width: 1200px;

@@ -81,6 +81,8 @@
         //     list-style: none;
         // }
         width: 570px;
+        max-height: 468px;
+        overflow: auto;
 
         .list-bookings {
             padding: 0px;

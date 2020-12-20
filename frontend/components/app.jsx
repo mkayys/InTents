@@ -95,7 +95,6 @@ const App = () => {
 
     <div className="locations" />
 
-
       <Switch>
         <Route exact path="/" component={SpotIndexContainer} />
 
