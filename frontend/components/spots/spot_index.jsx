@@ -27,7 +27,7 @@ class SpotIndex extends React.Component {
         }
         
         return (
-            <div>
+            <div className="">
                 <div className="test-container">
                     <span className='test-1'>Find yourself in a tent.</span>
                     <br />

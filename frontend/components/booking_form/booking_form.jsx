@@ -40,9 +40,11 @@ class BookingForm extends React.Component {
         this.setState({
             check_in: date
         });
+        this.nextDate.setDate(date.getDate() + this.props.spot.minNights);
     }
 
     handleCheckOut(date) {
+
         this.setState({
             check_out: date
         });

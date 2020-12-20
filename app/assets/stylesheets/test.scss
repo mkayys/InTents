@@ -23,6 +23,7 @@
   margin-left: 130px;
 }
 
+div:focus,
 input:focus,
 select:focus,
 textarea:focus,
@@ -38,3 +39,11 @@ button:focus {
 //     background-repeat-y: no-repeat;
 //     background-color: #0E0C41;
 // }
+
+.home-page {
+  background-color: #F3F2EF;
+}
+
+.other-pages {
+  background-color: white;
+}
