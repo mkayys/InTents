@@ -16,10 +16,13 @@ class BookingForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleCheckIn = this.handleCheckIn.bind(this);
         this.handleCheckOut = this.handleCheckOut.bind(this);
+
+        this.presentDayAndNext = this.presentDayAndNext.bind(this);
     }
 
     componentDidMount() {
         this.props.clearErrors();
+        this.presentDayAndNext(this.props.spot.minNights);
     }
 
     update(field) {
@@ -75,6 +78,12 @@ class BookingForm extends React.Component {
     //     );
     // }
 
+    presentDayAndNext(min) {
+        this.presentDay = Date.now();
+        this.nextDate = new Date();
+        this.nextDate.setDate(this.nextDate.getDate() + min);
+    }
+
     renderCheckInError() {
         let { errors } = this.props;
         return (
@@ -115,6 +124,7 @@ class BookingForm extends React.Component {
                                 className='checkin-input booking-input'
                                 placeholderText="Select date"
                                 openToDate={new Date()}
+                                minDate={this.presentDay}
                                 selected={this.state.check_in}
                                 onChange={this.handleCheckIn} />
                             
@@ -127,6 +137,7 @@ class BookingForm extends React.Component {
                             <DatePicker
                                 className='checkout-input booking-input'
                                 placeholderText="Select date"
+                                minDate={this.nextDate}
                                 selected={this.state.check_out}
                                 onChange={this.handleCheckOut} />
 
