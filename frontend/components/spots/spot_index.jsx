@@ -46,7 +46,7 @@ class SpotIndex extends React.Component {
                     </div>
                 </div>  
                 <ul className='spots-index-list'>
-                   {/* {spots} */}
+                   {spots}
                    {this.props.loading ? <LoadingIcon /> : spots}
                 </ul>
 

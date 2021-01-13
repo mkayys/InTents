@@ -56,7 +56,7 @@ class LoginForm extends React.Component {
 
         typeWriter();
         setTimeout(this.passwordTyper, 1300);
-        setTimeout(this.handleDemoSubmit, 2000);
+        setTimeout(this.handleDemoSubmit, 1800);
     };
 
     passwordTyper() {

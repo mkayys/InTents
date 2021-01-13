@@ -558,21 +558,21 @@ Spot.create(
     bins: true
 )
 
-# Spot.all.each_with_index do |spot, idx|
-#     if (idx < 8) 
-#         (1..9).each do |pic_idx|
-#             file = EzDownload.open("https://in-tents-seed.s3-us-west-1.amazonaws.com/spots/JT/0#{idx+1}-JT/0#{idx+1}-0#{pic_idx}-JT.jpg")
-#             spot.photos.attach(io: file, filename: "0#{idx+1}-0#{pic_idx}-JT.jpg")
-#             spot.save!
-#         end
-#     else
-#         (1..9).each do |pic_idx|
-#             file = EzDownload.open("https://in-tents-seed.s3-us-west-1.amazonaws.com/spots/Y/0#{idx-8}-Y/0#{idx-8}-0#{pic_idx}-Y.jpg")
-#             spot.photos.attach(io: file, filename: "0#{idx-8}-0#{pic_idx}-Y.jpg")
-#             spot.save!
-#         end
-#     end
-# end
+Spot.all.each_with_index do |spot, idx|
+    if (idx < 8) 
+        (1..9).each do |pic_idx|
+            file = EzDownload.open("https://in-tents-seed.s3-us-west-1.amazonaws.com/spots/JT/0#{idx+1}-JT/0#{idx+1}-0#{pic_idx}-JT.jpg")
+            spot.photos.attach(io: file, filename: "0#{idx+1}-0#{pic_idx}-JT.jpg")
+            spot.save!
+        end
+    else
+        (1..9).each do |pic_idx|
+            file = EzDownload.open("https://in-tents-seed.s3-us-west-1.amazonaws.com/spots/Y/0#{idx-8}-Y/0#{idx-8}-0#{pic_idx}-Y.jpg")
+            spot.photos.attach(io: file, filename: "0#{idx-8}-0#{pic_idx}-Y.jpg")
+            spot.save!
+        end
+    end
+end
 
 
 
@@ -699,6 +699,5 @@ The woods are lovely, dark and deep,
 But I have promises to keep,   
 And miles to go before I sleep,   
 And miles to go before I sleep.
-
-THIS IS A POEM, NOT A SONG. YOU FOOL!"
+"
 )

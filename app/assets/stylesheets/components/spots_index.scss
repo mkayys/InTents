@@ -1,35 +1,35 @@
 
-.search-bar {
-    background-color: #F3F2EF;
-    border: 1px solid #F0F0EC;
-    border-radius: 38px;
-    width: 80%;
-    margin: auto;
-    display: flex;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px 0px;
+// .search-bar {
+//     background-color: #F3F2EF;
+//     border: 1px solid #F0F0EC;
+//     border-radius: 38px;
+//     width: 80%;
+//     margin: auto;
+//     display: flex;
+//     box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px 0px;
 
-    input[type=search] {
-        margin: auto;
-        border: 1px solid #F0F0EC;
-        border-radius: 38px;
-        box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px 0px;
-        height: 30px;
-    }
+//     input[type=search] {
+//         margin: auto;
+//         border: 1px solid #F0F0EC;
+//         border-radius: 38px;
+//         box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px 0px;
+//         height: 30px;
+//     }
 
-    .search-button {
-        background-color: rgb(0, 197, 133);
-        cursor: pointer;
-        border-radius: 50%;
-        width: 58px;
-        height: 60px;
-        margin: auto;
+//     .search-button {
+//         background-color: rgb(0, 197, 133);
+//         cursor: pointer;
+//         border-radius: 50%;
+//         width: 58px;
+//         height: 60px;
+//         margin: auto;
 
-        .fa-search {
-            color: white;
-            margin: 11px 0px 0px 11px;
-        }
-    }
-}
+//         .fa-search {
+//             color: white;
+//             margin: 11px 0px 0px 11px;
+//         }
+//     }
+// }
 
 
 .spots-index-list {
@@ -68,10 +68,15 @@
     display: inline-block;
     background: white;
     // border: 1px solid white;
-    box-shadow: 5px 5px 5px 5px rgba(211, 211, 211, 0.7);
+    box-shadow: 3px 3px 5px 3px rgba(211, 211, 211, 0.7);
     // height: 400px;
     width: 350px;
     margin: 10px;
+}
+
+.spot-list-items:hover {
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
+    transition: all .2s ease-in 0s;
 }
 
 .spot-pictures {
