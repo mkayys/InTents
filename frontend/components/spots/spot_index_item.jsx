@@ -5,12 +5,12 @@ import Carousel from 'nuka-carousel';
 const SpotIndexItem = ({ spot }) => (
     <div className='spot-list-items'>
         <div className='spot-pictures'>
-            {/* <Carousel>
+            <Carousel>
                 <img src={spot.photoUrls[0]} className='pic-slides' />
                 <img src={spot.photoUrls[1]} className='pic-slides' />
                 <img src={spot.photoUrls[2]} className='pic-slides' />
                 <img src={spot.photoUrls[3]} className='pic-slides' />       
-            </Carousel> */}
+            </Carousel>
         </div>
 
         <Link className='spot-info' to={`/spots/${spot.id}`}>

@@ -15,7 +15,7 @@ const Footer = () => {
                     {/* </span> */}
                 </Link>
                 <div className='footer-text'>
-                    "Heaven is under our feet as well as over our heads. 
+                    "Heaven is under our feet as well as over our heads."
                     <br/>
                     —Henry David Thoreau
                     <br />
@@ -24,7 +24,7 @@ const Footer = () => {
                     <br />
                     I enjoy being in nature and wanted to bring that bit of passion for hiking and exploring
                     <br />
-                    into my personal project. I hope you find the pictures enjoyable and the experience, satisfying.
+                    into my personal project. I hope you find the pictures, beautiful and the experience, pleasing.
                     {/* "We need to find God, and he cannot be found in noise and restlessness.
                     <br />
                     God is the friend of silence. See how nature - trees, flowers, grass - grows in silence;
