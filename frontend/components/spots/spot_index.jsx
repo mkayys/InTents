@@ -33,17 +33,17 @@ class SpotIndex extends React.Component {
         return (
             <div className="">
                 <div className="test-container">
-                    <span className='test-1'>Find yourself in a tent.</span>
+                    <span className='test-1'>Find yourself in a tent among the stars.</span>
                     <br />
-                    <span className='test-2'>
+                    <span className="test-2">
                         Book adventures where your tent leads.
                     </span>
-                    <div className="search-bar"> 
+                    {/* <div className="search-bar"> 
                         <input type="search" placeholder="Try Yosemite"/>
                         <div className="search-button">
                             <i className="fas fa-search" ></i>
                         </div> 
-                    </div>
+                    </div> */}
                 </div>  
                 <ul className='spots-index-list'>
                    {spots}
